@@ -13,7 +13,7 @@ const App = (props: { game: Game }) => {
       <Title>Untitled App</Title>
       <Space>
         It's {game.currentPlayer.name}'s turn.
-        <Button onClick={() => game.moveOn()}>Next</Button>
+        <Button onClick={() => game.moveOn()}>Move on</Button>
       </Space>
     </>
   );
