@@ -2,31 +2,18 @@ import React from 'react';
 import { Button, Space, Typography } from 'antd';
 import { auto } from 'manate/react';
 
-import type { Store } from './store';
+import type Game from './game';
 
-const { Text, Title } = Typography;
+const { Title } = Typography;
 
-const App = (props: { store: Store }) => {
-  const { store } = props;
+const App = (props: { game: Game }) => {
+  const { game } = props;
   const render = () => (
     <>
       <Title>Untitled App</Title>
       <Space>
-        <Button
-          onClick={() => {
-            store.count -= 1;
-          }}
-        >
-          -
-        </Button>
-        <Text>{store.count}</Text>
-        <Button
-          onClick={() => {
-            store.count += 1;
-          }}
-        >
-          +
-        </Button>
+        It's {game.currentPlayer.name}'s turn.
+        <Button onClick={() => game.moveOn()}>Next</Button>
       </Space>
     </>
   );
