@@ -1,5 +1,5 @@
-import React from 'react';
-import { Alert, Button, Divider, Popover, Space, Typography } from 'antd';
+import React, { useEffect } from 'react';
+import { Alert, Button, Divider, Popover, Space, Typography, message } from 'antd';
 import { auto } from 'manate/react';
 import _ from 'lodash';
 
@@ -11,12 +11,28 @@ const cardBackImage = Card.backImage();
 
 const App = (props: { game: Game }) => {
   const { game } = props;
+  const [messageApi, contextHolder] = message.useMessage();
+  useEffect(() => {
+    const aiPlayer = game.findPlayer('AI');
+    if (game.currentTurnPlayer !== game.findPlayer('AI')) {
+      return;
+    }
+    messageApi.info('AI is thinking...');
+    setTimeout(() => {
+      const card = _.sample(aiPlayer.hand);
+      if (card) {
+        game.playCard(card);
+        game.moveOn();
+      }
+    }, 3000);
+  }, [game.currentTurnPlayer]);
   const render = () => {
     const youPlayer = game.findPlayer('You');
     const aiPlayer = game.findPlayer('AI');
     const isYourTurn = game.currentTurnPlayer === youPlayer;
     return (
       <>
+        {contextHolder}
         <Title>憋驴</Title>
         <Space direction="vertical">
           <Title level={2}>AI</Title>
