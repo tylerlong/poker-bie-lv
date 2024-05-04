@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Button, Divider, Popover, Space, Typography, message } from 'antd';
+import { Alert, Button, Divider, Popover, Space, Typography, message } from 'antd';
 import { auto } from 'manate/react';
 import _ from 'lodash';
 
@@ -34,6 +34,7 @@ const App = (props: { game: Game }) => {
         game.playCard(card);
       }
       game.moveOn();
+      messageApi.info('It is your turn.');
     }, 3000);
   }, [game.currentTurnPlayer]);
   const render = () => {
@@ -91,15 +92,19 @@ const App = (props: { game: Game }) => {
                 key={`${card.suit}-${card.rank}`}
                 content={
                   <Space direction="vertical">
-                    <Button
-                      style={{ width: '8rem' }}
-                      onClick={() => {
-                        game.playCard(card);
-                        game.moveOn();
-                      }}
-                    >
-                      出牌
-                    </Button>
+                    {game.canPlayCard(card) ? (
+                      <Button
+                        style={{ width: '8rem' }}
+                        onClick={() => {
+                          game.playCard(card);
+                          game.moveOn();
+                        }}
+                      >
+                        出牌
+                      </Button>
+                    ) : (
+                      <Alert message="不能出这张牌" type="info" />
+                    )}
                   </Space>
                 }
                 trigger="click"
