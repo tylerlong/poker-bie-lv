@@ -6,7 +6,7 @@ import App from './app';
 import Game from './game';
 
 const game = manage(new Game());
-game.addPlayer('Tyler');
+game.addPlayer('You');
 game.addPlayer('AI');
 for (let i = 0; i < 5; i++) {
   game.players.forEach((player) => player.hand.push(game.deck.pop()));
