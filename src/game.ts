@@ -1,9 +1,11 @@
+import type Card from './card';
 import Deck from './deck';
 import Player from './player';
 
 class Game {
   public players: Player[] = [];
   public deck = new Deck();
+  public playedCards: Card[] = [];
 
   private playerIndex = 0;
 
@@ -34,6 +36,11 @@ class Game {
 
   public findPlayer(name: string): Player | undefined {
     return this.players.find((player) => player.name === name);
+  }
+
+  public playCard(card: Card): void {
+    this.currentTurnPlayer.play(card);
+    this.playedCards.push(card);
   }
 }
 

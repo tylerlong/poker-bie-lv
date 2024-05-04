@@ -25,6 +25,10 @@ class Player {
   public isCurrent(game: Game): boolean {
     return game.currentTurnPlayer.uuid === this.uuid;
   }
+
+  public play(card: Card) {
+    this.hand = this.hand.filter((c) => c !== card);
+  }
 }
 
 export default Player;

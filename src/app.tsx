@@ -1,6 +1,7 @@
 import React from 'react';
-import { Alert, Button, Divider, Space, Typography } from 'antd';
+import { Alert, Button, Divider, Popover, Space, Typography } from 'antd';
 import { auto } from 'manate/react';
+import _ from 'lodash';
 
 import type Game from './game';
 import Card from './card';
@@ -26,6 +27,11 @@ const App = (props: { game: Game }) => {
           </div>
           <Divider />
           <Alert message={isYourTurn ? "It's your turn." : "It's AI's turn."} type={isYourTurn ? 'success' : 'error'} />
+          <div>
+            {_.reverse(_.takeRight(game.playedCards, 6)).map((card, index) => (
+              <img key={`${card.suit}-${card.rank}`} src={card.image} width={`${128 - index * 16}px`} />
+            ))}
+          </div>
           <Divider />
           <Title level={2}>你</Title>
           {isYourTurn && (
@@ -49,7 +55,26 @@ const App = (props: { game: Game }) => {
           )}
           <div>
             {youPlayer.hand.map((card) => (
-              <img className="card-img" key={`${card.suit}-${card.rank}`} src={card.image} width="128px" />
+              <Popover
+                key={`${card.suit}-${card.rank}`}
+                content={
+                  <Space direction="vertical">
+                    <Button
+                      style={{ width: '8rem' }}
+                      onClick={() => {
+                        game.playCard(card);
+                        game.moveOn();
+                      }}
+                    >
+                      出牌
+                    </Button>
+                  </Space>
+                }
+                trigger="click"
+                placement="bottom"
+              >
+                <img className="card-img" src={card.image} width="128px" />
+              </Popover>
             ))}
           </div>
         </Space>
