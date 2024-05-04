@@ -5,5 +5,9 @@ body {
 }
 
 .card-img {
-  margin: 1rem;
+  margin: 0.2rem;
+}
+
+.cards-queue {
+  white-space: nowrap;
 }

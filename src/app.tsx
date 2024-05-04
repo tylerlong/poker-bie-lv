@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Alert, Button, Divider, Popover, Space, Typography, message } from 'antd';
+import { Button, Divider, Popover, Space, Typography, message } from 'antd';
 import { auto } from 'manate/react';
 import _ from 'lodash';
 
@@ -19,11 +19,21 @@ const App = (props: { game: Game }) => {
     }
     messageApi.info('AI is thinking...');
     setTimeout(() => {
-      const card = _.sample(aiPlayer.hand);
+      const playableCards = aiPlayer.hand.filter((card) => game.canPlayCard(card));
+      if (playableCards.length === 0 && game.deck.cards.length > 0) {
+        aiPlayer.hand.push(game.deck.pop());
+        while (!game.canPlayCard(_.last(aiPlayer.hand)) && game.deck.cards.length > 0) {
+          aiPlayer.hand.push(game.deck.pop());
+        }
+        if (game.canPlayCard(_.last(aiPlayer.hand))) {
+          playableCards.push(_.last(aiPlayer.hand));
+        }
+      }
+      const card = _.sample(playableCards);
       if (card) {
         game.playCard(card);
-        game.moveOn();
       }
+      game.moveOn();
     }, 3000);
   }, [game.currentTurnPlayer]);
   const render = () => {
@@ -35,17 +45,23 @@ const App = (props: { game: Game }) => {
         {contextHolder}
         <Title>憋驴</Title>
         <Space direction="vertical">
+          <Title level={2}>主牌</Title>
+          <img src={game.primaryCard.image} width="96px" />
           <Title level={2}>AI</Title>
-          <div>
+          <div className="cards-queue">
             {aiPlayer.hand.map((card) => (
-              <img className="card-img" key={`${card.suit}-${card.rank}`} src={cardBackImage} width="128px" />
+              <img className="card-img" key={`${card.suit}-${card.rank}`} src={cardBackImage} width="96px" />
             ))}
           </div>
           <Divider />
-          <Alert message={isYourTurn ? "It's your turn." : "It's AI's turn."} type={isYourTurn ? 'success' : 'error'} />
           <div>
-            {_.reverse(_.takeRight(game.playedCards, 6)).map((card, index) => (
-              <img key={`${card.suit}-${card.rank}`} src={card.image} width={`${128 - index * 16}px`} />
+            {_.reverse(_.takeRight(game.playedCards, 8)).map((card, index) => (
+              <img
+                className="card-img"
+                key={`${card.suit}-${card.rank}`}
+                src={card.image}
+                width={`${96 - index * 8}px`}
+              />
             ))}
           </div>
           <Divider />
@@ -69,7 +85,7 @@ const App = (props: { game: Game }) => {
               跳过
             </Button>
           )}
-          <div>
+          <div className="cards-queue">
             {youPlayer.hand.map((card) => (
               <Popover
                 key={`${card.suit}-${card.rank}`}
@@ -89,7 +105,7 @@ const App = (props: { game: Game }) => {
                 trigger="click"
                 placement="bottom"
               >
-                <img className="card-img" src={card.image} width="128px" />
+                <img className="card-img" src={card.image} width="96px" />
               </Popover>
             ))}
           </div>

@@ -1,3 +1,5 @@
+import _ from 'lodash';
+
 import type Card from './card';
 import Deck from './deck';
 import Player from './player';
@@ -6,8 +8,16 @@ class Game {
   public players: Player[] = [];
   public deck = new Deck();
   public playedCards: Card[] = [];
+  public primaryCard: Card;
 
   private playerIndex = 0;
+
+  public constructor() {
+    this.primaryCard = _.sample(this.deck.cards);
+    while (this.primaryCard.suit === '🃏') {
+      this.primaryCard = _.sample(this.deck.cards);
+    }
+  }
 
   public addPlayer(name: string): void {
     const player = new Player(name);
@@ -41,6 +51,28 @@ class Game {
   public playCard(card: Card): void {
     this.currentTurnPlayer.play(card);
     this.playedCards.push(card);
+  }
+
+  public get currentCard() {
+    for (let i = this.playedCards.length - 1; i >= 0; i--) {
+      if (this.playedCards[i].suit !== '🃏') {
+        return this.playedCards[i];
+      }
+    }
+    return this.primaryCard;
+  }
+
+  public canPlayCard(card: Card): boolean {
+    return (
+      card.suit === this.currentCard.suit ||
+      card.rank === this.currentCard.rank ||
+      card.suit === '🃏' ||
+      card.rank === this.primaryCard.rank
+    );
+  }
+
+  public canChangeSuit(card: Card): boolean {
+    return card.rank === this.primaryCard.rank || card.rank === this.currentCard.rank;
   }
 }
 
