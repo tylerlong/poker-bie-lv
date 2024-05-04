@@ -9,7 +9,8 @@
   },
   "dependencies": {
     "hyperid": "^3.2.0",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "wait-for-async": "^0.6.1"
   },
   "devDependencies": {
     "@parcel/resolver-glob": "^2.12.0",

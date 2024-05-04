@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Divider, Space, Typography, message } from 'antd';
 import { auto } from 'manate/react';
 import _ from 'lodash';
+import waitFor from 'wait-for-async';
 
 import type Game from './game';
 import Card from './card';
@@ -18,12 +19,15 @@ const App = (props: { game: Game }) => {
     if (game.currentTurnPlayer !== game.findPlayer('AI')) {
       return;
     }
-    messageApi.info('AI is thinking...');
-    setTimeout(() => {
+    (async () => {
+      messageApi.info('AI正在思考');
+      await waitFor({ interval: 1000 });
       const playableCards = aiPlayer.hand.filter((card) => game.canPlayCard(card));
       if (playableCards.length === 0 && game.deck.cards.length > 0) {
         aiPlayer.hand.push(game.deck.pop());
         while (!game.canPlayCard(_.last(aiPlayer.hand)) && game.deck.cards.length > 0) {
+          messageApi.info('AI正在摸牌');
+          await waitFor({ interval: 1000 });
           aiPlayer.hand.push(game.deck.pop());
         }
         if (game.canPlayCard(_.last(aiPlayer.hand))) {
@@ -32,11 +36,16 @@ const App = (props: { game: Game }) => {
       }
       const card = _.sample(playableCards);
       if (card) {
+        messageApi.info('AI正在出牌');
+        await waitFor({ interval: 1000 });
         game.playCard(card);
+      } else {
+        messageApi.info('AI选择跳过');
+        await waitFor({ interval: 1000 });
       }
       game.moveOn();
-      messageApi.info('It is your turn.');
-    }, 3000);
+      messageApi.info('该你啦!');
+    })();
   }, [game.currentTurnPlayer]);
   const render = () => {
     const aiPlayer = game.findPlayer('AI');
