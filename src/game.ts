@@ -1,7 +1,10 @@
+import Deck from './deck';
 import Player from './player';
 
 class Game {
   public players: Player[] = [];
+  public deck = new Deck();
+
   private playerIndex = 0;
 
   public addPlayer(name: string): void {

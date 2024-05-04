@@ -8,9 +8,12 @@
     "serve": "rm -rf .parcel-cache && parcel src/index.html --dist-dir docs"
   },
   "dependencies": {
-    "hyperid": "^3.2.0"
+    "hyperid": "^3.2.0",
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
+    "@parcel/resolver-glob": "^2.12.0",
+    "@types/lodash": "^4.17.0",
     "@types/node": "^20.12.8",
     "@types/react-dom": "^18.3.0",
     "@typescript-eslint/eslint-plugin": "^7.8.0",

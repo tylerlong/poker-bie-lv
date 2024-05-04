@@ -14,6 +14,9 @@ const App = (props: { game: Game }) => {
       <Space>
         It's {game.currentPlayer.name}'s turn.
         <Button onClick={() => game.moveOn()}>Move on</Button>
+        {game.deck.cards.map((card) => (
+          <img src={card.image} width="32px" />
+        ))}
       </Space>
     </>
   );
