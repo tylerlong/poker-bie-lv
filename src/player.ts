@@ -23,7 +23,7 @@ class Player {
   }
 
   public isCurrent(game: Game): boolean {
-    return game.currentPlayer.uuid === this.uuid;
+    return game.currentTurnPlayer.uuid === this.uuid;
   }
 }
 

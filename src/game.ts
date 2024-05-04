@@ -12,7 +12,7 @@ class Game {
     this.players.push(player);
   }
 
-  public get currentPlayer(): Player {
+  public get currentTurnPlayer(): Player {
     return this.players[this.playerIndex];
   }
 
@@ -27,9 +27,13 @@ class Game {
       return;
     }
     this.playerIndex = (this.playerIndex + 1) % this.players.length;
-    while (this.currentPlayer.won) {
+    while (this.currentTurnPlayer.won) {
       this.playerIndex = (this.playerIndex + 1) % this.players.length;
     }
+  }
+
+  public findPlayer(name: string): Player | undefined {
+    return this.players.find((player) => player.name === name);
   }
 }
 

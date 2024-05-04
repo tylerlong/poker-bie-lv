@@ -8,15 +8,24 @@ const { Title, Text } = Typography;
 
 const App = (props: { game: Game }) => {
   const { game } = props;
+  const youPlayer = game.findPlayer('Tyler');
+  const aiPlayer = game.findPlayer('AI');
   const render = () => (
     <>
-      <Title>Untitled App</Title>
+      <Title>憋驴</Title>
       <Space direction="vertical">
-        <Text>It's {game.currentPlayer.name}'s turn.</Text>
+        <Text>It's {game.currentTurnPlayer.name}'s turn.</Text>
         <Button onClick={() => game.moveOn()}>Move on</Button>
+        AI's Cards:
         <div>
-          {game.deck.cards.map((card) => (
-            <img src={card.image} width="32px" />
+          {aiPlayer.hand.map((card) => (
+            <img key={`${card.suit}-${card.rank}`} src={card.image} width="128px" />
+          ))}
+        </div>
+        Your Cards:
+        <div>
+          {youPlayer.hand.map((card) => (
+            <img key={`${card.suit}-${card.rank}`} src={card.image} width="128px" />
           ))}
         </div>
       </Space>

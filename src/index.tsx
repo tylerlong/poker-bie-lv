@@ -1,4 +1,4 @@
-import React, { StrictMode } from 'react';
+import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { manage } from 'manate';
 
@@ -7,7 +7,7 @@ import Game from './game';
 
 const game = manage(new Game());
 game.addPlayer('Tyler');
-game.addPlayer('Bob');
+game.addPlayer('AI');
 for (let i = 0; i < 5; i++) {
   game.players.forEach((player) => player.hand.push(game.deck.pop()));
 }
@@ -15,8 +15,4 @@ for (let i = 0; i < 5; i++) {
 const container = document.createElement('div');
 document.body.appendChild(container);
 const root = createRoot(container);
-root.render(
-  <StrictMode>
-    <App game={game} />
-  </StrictMode>,
-);
+root.render(<App game={game} />);
