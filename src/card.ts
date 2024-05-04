@@ -1,11 +1,10 @@
-import Poker from 'poker-images';
-
-import images from './assets/images/cards/**/*.svg';
+import cardImages from './assets/images/cards/**/*.svg';
+import backImage from './assets/images/cards/back.svg';
 import type { RankType, SuitType } from './types';
 
 class Card {
-  public static backImage(size: number): string {
-    return Poker.getBackData(size, '#BB5555', '#AA2222');
+  public static backImage(): string {
+    return backImage;
   }
 
   public suit: SuitType;
@@ -17,7 +16,7 @@ class Card {
   }
 
   public get image(): string {
-    return images[this.suit][this.rank];
+    return cardImages[this.suit][this.rank];
   }
 }
 

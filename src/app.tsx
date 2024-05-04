@@ -12,7 +12,7 @@ const App = (props: { game: Game }) => {
   const youPlayer = game.findPlayer('You');
   const aiPlayer = game.findPlayer('AI');
   const isYourTurn = game.currentTurnPlayer === youPlayer;
-  const cardBackImage = Card.backImage(128);
+  const cardBackImage = Card.backImage();
   const render = () => (
     <>
       <Title>憋驴</Title>

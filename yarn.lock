@@ -2608,11 +2608,6 @@ picomatch@^2.3.1:
   resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-2.3.1.tgz#3ba3833733646d9d3e4995946c1365a67fb07a42"
   integrity sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==
 
-poker-images@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/poker-images/-/poker-images-0.1.0.tgz#32d96d1bd321ee2e8aeb9ca27ed95d7938331362"
-  integrity sha512-LsAihc6ajHBCV7R4HRhDCHXdpwIg7KiCT7Wwxa+Y8Qi8//GqREoskM06QTiBVeG9i/VDedz+Y1QDvHt/3dI//A==
-
 postcss-value-parser@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/postcss-value-parser/-/postcss-value-parser-4.2.0.tgz#723c09920836ba6d3e5af019f92bc0971c02e514"

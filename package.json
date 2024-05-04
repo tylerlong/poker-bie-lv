@@ -9,8 +9,7 @@
   },
   "dependencies": {
     "hyperid": "^3.2.0",
-    "lodash": "^4.17.21",
-    "poker-images": "^0.1.0"
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
     "@parcel/resolver-glob": "^2.12.0",
