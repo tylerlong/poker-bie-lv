@@ -21,6 +21,10 @@ class Deck {
   public shuffle(): void {
     this.cards = _.shuffle(this.cards);
   }
+
+  public pop(): Card {
+    return this.cards.pop();
+  }
 }
 
 export default Deck;

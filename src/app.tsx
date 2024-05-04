@@ -4,19 +4,21 @@ import { auto } from 'manate/react';
 
 import type Game from './game';
 
-const { Title } = Typography;
+const { Title, Text } = Typography;
 
 const App = (props: { game: Game }) => {
   const { game } = props;
   const render = () => (
     <>
       <Title>Untitled App</Title>
-      <Space>
-        It's {game.currentPlayer.name}'s turn.
+      <Space direction="vertical">
+        <Text>It's {game.currentPlayer.name}'s turn.</Text>
         <Button onClick={() => game.moveOn()}>Move on</Button>
-        {game.deck.cards.map((card) => (
-          <img src={card.image} width="32px" />
-        ))}
+        <div>
+          {game.deck.cards.map((card) => (
+            <img src={card.image} width="32px" />
+          ))}
+        </div>
       </Space>
     </>
   );
