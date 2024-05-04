@@ -29,13 +29,13 @@ class Game {
   }
 
   // only one player not won
-  public get gameOver() {
+  public get over() {
     return this.players.filter((player) => !player.won).length <= 1;
   }
 
   // move on to the next player
   public moveOn(): void {
-    if (this.gameOver) {
+    if (this.over) {
       return;
     }
     this.playerIndex = (this.playerIndex + 1) % this.players.length;
