@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react';
-import { Alert, Button, Divider, Popover, Space, Typography, message } from 'antd';
+import { Divider, Space, Typography, message } from 'antd';
 import { auto } from 'manate/react';
 import _ from 'lodash';
 
 import type Game from './game';
 import Card from './card';
+import You from './you';
 
 const { Title } = Typography;
 const cardBackImage = Card.backImage();
@@ -38,9 +39,7 @@ const App = (props: { game: Game }) => {
     }, 3000);
   }, [game.currentTurnPlayer]);
   const render = () => {
-    const youPlayer = game.findPlayer('You');
     const aiPlayer = game.findPlayer('AI');
-    const isYourTurn = game.currentTurnPlayer === youPlayer;
     return (
       <>
         {contextHolder}
@@ -67,53 +66,7 @@ const App = (props: { game: Game }) => {
           </div>
           <Divider />
           <Title level={2}>你</Title>
-          {isYourTurn && (
-            <>
-              <Button
-                block
-                size="large"
-                onClick={() => {
-                  youPlayer.hand.push(game.deck.pop());
-                }}
-                disabled={game.deck.cards.length === 0}
-              >
-                摸牌
-              </Button>
-            </>
-          )}
-          {isYourTurn && game.deck.cards.length === 0 && (
-            <Button block size="large" onClick={() => game.moveOn()}>
-              跳过
-            </Button>
-          )}
-          <div className="cards-queue">
-            {youPlayer.hand.map((card) => (
-              <Popover
-                key={`${card.suit}-${card.rank}`}
-                content={
-                  <Space direction="vertical">
-                    {game.canPlayCard(card) ? (
-                      <Button
-                        style={{ width: '8rem' }}
-                        onClick={() => {
-                          game.playCard(card);
-                          game.moveOn();
-                        }}
-                      >
-                        出牌
-                      </Button>
-                    ) : (
-                      <Alert message="不能出这张牌" type="info" />
-                    )}
-                  </Space>
-                }
-                trigger="click"
-                placement="bottom"
-              >
-                <img className="card-img" src={card.image} width="96px" />
-              </Popover>
-            ))}
-          </div>
+          <You game={game} />
         </Space>
       </>
     );
