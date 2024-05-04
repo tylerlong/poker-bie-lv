@@ -27,12 +27,25 @@ const App = (props: { game: Game }) => {
         <Divider />
         <Alert message={isYourTurn ? "It's your turn." : "It's AI's turn."} type={isYourTurn ? 'success' : 'error'} />
         <Divider />
-        <Title level={2}>You</Title>
+        <Title level={2}>你</Title>
         <div>
           {youPlayer.hand.map((card) => (
             <img key={`${card.suit}-${card.rank}`} src={card.image} width="128px" />
           ))}
         </div>
+        {isYourTurn && game.deck.cards.length > 0 && (
+          <>
+            <Button
+              block
+              size="large"
+              onClick={() => {
+                youPlayer.hand.push(game.deck.pop());
+              }}
+            >
+              摸牌
+            </Button>
+          </>
+        )}
       </Space>
     </>
   );
