@@ -5,8 +5,8 @@ import type Game from './game';
 import { Alert, Button, Popover, Space } from 'antd';
 
 const You = (props: { game: Game }) => {
+  const { game } = props;
   const render = () => {
-    const { game } = props;
     const youPlayer = game.findPlayer('You');
     const isYourTurn = game.currentTurnPlayer === youPlayer;
     return (
