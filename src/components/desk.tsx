@@ -18,6 +18,7 @@ const Desk = (props: { game: Game }) => {
           <img className="card-img" src={Card.backImage()} width="96px" />
         </CardComponent>
         <CardComponent title="已出牌">
+          {game.playedCards.length === 0 && <img className="card-img" src={Card.blankImage()} width="96px" />}
           <div className="cards-queue">
             {_.reverse(_.takeRight(game.playedCards, 6)).map((card) => (
               <img className="card-img" key={`${card.suit}-${card.rank}`} src={card.image} width="96px" />
