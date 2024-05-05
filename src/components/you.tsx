@@ -10,24 +10,7 @@ const You = (props: { game: Game }) => {
     const youPlayer = game.findPlayer('You');
     const isYourTurn = game.currentTurnPlayer === youPlayer;
     return (
-      <>
-        {isYourTurn && (
-          <Button
-            block
-            size="large"
-            onClick={() => {
-              youPlayer.hand.push(game.deck.pop());
-            }}
-            disabled={game.deck.cards.length === 0}
-          >
-            摸牌
-          </Button>
-        )}
-        {isYourTurn && game.deck.cards.length === 0 && (
-          <Button block size="large" onClick={() => game.moveOn()}>
-            跳过
-          </Button>
-        )}
+      <Space direction="vertical">
         <div className="cards-queue">
           {youPlayer.hand.map((card) => (
             <Popover
@@ -56,7 +39,24 @@ const You = (props: { game: Game }) => {
             </Popover>
           ))}
         </div>
-      </>
+        {isYourTurn && (
+          <Button
+            block
+            size="large"
+            onClick={() => {
+              youPlayer.hand.push(game.deck.pop());
+            }}
+            disabled={game.deck.cards.length === 0}
+          >
+            摸牌
+          </Button>
+        )}
+        {isYourTurn && game.deck.cards.length === 0 && (
+          <Button block size="large" onClick={() => game.moveOn()}>
+            跳过
+          </Button>
+        )}
+      </Space>
     );
   };
   return auto(render, props);
