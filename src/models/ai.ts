@@ -18,7 +18,7 @@ class AI {
       if (event.name !== 'set' || event.pathString !== 'playerIndex') {
         return;
       }
-      if (game.findPlayer('AI') !== player) {
+      if (this.game.currentTurnPlayer !== this.player) {
         return;
       }
       this.play();

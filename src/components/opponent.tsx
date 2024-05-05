@@ -4,7 +4,7 @@ import React from 'react';
 import type Game from '../models/game';
 import Card from '../models/card';
 
-const AI = (props: { game: Game }) => {
+const Opponent = (props: { game: Game }) => {
   const { game } = props;
   const render = () => {
     const aiPlayer = game.findPlayer('AI');
@@ -19,4 +19,4 @@ const AI = (props: { game: Game }) => {
   return auto(render, props);
 };
 
-export default AI;
+export default Opponent;
