@@ -74,6 +74,22 @@ class Game {
   public canChangeSuit(card: Card): boolean {
     return card.rank === this.primaryCard.rank || card.rank === this.currentCard.rank;
   }
+
+  public restart(): void {
+    this.deck = new Deck();
+    this.playedCards = [];
+    this.primaryCard = _.sample(this.deck.cards);
+    while (this.primaryCard.suit === '🃏') {
+      this.primaryCard = _.sample(this.deck.cards);
+    }
+    this.players.forEach((player) => {
+      player.hand = [];
+      for (let i = 0; i < 5; i++) {
+        player.hand.push(this.deck.pop());
+      }
+    });
+    this.playerIndex = 0;
+  }
 }
 
 export default Game;
