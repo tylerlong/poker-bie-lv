@@ -4,7 +4,7 @@ import { auto } from 'manate/react';
 
 import type Game from './game';
 import You from './you';
-import AI from './ai';
+import Opponent from './opponent';
 import Desk from './desk';
 
 const { Title } = Typography;
@@ -19,7 +19,7 @@ const App = (props: { game: Game }) => {
           <Title level={2}>主牌</Title>
           <img src={game.primaryCard.image} width="96px" />
           <Title level={2}>AI</Title>
-          <AI game={game} />
+          <Opponent game={game} />
           <Title level={2}>牌桌</Title>
           <Desk game={game} />
           <Title level={2}>你</Title>
