@@ -7,8 +7,6 @@ const uuid = hyperid();
 
 class Player {
   public name: string;
-  public won = false;
-  public rank = -1;
   public uuid: string;
   public hand: Card[] = [];
 
@@ -17,9 +15,8 @@ class Player {
     this.uuid = uuid();
   }
 
-  public win(game: Game): void {
-    this.won = true;
-    this.rank = game.players.filter((player) => player.won).length;
+  public get won(): boolean {
+    return this.hand.length === 0;
   }
 
   public isCurrent(game: Game): boolean {

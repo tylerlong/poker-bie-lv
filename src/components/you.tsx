@@ -1,8 +1,9 @@
 import { auto } from 'manate/react';
 import React from 'react';
+import { Button, Space } from 'antd';
 
 import type Game from '../models/game';
-import { Alert, Button, Popover, Space } from 'antd';
+import CardComponent from './card';
 
 const You = (props: { game: Game }) => {
   const { game } = props;
@@ -10,33 +11,10 @@ const You = (props: { game: Game }) => {
     const youPlayer = game.findPlayer('You');
     const isYourTurn = game.currentTurnPlayer === youPlayer;
     return (
-      <Space direction="vertical">
+      <Space direction="vertical" style={{ width: '100%' }}>
         <div className="cards-queue">
           {youPlayer.hand.map((card) => (
-            <Popover
-              key={`${card.suit}-${card.rank}`}
-              content={
-                <Space direction="vertical">
-                  {game.canPlayCard(card) ? (
-                    <Button
-                      style={{ width: '8rem' }}
-                      onClick={() => {
-                        game.playCard(card);
-                        game.moveOn();
-                      }}
-                    >
-                      出牌
-                    </Button>
-                  ) : (
-                    <Alert message="不能出这张牌" type="info" />
-                  )}
-                </Space>
-              }
-              trigger="click"
-              placement="bottom"
-            >
-              <img className="card-img" src={card.image} width="96px" />
-            </Popover>
+            <CardComponent key={`${card.suit}-${card.rank}`} game={game} player={youPlayer} card={card} />
           ))}
         </div>
         {isYourTurn && (
