@@ -2,9 +2,9 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { manage } from 'manate';
 
-import App from './app';
-import Game from './game';
-import AI from './ai';
+import App from './components/app';
+import Game from './models/game';
+import AI from './models/ai';
 
 const game = manage(new Game());
 game.addPlayer('You');

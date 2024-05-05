@@ -1,7 +1,7 @@
 import _ from 'lodash';
 
 import Card from './card';
-import type { RankType, SuitType } from './types';
+import type { RankType, SuitType } from '../types/types';
 
 class Deck {
   public cards: Card[];

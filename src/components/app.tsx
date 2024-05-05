@@ -2,7 +2,7 @@ import React from 'react';
 import { Space, Typography } from 'antd';
 import { auto } from 'manate/react';
 
-import type Game from './game';
+import type Game from '../models/game';
 import You from './you';
 import Opponent from './opponent';
 import Desk from './desk';

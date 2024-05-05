@@ -1,6 +1,6 @@
-import cardImages from './assets/images/cards/**/*.svg';
-import backImage from './assets/images/cards/back.svg';
-import type { RankType, SuitType } from './types';
+import cardImages from '../assets/images/cards/**/*.svg';
+import backImage from '../assets/images/cards/back.svg';
+import type { RankType, SuitType } from '../types/types';
 
 class Card {
   public static backImage(): string {

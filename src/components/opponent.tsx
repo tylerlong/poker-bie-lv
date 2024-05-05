@@ -1,8 +1,8 @@
 import { auto } from 'manate/react';
 import React from 'react';
 
-import type Game from './game';
-import Card from './card';
+import type Game from '../models/game';
+import Card from '../models/card';
 
 const AI = (props: { game: Game }) => {
   const { game } = props;

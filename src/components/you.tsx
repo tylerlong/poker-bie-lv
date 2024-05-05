@@ -1,7 +1,7 @@
 import { auto } from 'manate/react';
 import React from 'react';
 
-import type Game from './game';
+import type Game from '../models/game';
 import { Alert, Button, Popover, Space } from 'antd';
 
 const You = (props: { game: Game }) => {

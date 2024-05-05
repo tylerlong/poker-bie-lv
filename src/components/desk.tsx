@@ -2,7 +2,7 @@ import { auto } from 'manate/react';
 import React from 'react';
 import _ from 'lodash';
 
-import type Game from './game';
+import type Game from '../models/game';
 
 const Desk = (props: { game: Game }) => {
   const { game } = props;
