@@ -1,11 +1,11 @@
 import React from 'react';
 import { Space, Typography } from 'antd';
 import { auto } from 'manate/react';
-import _ from 'lodash';
 
 import type Game from './game';
 import You from './you';
 import AI from './ai';
+import Desk from './desk';
 
 const { Title } = Typography;
 
@@ -21,16 +21,7 @@ const App = (props: { game: Game }) => {
           <Title level={2}>AI</Title>
           <AI game={game} />
           <Title level={2}>牌桌</Title>
-          <div>
-            {_.reverse(_.takeRight(game.playedCards, 8)).map((card, index) => (
-              <img
-                className="card-img"
-                key={`${card.suit}-${card.rank}`}
-                src={card.image}
-                width={`${96 - index * 8}px`}
-              />
-            ))}
-          </div>
+          <Desk game={game} />
           <Title level={2}>你</Title>
           <You game={game} />
         </Space>
