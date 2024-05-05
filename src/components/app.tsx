@@ -16,8 +16,6 @@ const App = (props: { game: Game }) => {
       <>
         <Title>憋驴</Title>
         <Space direction="vertical">
-          <Title level={2}>主牌</Title>
-          <img src={game.primaryCard.image} width="96px" />
           <Title level={2}>AI</Title>
           <Opponent game={game} />
           <Title level={2}>牌桌</Title>
