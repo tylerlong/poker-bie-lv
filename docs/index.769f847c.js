@@ -61417,6 +61417,7 @@ const CardComponent = (props)=>{
                             style: {
                                 width: "8rem"
                             },
+                            size: "large",
                             onClick: ()=>{
                                 game.playCard(card);
                                 game.changeSuit("\u2663\uFE0F");
@@ -61433,6 +61434,7 @@ const CardComponent = (props)=>{
                                 width: "8rem",
                                 color: "red"
                             },
+                            size: "large",
                             onClick: ()=>{
                                 game.playCard(card);
                                 game.changeSuit("\u2666\uFE0F");
@@ -61441,7 +61443,7 @@ const CardComponent = (props)=>{
                             children: "\u2666\uFE0F"
                         }, void 0, false, {
                             fileName: "src/components/card.tsx",
-                            lineNumber: 33,
+                            lineNumber: 34,
                             columnNumber: 17
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antd.Button), {
@@ -61449,6 +61451,7 @@ const CardComponent = (props)=>{
                                 width: "8rem",
                                 color: "red"
                             },
+                            size: "large",
                             onClick: ()=>{
                                 game.playCard(card);
                                 game.changeSuit("\u2665\uFE0F");
@@ -61457,13 +61460,14 @@ const CardComponent = (props)=>{
                             children: "\u2665\uFE0F"
                         }, void 0, false, {
                             fileName: "src/components/card.tsx",
-                            lineNumber: 43,
+                            lineNumber: 45,
                             columnNumber: 17
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antd.Button), {
                             style: {
                                 width: "8rem"
                             },
+                            size: "large",
                             onClick: ()=>{
                                 game.playCard(card);
                                 game.changeSuit("\u2660\uFE0F");
@@ -61472,7 +61476,7 @@ const CardComponent = (props)=>{
                             children: "\u2660\uFE0F"
                         }, void 0, false, {
                             fileName: "src/components/card.tsx",
-                            lineNumber: 53,
+                            lineNumber: 56,
                             columnNumber: 17
                         }, undefined)
                     ]
@@ -61489,10 +61493,11 @@ const CardComponent = (props)=>{
                         game.playCard(card);
                         game.moveOn();
                     },
+                    size: "large",
                     children: "\u51FA\u724C"
                 }, void 0, false, {
                     fileName: "src/components/card.tsx",
-                    lineNumber: 67,
+                    lineNumber: 71,
                     columnNumber: 15
                 }, undefined);
             } else content = /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antd.Alert), {
@@ -61500,7 +61505,7 @@ const CardComponent = (props)=>{
                 type: "info"
             }, void 0, false, {
                 fileName: "src/components/card.tsx",
-                lineNumber: 79,
+                lineNumber: 84,
                 columnNumber: 21
             }, undefined);
         }
@@ -61514,12 +61519,12 @@ const CardComponent = (props)=>{
                 width: "96px"
             }, void 0, false, {
                 fileName: "src/components/card.tsx",
-                lineNumber: 85,
+                lineNumber: 90,
                 columnNumber: 9
             }, undefined)
         }, `${card.suit}-${card.rank}`, false, {
             fileName: "src/components/card.tsx",
-            lineNumber: 84,
+            lineNumber: 89,
             columnNumber: 7
         }, undefined);
     };

@@ -22,6 +22,7 @@ const CardComponent = (props: { game: Game; player: Player; card: Card }) => {
               <Space direction="vertical">
                 <Button
                   style={{ width: '8rem' }}
+                  size="large"
                   onClick={() => {
                     game.playCard(card);
                     game.changeSuit('♣️');
@@ -32,6 +33,7 @@ const CardComponent = (props: { game: Game; player: Player; card: Card }) => {
                 </Button>
                 <Button
                   style={{ width: '8rem', color: 'red' }}
+                  size="large"
                   onClick={() => {
                     game.playCard(card);
                     game.changeSuit('♦️');
@@ -42,6 +44,7 @@ const CardComponent = (props: { game: Game; player: Player; card: Card }) => {
                 </Button>
                 <Button
                   style={{ width: '8rem', color: 'red' }}
+                  size="large"
                   onClick={() => {
                     game.playCard(card);
                     game.changeSuit('♥️');
@@ -52,6 +55,7 @@ const CardComponent = (props: { game: Game; player: Player; card: Card }) => {
                 </Button>
                 <Button
                   style={{ width: '8rem' }}
+                  size="large"
                   onClick={() => {
                     game.playCard(card);
                     game.changeSuit('♠️');
@@ -70,6 +74,7 @@ const CardComponent = (props: { game: Game; player: Player; card: Card }) => {
                   game.playCard(card);
                   game.moveOn();
                 }}
+                size="large"
               >
                 出牌
               </Button>
