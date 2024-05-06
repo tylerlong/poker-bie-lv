@@ -75,7 +75,7 @@ class Game {
   }
 
   public canChangeSuit(card: Card): boolean {
-    return card.rank === this.primaryCard.rank || card.rank === this.currentRank;
+    return card.suit !== '🃏' && (card.rank === this.primaryCard.rank || card.rank === this.currentRank);
   }
 
   public restart(): void {
