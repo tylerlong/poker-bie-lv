@@ -14,6 +14,9 @@ const Desk = (props: { game: Game }) => {
         <CardComponent title="主牌">
           <img className="card-img" src={game.primaryCard.image} width="96px" />
         </CardComponent>
+        <CardComponent title="当前花色">
+          <img className="card-img" src={Card.suiteImage(game.currentSuit)} width="96px" />
+        </CardComponent>
         <CardComponent title="未发牌" extra={`${game.deck.cards.length} 张`}>
           <img className="card-img" src={Card.backImage()} width="96px" />
         </CardComponent>

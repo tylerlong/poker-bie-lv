@@ -5,6 +5,7 @@ import type { Managed, ManateEvent } from 'manate/models';
 
 import type Game from './game';
 import type Player from './player';
+import type { SuitType } from '../types/types';
 
 class AI {
   public game: Managed<Game>;
@@ -56,7 +57,19 @@ class AI {
     if (card) {
       message.info('AI正在出牌');
       await waitFor({ interval: 1000 });
+      const canChangeSuit = this.game.canChangeSuit(card);
       this.game.playCard(card);
+      if (canChangeSuit) {
+        const counter = _.countBy(
+          this.player.hand.filter((card) => card.suit !== '🃏'),
+          'suit',
+        );
+        const mostFrequentSuit = _.maxBy(_.keys(counter), (suit) => counter[suit]);
+        if (mostFrequentSuit) {
+          message.info('AI正在更改花色');
+          this.game.changeSuit(mostFrequentSuit as SuitType);
+        }
+      }
     } else {
       message.info('AI选择跳过');
       await waitFor({ interval: 1000 });

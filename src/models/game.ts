@@ -3,12 +3,14 @@ import _ from 'lodash';
 import type Card from './card';
 import Deck from './deck';
 import Player from './player';
+import type { SuitType } from '../types/types';
 
 class Game {
   public players: Player[] = [];
   public deck = new Deck();
   public playedCards: Card[] = [];
   public primaryCard: Card;
+  public currentSuit: SuitType;
 
   private playerIndex = 0;
 
@@ -17,6 +19,7 @@ class Game {
     while (this.primaryCard.suit === '🃏') {
       this.primaryCard = _.sample(this.deck.cards);
     }
+    this.currentSuit = this.primaryCard.suit;
   }
 
   public addPlayer(name: string): void {
@@ -53,26 +56,26 @@ class Game {
     this.playedCards.push(card);
   }
 
-  public get currentCard() {
+  public get currentRank() {
     for (let i = this.playedCards.length - 1; i >= 0; i--) {
       if (this.playedCards[i].suit !== '🃏') {
-        return this.playedCards[i];
+        return this.playedCards[i].rank;
       }
     }
-    return this.primaryCard;
+    return this.primaryCard.rank;
   }
 
   public canPlayCard(card: Card): boolean {
     return (
-      card.suit === this.currentCard.suit ||
-      card.rank === this.currentCard.rank ||
+      card.suit === this.currentSuit ||
+      card.rank === this.currentRank ||
       card.suit === '🃏' ||
       card.rank === this.primaryCard.rank
     );
   }
 
   public canChangeSuit(card: Card): boolean {
-    return card.rank === this.primaryCard.rank || card.rank === this.currentCard.rank;
+    return card.rank === this.primaryCard.rank || card.rank === this.currentRank;
   }
 
   public restart(): void {
@@ -82,6 +85,7 @@ class Game {
     while (this.primaryCard.suit === '🃏') {
       this.primaryCard = _.sample(this.deck.cards);
     }
+    this.currentSuit = this.primaryCard.suit;
     this.players.forEach((player) => {
       player.hand = [];
       for (let i = 0; i < 5; i++) {
@@ -89,6 +93,10 @@ class Game {
       }
     });
     this.playerIndex = 0;
+  }
+
+  public changeSuit(suit: SuitType): void {
+    this.currentSuit = suit;
   }
 }
 

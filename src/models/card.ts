@@ -12,6 +12,10 @@ class Card {
     return blankImage;
   }
 
+  public static suiteImage(suit: SuitType): string {
+    return cardImages[suit][0];
+  }
+
   public suit: SuitType;
   public rank: RankType;
 
