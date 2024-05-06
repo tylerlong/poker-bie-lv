@@ -24,14 +24,24 @@ const CardComponent = (props: { game: Game; player: Player; card: Card }) => {
                   style={{ width: '8rem' }}
                   onClick={() => {
                     game.playCard(card);
-                    game.changeSuit('♠️');
+                    game.changeSuit('♣️');
                     game.moveOn();
                   }}
                 >
-                  ♠️
+                  ♣️
                 </Button>
                 <Button
-                  style={{ width: '8rem' }}
+                  style={{ width: '8rem', color: 'red' }}
+                  onClick={() => {
+                    game.playCard(card);
+                    game.changeSuit('♦️');
+                    game.moveOn();
+                  }}
+                >
+                  ♦️
+                </Button>
+                <Button
+                  style={{ width: '8rem', color: 'red' }}
                   onClick={() => {
                     game.playCard(card);
                     game.changeSuit('♥️');
@@ -44,21 +54,11 @@ const CardComponent = (props: { game: Game; player: Player; card: Card }) => {
                   style={{ width: '8rem' }}
                   onClick={() => {
                     game.playCard(card);
-                    game.changeSuit('♦️');
+                    game.changeSuit('♠️');
                     game.moveOn();
                   }}
                 >
-                  ♦️
-                </Button>
-                <Button
-                  style={{ width: '8rem' }}
-                  onClick={() => {
-                    game.playCard(card);
-                    game.changeSuit('♣️');
-                    game.moveOn();
-                  }}
-                >
-                  ♣️
+                  ♠️
                 </Button>
               </Space>
             );
