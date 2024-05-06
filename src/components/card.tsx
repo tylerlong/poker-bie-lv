@@ -82,7 +82,11 @@ const CardComponent = (props: { game: Game; player: Player; card: Card }) => {
     }
     return (
       <Popover key={`${card.suit}-${card.rank}`} content={content} trigger="click" placement="bottom">
-        <img className="card-img" src={card.image} width="96px" />
+        <img
+          className={`card-img ${player === game.currentTurnPlayer && game.canPlayCard(card) ? 'highlighted' : ''}`}
+          src={card.image}
+          width="96px"
+        />
       </Popover>
     );
   };

@@ -11,3 +11,11 @@ body {
 .cards-queue {
   white-space: nowrap;
 }
+
+.highlighted {
+  border: 2px solid greenyellow;
+}
+
+.highlighted-gold {
+  border: 2px solid gold;
+}
