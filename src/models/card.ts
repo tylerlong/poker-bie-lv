@@ -4,11 +4,11 @@ import blankImage from '../assets/images/cards/blank.svg';
 import type { RankType, SuitType } from '../types/types';
 
 class Card {
-  public static backImage(): string {
+  public static get backImage(): string {
     return backImage;
   }
 
-  public static blankImage(): string {
+  public static get blankImage(): string {
     return blankImage;
   }
 

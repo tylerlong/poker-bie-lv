@@ -18,10 +18,10 @@ const Desk = (props: { game: Game }) => {
           <img className="card-img highlighted" src={Card.suiteImage(game.currentSuit)} width="96px" />
         </CardComponent>
         <CardComponent title="未发牌" extra={`${game.deck.cards.length} 张`}>
-          <img className="card-img" src={Card.backImage()} width="96px" />
+          <img className="card-img" src={Card.backImage} width="96px" />
         </CardComponent>
         <CardComponent title="已出牌">
-          {game.playedCards.length === 0 && <img className="card-img" src={Card.blankImage()} width="96px" />}
+          {game.playedCards.length === 0 && <img className="card-img" src={Card.blankImage} width="96px" />}
           <div className="cards-queue">
             {_.reverse(_.takeRight(game.playedCards, 6)).map((card, index) => (
               <img
