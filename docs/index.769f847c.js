@@ -27443,7 +27443,7 @@ const App = (props)=>{
         return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Title, {
-                    children: "\u618B\u9A74"
+                    children: "Bie Lv"
                 }, void 0, false, {
                     fileName: "src/components/app.tsx",
                     lineNumber: 17,
@@ -27469,7 +27469,7 @@ const App = (props)=>{
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Title, {
                             level: 2,
-                            children: "\u724C\u684C"
+                            children: "Desk"
                         }, void 0, false, {
                             fileName: "src/components/app.tsx",
                             lineNumber: 21,
@@ -27484,7 +27484,7 @@ const App = (props)=>{
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Title, {
                             level: 2,
-                            children: "\u4F60"
+                            children: "You"
                         }, void 0, false, {
                             fileName: "src/components/app.tsx",
                             lineNumber: 23,
@@ -61315,7 +61315,7 @@ const You = (props)=>{
                     youPlayer.hand.push(game.deck.pop());
                 },
                 disabled: game.deck.cards.length === 0,
-                children: "\u6478\u724C"
+                children: "Draw"
             }, "button-draw-card", false, {
                 fileName: "src/components/you.tsx",
                 lineNumber: 30,
@@ -61325,7 +61325,7 @@ const You = (props)=>{
                 block: true,
                 size: "large",
                 onClick: ()=>game.moveOn(),
-                children: "\u8DF3\u8FC7"
+                children: "Pass"
             }, "button-pass", false, {
                 fileName: "src/components/you.tsx",
                 lineNumber: 44,
@@ -61393,7 +61393,7 @@ const CardComponent = (props)=>{
     const render = ()=>{
         let content;
         if (game.over) content = /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antd.Alert), {
-            message: "\u6E38\u620F\u7ED3\u675F",
+            message: "Game is over",
             type: "info"
         }, void 0, false, {
             fileName: "src/components/card.tsx",
@@ -61402,7 +61402,7 @@ const CardComponent = (props)=>{
         }, undefined);
         else {
             if (player !== game.currentTurnPlayer) content = /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antd.Alert), {
-                message: "\u7B49\u5F85\u5BF9\u65B9\u51FA\u724C",
+                message: "Not your turn",
                 type: "info"
             }, void 0, false, {
                 fileName: "src/components/card.tsx",
@@ -61494,14 +61494,14 @@ const CardComponent = (props)=>{
                         game.moveOn();
                     },
                     size: "large",
-                    children: "\u51FA\u724C"
+                    children: "Play"
                 }, void 0, false, {
                     fileName: "src/components/card.tsx",
                     lineNumber: 71,
                     columnNumber: 15
                 }, undefined);
             } else content = /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antd.Alert), {
-                message: "\u4E0D\u80FD\u51FA\u8FD9\u5F20\u724C",
+                message: "Not Playable",
                 type: "info"
             }, void 0, false, {
                 fileName: "src/components/card.tsx",
@@ -61699,14 +61699,22 @@ const Opponent = (props)=>{
         const aiPlayer = game.findPlayer("AI");
         return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             className: "cards-queue",
-            children: aiPlayer.hand.map((card)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+            children: game.over ? aiPlayer.hand.map((card)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                     className: "card-img",
-                    src: (0, _cardDefault.default).backImage(),
+                    src: card.image,
                     width: "96px"
                 }, `${card.suit}-${card.rank}`, false, {
                     fileName: "src/components/opponent.tsx",
-                    lineNumber: 14,
-                    columnNumber: 11
+                    lineNumber: 15,
+                    columnNumber: 15
+                }, undefined)) : aiPlayer.hand.map((card)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                    className: "card-img",
+                    src: (0, _cardDefault.default).backImage,
+                    width: "96px"
+                }, `${card.suit}-${card.rank}`, false, {
+                    fileName: "src/components/opponent.tsx",
+                    lineNumber: 18,
+                    columnNumber: 15
                 }, undefined))
         }, void 0, false, {
             fileName: "src/components/opponent.tsx",
@@ -61736,10 +61744,10 @@ var _backSvgDefault = parcelHelpers.interopDefault(_backSvg);
 var _blankSvg = require("../assets/images/cards/blank.svg");
 var _blankSvgDefault = parcelHelpers.interopDefault(_blankSvg);
 class Card {
-    static backImage() {
+    static get backImage() {
         return 0, _backSvgDefault.default;
     }
-    static blankImage() {
+    static get blankImage() {
         return 0, _blankSvgDefault.default;
     }
     static suiteImage(suit) {
@@ -62128,7 +62136,7 @@ const Desk = (props)=>{
         return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antd.Space), {
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antd.Card), {
-                    title: "\u4E3B\u724C",
+                    title: "Primary Card",
                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                         className: "card-img highlighted-gold",
                         src: game.primaryCard.image,
@@ -62144,7 +62152,7 @@ const Desk = (props)=>{
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antd.Card), {
-                    title: "\u5F53\u524D\u82B1\u8272",
+                    title: "Current Suit",
                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                         className: "card-img highlighted",
                         src: (0, _cardDefault.default).suiteImage(game.currentSuit),
@@ -62160,11 +62168,11 @@ const Desk = (props)=>{
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antd.Card), {
-                    title: "\u672A\u53D1\u724C",
-                    extra: `${game.deck.cards.length} \u{5F20}`,
+                    title: "Deck",
+                    extra: `${game.deck.cards.length} Cards`,
                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                         className: "card-img",
-                        src: (0, _cardDefault.default).backImage(),
+                        src: (0, _cardDefault.default).backImage,
                         width: "96px"
                     }, void 0, false, {
                         fileName: "src/components/desk.tsx",
@@ -62177,11 +62185,11 @@ const Desk = (props)=>{
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antd.Card), {
-                    title: "\u5DF2\u51FA\u724C",
+                    title: "Played Cards",
                     children: [
                         game.playedCards.length === 0 && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                             className: "card-img",
-                            src: (0, _cardDefault.default).blankImage(),
+                            src: (0, _cardDefault.default).blankImage,
                             width: "96px"
                         }, void 0, false, {
                             fileName: "src/components/desk.tsx",
@@ -78697,10 +78705,10 @@ class AI {
     }
     async play() {
         if (this.game.currentTurnPlayer !== this.player) {
-            console.log("Not AI turn.");
+            console.log("Not AI's turn.");
             return;
         }
-        (0, _antd.message).info("AI\u6B63\u5728\u601D\u8003");
+        (0, _antd.message).info("AI is thinking...");
         await (0, _waitForAsyncDefault.default)({
             interval: 1000
         });
@@ -78708,7 +78716,7 @@ class AI {
         if (playableCards.length === 0 && this.game.deck.cards.length > 0) {
             this.player.hand.push(this.game.deck.pop());
             while(!this.game.canPlayCard((0, _lodashDefault.default).last(this.player.hand)) && this.game.deck.cards.length > 0){
-                (0, _antd.message).info("AI\u6B63\u5728\u6478\u724C");
+                (0, _antd.message).info("AI is drawing...");
                 await (0, _waitForAsyncDefault.default)({
                     interval: 1000
                 });
@@ -78718,7 +78726,7 @@ class AI {
         }
         const card = (0, _lodashDefault.default).sample(playableCards);
         if (card) {
-            (0, _antd.message).info("AI\u6B63\u5728\u51FA\u724C");
+            (0, _antd.message).info("AI is playing...");
             await (0, _waitForAsyncDefault.default)({
                 interval: 1000
             });
@@ -78728,18 +78736,18 @@ class AI {
                 const counter = (0, _lodashDefault.default).countBy(this.player.hand.filter((card)=>card.suit !== "\uD83C\uDCCF"), "suit");
                 const mostFrequentSuit = (0, _lodashDefault.default).maxBy((0, _lodashDefault.default).keys(counter), (suit)=>counter[suit]);
                 if (mostFrequentSuit) {
-                    (0, _antd.message).info("AI\u6B63\u5728\u66F4\u6539\u82B1\u8272");
+                    (0, _antd.message).info("AI is changing suit...");
                     this.game.changeSuit(mostFrequentSuit);
                 }
             }
         } else {
-            (0, _antd.message).info("AI\u9009\u62E9\u8DF3\u8FC7");
+            (0, _antd.message).info("AI is passing...");
             await (0, _waitForAsyncDefault.default)({
                 interval: 1000
             });
         }
         this.game.moveOn();
-        (0, _antd.message).info("\u8BE5\u4F60\u5566!");
+        (0, _antd.message).info("It is your turn.");
     }
 }
 exports.default = AI;

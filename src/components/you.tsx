@@ -36,13 +36,13 @@ const You = (props: { game: Game }) => {
           }}
           disabled={game.deck.cards.length === 0}
         >
-          摸牌
+          Draw
         </Button>,
       );
       if (game.deck.cards.length === 0) {
         actions.push(
           <Button key="button-pass" block size="large" onClick={() => game.moveOn()}>
-            跳过
+            Pass
           </Button>,
         );
       }

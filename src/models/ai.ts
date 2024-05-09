@@ -36,16 +36,16 @@ class AI {
 
   public async play() {
     if (this.game.currentTurnPlayer !== this.player) {
-      console.log('Not AI turn.');
+      console.log("Not AI's turn.");
       return;
     }
-    message.info('AI正在思考');
+    message.info('AI is thinking...');
     await waitFor({ interval: 1000 });
     const playableCards = this.player.hand.filter((card) => this.game.canPlayCard(card));
     if (playableCards.length === 0 && this.game.deck.cards.length > 0) {
       this.player.hand.push(this.game.deck.pop());
       while (!this.game.canPlayCard(_.last(this.player.hand)) && this.game.deck.cards.length > 0) {
-        message.info('AI正在摸牌');
+        message.info('AI is drawing...');
         await waitFor({ interval: 1000 });
         this.player.hand.push(this.game.deck.pop());
       }
@@ -55,7 +55,7 @@ class AI {
     }
     const card = _.sample(playableCards);
     if (card) {
-      message.info('AI正在出牌');
+      message.info('AI is playing...');
       await waitFor({ interval: 1000 });
       const canChangeSuit = this.game.canChangeSuit(card);
       this.game.playCard(card);
@@ -66,16 +66,16 @@ class AI {
         );
         const mostFrequentSuit = _.maxBy(_.keys(counter), (suit) => counter[suit]);
         if (mostFrequentSuit) {
-          message.info('AI正在更改花色');
+          message.info('AI is changing suit...');
           this.game.changeSuit(mostFrequentSuit as SuitType);
         }
       }
     } else {
-      message.info('AI选择跳过');
+      message.info('AI is passing...');
       await waitFor({ interval: 1000 });
     }
     this.game.moveOn();
-    message.info('该你啦!');
+    message.info('It is your turn.');
   }
 }
 

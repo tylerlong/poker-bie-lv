@@ -11,10 +11,10 @@ const CardComponent = (props: { game: Game; player: Player; card: Card }) => {
   const render = () => {
     let content;
     if (game.over) {
-      content = <Alert message="游戏结束" type="info" />;
+      content = <Alert message="Game is over" type="info" />;
     } else {
       if (player !== game.currentTurnPlayer) {
-        content = <Alert message="等待对方出牌" type="info" />;
+        content = <Alert message="Not your turn" type="info" />;
       } else {
         if (game.canPlayCard(card)) {
           if (game.canChangeSuit(card)) {
@@ -76,12 +76,12 @@ const CardComponent = (props: { game: Game; player: Player; card: Card }) => {
                 }}
                 size="large"
               >
-                出牌
+                Play
               </Button>
             );
           }
         } else {
-          content = <Alert message="不能出这张牌" type="info" />;
+          content = <Alert message="Not Playable" type="info" />;
         }
       }
     }

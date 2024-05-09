@@ -14,13 +14,13 @@ const App = (props: { game: Game }) => {
   const render = () => {
     return (
       <>
-        <Title>憋驴</Title>
+        <Title>Bie Lv</Title>
         <Space direction="vertical">
           <Title level={2}>AI</Title>
           <Opponent game={game} />
-          <Title level={2}>牌桌</Title>
+          <Title level={2}>Desk</Title>
           <Desk game={game} />
-          <Title level={2}>你</Title>
+          <Title level={2}>You</Title>
           <You game={game} />
         </Space>
       </>
