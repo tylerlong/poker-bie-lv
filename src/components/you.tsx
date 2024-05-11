@@ -26,7 +26,7 @@ const You = (props: { game: Game }) => {
           Restart
         </Button>,
       );
-    } else if (isYourTurn) {
+    } else {
       preActions.push(
         <Button
           color="primary"
@@ -36,14 +36,21 @@ const You = (props: { game: Game }) => {
           onClick={() => {
             youPlayer.hand.push(game.deck.pop());
           }}
-          disabled={game.deck.cards.length === 0}
+          disabled={!isYourTurn || game.deck.cards.length === 0}
         >
           Draw
         </Button>,
       );
       if (game.deck.cards.length === 0) {
         preActions.push(
-          <Button key="button-pass" block size="large" onClick={() => game.moveOn()} color="warning">
+          <Button
+            key="button-pass"
+            block
+            size="large"
+            onClick={() => game.moveOn()}
+            color="warning"
+            disabled={!isYourTurn}
+          >
             Pass
           </Button>,
         );
@@ -52,11 +59,11 @@ const You = (props: { game: Game }) => {
     return (
       <Space direction="vertical" style={{ width: '100%' }}>
         {preActions}
-        <div className="cards-queue">
+        <Space wrap>
           {youPlayer.hand.map((card) => (
             <CardComponent key={`${card.suit}-${card.rank}`} game={game} player={youPlayer} card={card} />
           ))}
-        </div>
+        </Space>
         {actions}
       </Space>
     );

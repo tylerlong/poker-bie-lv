@@ -37328,7 +37328,7 @@ const You = (props)=>{
                 lineNumber: 25,
                 columnNumber: 9
             }, undefined));
-        } else if (isYourTurn) {
+        } else {
             preActions.push(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antdMobile.Button), {
                 color: "primary",
                 block: true,
@@ -37336,7 +37336,7 @@ const You = (props)=>{
                 onClick: ()=>{
                     youPlayer.hand.push(game.deck.pop());
                 },
-                disabled: game.deck.cards.length === 0,
+                disabled: !isYourTurn || game.deck.cards.length === 0,
                 children: "Draw"
             }, "button-draw-card", false, {
                 fileName: "src/components/you.tsx",
@@ -37348,6 +37348,7 @@ const You = (props)=>{
                 size: "large",
                 onClick: ()=>game.moveOn(),
                 color: "warning",
+                disabled: !isYourTurn,
                 children: "Pass"
             }, "button-pass", false, {
                 fileName: "src/components/you.tsx",
@@ -37362,27 +37363,27 @@ const You = (props)=>{
             },
             children: [
                 preActions,
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "cards-queue",
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antdMobile.Space), {
+                    wrap: true,
                     children: youPlayer.hand.map((card)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default), {
                             game: game,
                             player: youPlayer,
                             card: card
                         }, `${card.suit}-${card.rank}`, false, {
                             fileName: "src/components/you.tsx",
-                            lineNumber: 57,
+                            lineNumber: 64,
                             columnNumber: 13
                         }, undefined))
                 }, void 0, false, {
                     fileName: "src/components/you.tsx",
-                    lineNumber: 55,
+                    lineNumber: 62,
                     columnNumber: 9
                 }, undefined),
                 actions
             ]
         }, void 0, true, {
             fileName: "src/components/you.tsx",
-            lineNumber: 53,
+            lineNumber: 60,
             columnNumber: 7
         }, undefined);
     };
@@ -37499,9 +37500,9 @@ const CardComponent = (props)=>{
             } else actionSheetProps.extra = "Cannot play this card";
         }
         return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-            className: `card-img ${player === game.currentTurnPlayer && game.canPlayCard(card) ? "highlighted" : ""}`,
+            className: `${player === game.currentTurnPlayer && game.canPlayCard(card) ? "highlighted" : ""}`,
             src: card.image,
-            width: "128px",
+            width: "64px",
             onClick: ()=>{
                 actionSheetShowHandler = (0, _antdMobile.ActionSheet).show(actionSheetProps);
             }
@@ -37674,34 +37675,33 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("manate/react");
 var _react1 = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react1);
+var _antdMobile = require("antd-mobile");
 var _card = require("../models/card");
 var _cardDefault = parcelHelpers.interopDefault(_card);
 const Opponent = (props)=>{
     const { game } = props;
     const render = ()=>{
         const aiPlayer = game.findPlayer("AI");
-        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "cards-queue",
+        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antdMobile.Space), {
+            wrap: true,
             children: game.over ? aiPlayer.hand.map((card)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                    className: "card-img",
                     src: card.image,
-                    width: "128px"
+                    width: "64px"
                 }, `${card.suit}-${card.rank}`, false, {
                     fileName: "src/components/opponent.tsx",
                     lineNumber: 15,
-                    columnNumber: 15
+                    columnNumber: 41
                 }, undefined)) : aiPlayer.hand.map((card)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                    className: "card-img",
                     src: (0, _cardDefault.default).backImage,
-                    width: "128px"
+                    width: "64px"
                 }, `${card.suit}-${card.rank}`, false, {
                     fileName: "src/components/opponent.tsx",
-                    lineNumber: 18,
-                    columnNumber: 15
+                    lineNumber: 16,
+                    columnNumber: 41
                 }, undefined))
         }, void 0, false, {
             fileName: "src/components/opponent.tsx",
-            lineNumber: 12,
+            lineNumber: 13,
             columnNumber: 7
         }, undefined);
     };
@@ -37717,7 +37717,7 @@ $RefreshReg$(_c, "Opponent");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","manate/react":"670os","react":"21dqq","../models/card":"iA6cP","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iA6cP":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","manate/react":"670os","react":"21dqq","../models/card":"iA6cP","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","antd-mobile":"4Nprw"}],"iA6cP":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _svg = require("../assets/images/cards/**/*.svg");
@@ -38116,97 +38116,99 @@ var _cardDefault = parcelHelpers.interopDefault(_card);
 const Desk = (props)=>{
     const { game } = props;
     const render = ()=>{
-        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antdMobile.Space), {
+        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
             children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antdMobile.Card), {
-                    title: "Primary Card",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                        className: "card-img highlighted-gold",
-                        src: game.primaryCard.image,
-                        width: "128px"
-                    }, void 0, false, {
-                        fileName: "src/components/desk.tsx",
-                        lineNumber: 15,
-                        columnNumber: 11
-                    }, undefined)
-                }, void 0, false, {
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antdMobile.Space), {
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antdMobile.Card), {
+                            title: "Primary Card",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                className: "highlighted-gold",
+                                src: game.primaryCard.image,
+                                width: "64px"
+                            }, void 0, false, {
+                                fileName: "src/components/desk.tsx",
+                                lineNumber: 16,
+                                columnNumber: 13
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/components/desk.tsx",
+                            lineNumber: 15,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antdMobile.Card), {
+                            title: "Current Suit",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                className: "highlighted",
+                                src: (0, _cardDefault.default).suiteImage(game.currentSuit),
+                                width: "64px"
+                            }, void 0, false, {
+                                fileName: "src/components/desk.tsx",
+                                lineNumber: 19,
+                                columnNumber: 13
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/components/desk.tsx",
+                            lineNumber: 18,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antdMobile.Card), {
+                            title: "Deck",
+                            extra: `${game.deck.cards.length} Cards`,
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                src: (0, _cardDefault.default).backImage,
+                                width: "64px"
+                            }, void 0, false, {
+                                fileName: "src/components/desk.tsx",
+                                lineNumber: 22,
+                                columnNumber: 13
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/components/desk.tsx",
+                            lineNumber: 21,
+                            columnNumber: 11
+                        }, undefined)
+                    ]
+                }, void 0, true, {
                     fileName: "src/components/desk.tsx",
                     lineNumber: 14,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antdMobile.Card), {
-                    title: "Current Suit",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                        className: "card-img highlighted",
-                        src: (0, _cardDefault.default).suiteImage(game.currentSuit),
-                        width: "128px"
-                    }, void 0, false, {
-                        fileName: "src/components/desk.tsx",
-                        lineNumber: 18,
-                        columnNumber: 11
-                    }, undefined)
-                }, void 0, false, {
-                    fileName: "src/components/desk.tsx",
-                    lineNumber: 17,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antdMobile.Card), {
-                    title: "Deck",
-                    extra: `${game.deck.cards.length} Cards`,
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                        className: "card-img",
-                        src: (0, _cardDefault.default).backImage,
-                        width: "128px"
-                    }, void 0, false, {
-                        fileName: "src/components/desk.tsx",
-                        lineNumber: 21,
-                        columnNumber: 11
-                    }, undefined)
-                }, void 0, false, {
-                    fileName: "src/components/desk.tsx",
-                    lineNumber: 20,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antdMobile.Card), {
                     title: "Played Cards",
                     children: [
                         game.playedCards.length === 0 && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                            className: "card-img",
                             src: (0, _cardDefault.default).blankImage,
-                            width: "128px"
+                            width: "64px"
                         }, void 0, false, {
                             fileName: "src/components/desk.tsx",
-                            lineNumber: 24,
+                            lineNumber: 26,
                             columnNumber: 45
                         }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "cards-queue",
-                            children: (0, _lodashDefault.default).reverse((0, _lodashDefault.default).takeRight(game.playedCards, 6)).map((card, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                                    className: `card-img ${index === 0 ? "highlighted" : ""}`,
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antdMobile.Space), {
+                            wrap: true,
+                            children: (0, _lodashDefault.default).reverse((0, _lodashDefault.default).takeRight(game.playedCards, 5)).map((card, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                    className: `${index === 0 ? "highlighted" : ""}`,
                                     src: card.image,
-                                    width: "128px"
+                                    width: "64px"
                                 }, `${card.suit}-${card.rank}`, false, {
                                     fileName: "src/components/desk.tsx",
-                                    lineNumber: 27,
+                                    lineNumber: 29,
                                     columnNumber: 15
                                 }, undefined))
                         }, void 0, false, {
                             fileName: "src/components/desk.tsx",
-                            lineNumber: 25,
+                            lineNumber: 27,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/desk.tsx",
-                    lineNumber: 23,
+                    lineNumber: 25,
                     columnNumber: 9
                 }, undefined)
             ]
-        }, void 0, true, {
-            fileName: "src/components/desk.tsx",
-            lineNumber: 13,
-            columnNumber: 7
-        }, undefined);
+        }, void 0, true);
     };
     return (0, _react.auto)(render, props);
 };

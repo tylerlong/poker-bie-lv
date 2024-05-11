@@ -1,5 +1,6 @@
 import { auto } from 'manate/react';
 import React from 'react';
+import { Space } from 'antd-mobile';
 
 import type Game from '../models/game';
 import Card from '../models/card';
@@ -9,15 +10,11 @@ const Opponent = (props: { game: Game }) => {
   const render = () => {
     const aiPlayer = game.findPlayer('AI');
     return (
-      <div className="cards-queue">
+      <Space wrap>
         {game.over
-          ? aiPlayer.hand.map((card) => (
-              <img className="card-img" key={`${card.suit}-${card.rank}`} src={card.image} width="128px" />
-            ))
-          : aiPlayer.hand.map((card) => (
-              <img className="card-img" key={`${card.suit}-${card.rank}`} src={Card.backImage} width="128px" />
-            ))}
-      </div>
+          ? aiPlayer.hand.map((card) => <img key={`${card.suit}-${card.rank}`} src={card.image} width="64px" />)
+          : aiPlayer.hand.map((card) => <img key={`${card.suit}-${card.rank}`} src={Card.backImage} width="64px" />)}
+      </Space>
     );
   };
   return auto(render, props);
