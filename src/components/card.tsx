@@ -13,6 +13,7 @@ const CardComponent = (props: { game: Game; player: Player; card: Card }) => {
   const render = () => {
     const actionSheetProps: Omit<ActionSheetProps, 'destroyOnClose' | 'forceRender' | 'visible'> = {
       actions: [],
+      cancelText: 'Cancel',
     };
     let actionSheetShowHandler: ActionSheetShowHandler;
     if (game.over) {
@@ -85,7 +86,7 @@ const CardComponent = (props: { game: Game; player: Player; card: Card }) => {
       <img
         className={`card-img ${player === game.currentTurnPlayer && game.canPlayCard(card) ? 'highlighted' : ''}`}
         src={card.image}
-        width="96px"
+        width="128px"
         onClick={() => {
           actionSheetShowHandler = ActionSheet.show(actionSheetProps);
         }}

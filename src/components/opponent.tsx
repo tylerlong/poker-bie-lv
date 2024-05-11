@@ -12,10 +12,10 @@ const Opponent = (props: { game: Game }) => {
       <div className="cards-queue">
         {game.over
           ? aiPlayer.hand.map((card) => (
-              <img className="card-img" key={`${card.suit}-${card.rank}`} src={card.image} width="96px" />
+              <img className="card-img" key={`${card.suit}-${card.rank}`} src={card.image} width="128px" />
             ))
           : aiPlayer.hand.map((card) => (
-              <img className="card-img" key={`${card.suit}-${card.rank}`} src={Card.backImage} width="96px" />
+              <img className="card-img" key={`${card.suit}-${card.rank}`} src={Card.backImage} width="128px" />
             ))}
       </div>
     );
