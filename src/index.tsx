@@ -24,11 +24,11 @@ document.body.appendChild(container);
 const root = createRoot(container);
 root.render(
   <>
-    <div style={{ background: '#ace0ff' }}>
+    <div>
       <SafeArea position="top" />
     </div>
     <App game={game} />
-    <div style={{ background: '#ffcfac' }}>
+    <div>
       <SafeArea position="bottom" />
     </div>
   </>,

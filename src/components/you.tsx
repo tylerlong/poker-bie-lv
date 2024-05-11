@@ -21,13 +21,14 @@ const You = (props: { game: Game }) => {
         actions.push(<Result status="error" title="You Lose!" />);
       }
       actions.push(
-        <Button key="button-restart" block size="large" onClick={() => game.restart()}>
+        <Button color="success" key="button-restart" block size="large" onClick={() => game.restart()}>
           Restart
         </Button>,
       );
     } else if (isYourTurn) {
       actions.push(
         <Button
+          color="primary"
           key="button-draw-card"
           block
           size="large"
@@ -41,7 +42,7 @@ const You = (props: { game: Game }) => {
       );
       if (game.deck.cards.length === 0) {
         actions.push(
-          <Button key="button-pass" block size="large" onClick={() => game.moveOn()}>
+          <Button key="button-pass" block size="large" onClick={() => game.moveOn()} color="warning">
             Pass
           </Button>,
         );

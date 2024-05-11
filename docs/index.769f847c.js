@@ -2978,9 +2978,6 @@ const root = (0, _client.createRoot)(container);
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
     children: [
         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            style: {
-                background: "#ace0ff"
-            },
             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antdMobile.SafeArea), {
                 position: "top"
             }, void 0, false, {
@@ -3001,9 +2998,6 @@ root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment
             columnNumber: 5
         }, undefined),
         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            style: {
-                background: "#ffcfac"
-            },
             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antdMobile.SafeArea), {
                 position: "bottom"
             }, void 0, false, {
