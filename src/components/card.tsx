@@ -1,98 +1,95 @@
 import { auto } from 'manate/react';
 import React from 'react';
-import { Alert, Button, Popover, Space } from 'antd';
+import type { ActionSheetProps } from 'antd-mobile';
+import { ActionSheet } from 'antd-mobile';
 
 import type Card from '../models/card';
 import type Game from '../models/game';
 import type Player from '../models/player';
+import type { ActionSheetShowHandler } from 'antd-mobile/es/components/action-sheet';
 
 const CardComponent = (props: { game: Game; player: Player; card: Card }) => {
   const { game, player, card } = props;
   const render = () => {
-    let content;
+    const actionSheetProps: Omit<ActionSheetProps, 'destroyOnClose' | 'forceRender' | 'visible'> = {
+      actions: [],
+    };
+    let actionSheetShowHandler: ActionSheetShowHandler;
     if (game.over) {
-      content = <Alert message="Game is over" type="info" />;
+      actionSheetProps.extra = 'Game is over';
     } else {
       if (player !== game.currentTurnPlayer) {
-        content = <Alert message="Not your turn" type="info" />;
+        actionSheetProps.extra = 'Not your turn';
       } else {
         if (game.canPlayCard(card)) {
           if (game.canChangeSuit(card)) {
-            content = (
-              <Space direction="vertical">
-                <Button
-                  style={{ width: '8rem' }}
-                  size="large"
-                  onClick={() => {
-                    game.playCard(card);
-                    game.changeSuit('♣️');
-                    game.moveOn();
-                  }}
-                >
-                  ♣️
-                </Button>
-                <Button
-                  style={{ width: '8rem', color: 'red' }}
-                  size="large"
-                  onClick={() => {
-                    game.playCard(card);
-                    game.changeSuit('♦️');
-                    game.moveOn();
-                  }}
-                >
-                  ♦️
-                </Button>
-                <Button
-                  style={{ width: '8rem', color: 'red' }}
-                  size="large"
-                  onClick={() => {
-                    game.playCard(card);
-                    game.changeSuit('♥️');
-                    game.moveOn();
-                  }}
-                >
-                  ♥️
-                </Button>
-                <Button
-                  style={{ width: '8rem' }}
-                  size="large"
-                  onClick={() => {
-                    game.playCard(card);
-                    game.changeSuit('♠️');
-                    game.moveOn();
-                  }}
-                >
-                  ♠️
-                </Button>
-              </Space>
-            );
+            actionSheetProps.extra = 'Play a card and change suit to:';
+            actionSheetProps.actions.push({
+              text: '♣️',
+              key: '♣️',
+              onClick: () => {
+                game.playCard(card);
+                game.changeSuit('♣️');
+                game.moveOn();
+                actionSheetShowHandler.close();
+              },
+            });
+            actionSheetProps.actions.push({
+              text: <span style={{ color: 'red' }}>♦️</span>,
+              key: '♦️',
+              onClick: () => {
+                game.playCard(card);
+                game.changeSuit('♦️');
+                game.moveOn();
+                actionSheetShowHandler.close();
+              },
+            });
+            actionSheetProps.actions.push({
+              text: <span style={{ color: 'red' }}>♥️</span>,
+              key: '♥️',
+              onClick: () => {
+                game.playCard(card);
+                game.changeSuit('♥️');
+                game.moveOn();
+                actionSheetShowHandler.close();
+              },
+            });
+            actionSheetProps.actions.push({
+              text: '♠️',
+              key: '♠️',
+              onClick: () => {
+                game.playCard(card);
+                game.changeSuit('♠️');
+                game.moveOn();
+                actionSheetShowHandler.close();
+              },
+            });
           } else {
-            content = (
-              <Button
-                style={{ width: '8rem' }}
-                onClick={() => {
-                  game.playCard(card);
-                  game.moveOn();
-                }}
-                size="large"
-              >
-                Play
-              </Button>
-            );
+            actionSheetProps.extra = 'Play a card:';
+            actionSheetProps.actions.push({
+              text: 'Play',
+              key: 'play',
+              onClick: () => {
+                game.playCard(card);
+                game.moveOn();
+                actionSheetShowHandler.close();
+              },
+            });
           }
         } else {
-          content = <Alert message="Not Playable" type="info" />;
+          actionSheetProps.extra = 'Cannot play this card';
         }
       }
     }
     return (
-      <Popover key={`${card.suit}-${card.rank}`} content={content} trigger="click" placement="bottom">
-        <img
-          className={`card-img ${player === game.currentTurnPlayer && game.canPlayCard(card) ? 'highlighted' : ''}`}
-          src={card.image}
-          width="96px"
-        />
-      </Popover>
+      <img
+        className={`card-img ${player === game.currentTurnPlayer && game.canPlayCard(card) ? 'highlighted' : ''}`}
+        src={card.image}
+        width="96px"
+        onClick={() => {
+          actionSheetShowHandler = ActionSheet.show(actionSheetProps);
+        }}
+      />
     );
   };
   return auto(render, props);

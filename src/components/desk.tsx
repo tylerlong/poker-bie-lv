@@ -1,7 +1,7 @@
 import { auto } from 'manate/react';
 import React from 'react';
 import _ from 'lodash';
-import { Card as CardComponent, Space } from 'antd';
+import { Space, Card as CardComponent } from 'antd-mobile';
 
 import type Game from '../models/game';
 import Card from '../models/card';

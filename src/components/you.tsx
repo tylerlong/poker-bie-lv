@@ -1,11 +1,9 @@
 import { auto } from 'manate/react';
 import React from 'react';
-import { Alert, Button, Space, Typography } from 'antd';
+import { Button, NoticeBar, Result, Space } from 'antd-mobile';
 
 import type Game from '../models/game';
 import CardComponent from './card';
-
-const { Title } = Typography;
 
 const You = (props: { game: Game }) => {
   const { game } = props;
@@ -14,13 +12,13 @@ const You = (props: { game: Game }) => {
     const isYourTurn = game.currentTurnPlayer === youPlayer;
     const actions = [];
     if (game.over || game.draw) {
-      actions.push(<Title key="title-game-over">Game Over!</Title>);
+      actions.push(<NoticeBar content="Game Over!" color="info" />);
       if (game.draw) {
-        actions.push(<Alert key="alert-draw" message="Draw!" type="warning" />);
+        actions.push(<Result status="info" title="Draw!" />);
       } else if (game.findPlayer('You').won) {
-        actions.push(<Alert key="alert-you-win" message="You Win!" type="success" />);
+        actions.push(<Result status="success" title="You Win!" />);
       } else {
-        actions.push(<Alert key="alert-you-lose" message="You Lose!" type="error" />);
+        actions.push(<Result status="error" title="You Lose!" />);
       }
       actions.push(
         <Button key="button-restart" block size="large" onClick={() => game.restart()}>

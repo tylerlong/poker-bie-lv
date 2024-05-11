@@ -5,6 +5,7 @@ import { manage } from 'manate';
 import App from './components/app';
 import Game from './models/game';
 import AI from './models/ai';
+import { SafeArea } from 'antd-mobile';
 
 const game = manage(new Game());
 game.addPlayer('You');
@@ -21,6 +22,17 @@ ai.start();
 const container = document.createElement('div');
 document.body.appendChild(container);
 const root = createRoot(container);
-root.render(<App game={game} />);
+root.render(
+  <>
+    <div style={{ background: '#ace0ff' }}>
+      <SafeArea position="top" />
+    </div>
+    <App game={game} />
+    <div style={{ background: '#ffcfac' }}>
+      <SafeArea position="bottom" />
+    </div>
+  </>,
+);
 
-(window as any).game = game; // for debugging;
+// below is for debugging
+(window as any).game = game;

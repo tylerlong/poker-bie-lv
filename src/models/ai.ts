@@ -1,4 +1,4 @@
-import { message } from 'antd';
+import { Toast } from 'antd-mobile';
 import waitFor from 'wait-for-async';
 import _ from 'lodash';
 import type { Managed, ManateEvent } from 'manate/models';
@@ -39,13 +39,13 @@ class AI {
       console.log("Not AI's turn.");
       return;
     }
-    message.info('AI is thinking...');
+    Toast.show({ content: 'AI is thinking...' });
     await waitFor({ interval: 1000 });
     const playableCards = this.player.hand.filter((card) => this.game.canPlayCard(card));
     if (playableCards.length === 0 && this.game.deck.cards.length > 0) {
       this.player.hand.push(this.game.deck.pop());
       while (!this.game.canPlayCard(_.last(this.player.hand)) && this.game.deck.cards.length > 0) {
-        message.info('AI is drawing...');
+        Toast.show({ content: 'AI is drawing...' });
         await waitFor({ interval: 1000 });
         this.player.hand.push(this.game.deck.pop());
       }
@@ -55,7 +55,7 @@ class AI {
     }
     const card = _.sample(playableCards);
     if (card) {
-      message.info('AI is playing...');
+      Toast.show({ content: 'AI is playing...' });
       await waitFor({ interval: 1000 });
       const canChangeSuit = this.game.canChangeSuit(card);
       this.game.playCard(card);
@@ -66,12 +66,12 @@ class AI {
         );
         const mostFrequentSuit = _.maxBy(_.keys(counter), (suit) => counter[suit]);
         if (mostFrequentSuit) {
-          message.info('AI is changing suit...');
+          Toast.show({ content: 'AI is changing suit...' });
           this.game.changeSuit(mostFrequentSuit as SuitType);
         }
       }
     } else {
-      message.info('AI is passing...');
+      Toast.show({ content: 'AI is passing...' });
       await waitFor({ interval: 1000 });
       // If no one can play, it's a draw
       if (
@@ -85,7 +85,7 @@ class AI {
       }
     }
     this.game.moveOn();
-    message.info('It is your turn.');
+    Toast.show({ content: 'It is your turn.' });
   }
 }
 
