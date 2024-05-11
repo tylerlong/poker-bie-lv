@@ -11,6 +11,7 @@ class Game {
   public playedCards: Card[] = [];
   public primaryCard: Card;
   public currentSuit: SuitType;
+  public draw = false;
 
   private playerIndex = 0;
 

@@ -61273,7 +61273,7 @@ const You = (props)=>{
         const youPlayer = game.findPlayer("You");
         const isYourTurn = game.currentTurnPlayer === youPlayer;
         const actions = [];
-        if (game.over) {
+        if (game.over || game.draw) {
             actions.push(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Title, {
                 children: "Game Over!"
             }, "title-game-over", false, {
@@ -61281,12 +61281,20 @@ const You = (props)=>{
                 lineNumber: 17,
                 columnNumber: 20
             }, undefined));
-            if (game.findPlayer("You").won) actions.push(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antd.Alert), {
+            if (game.draw) actions.push(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antd.Alert), {
+                message: "Draw!",
+                type: "warning"
+            }, "alert-draw", false, {
+                fileName: "src/components/you.tsx",
+                lineNumber: 19,
+                columnNumber: 22
+            }, undefined));
+            else if (game.findPlayer("You").won) actions.push(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antd.Alert), {
                 message: "You Win!",
                 type: "success"
             }, "alert-you-win", false, {
                 fileName: "src/components/you.tsx",
-                lineNumber: 19,
+                lineNumber: 21,
                 columnNumber: 22
             }, undefined));
             else actions.push(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antd.Alert), {
@@ -61294,7 +61302,7 @@ const You = (props)=>{
                 type: "error"
             }, "alert-you-lose", false, {
                 fileName: "src/components/you.tsx",
-                lineNumber: 21,
+                lineNumber: 23,
                 columnNumber: 22
             }, undefined));
             actions.push(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antd.Button), {
@@ -61304,7 +61312,7 @@ const You = (props)=>{
                 children: "Restart"
             }, "button-restart", false, {
                 fileName: "src/components/you.tsx",
-                lineNumber: 24,
+                lineNumber: 26,
                 columnNumber: 9
             }, undefined));
         } else if (isYourTurn) {
@@ -61318,7 +61326,7 @@ const You = (props)=>{
                 children: "Draw"
             }, "button-draw-card", false, {
                 fileName: "src/components/you.tsx",
-                lineNumber: 30,
+                lineNumber: 32,
                 columnNumber: 9
             }, undefined));
             if (game.deck.cards.length === 0) actions.push(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antd.Button), {
@@ -61328,7 +61336,7 @@ const You = (props)=>{
                 children: "Pass"
             }, "button-pass", false, {
                 fileName: "src/components/you.tsx",
-                lineNumber: 44,
+                lineNumber: 46,
                 columnNumber: 11
             }, undefined));
         }
@@ -61346,19 +61354,19 @@ const You = (props)=>{
                             card: card
                         }, `${card.suit}-${card.rank}`, false, {
                             fileName: "src/components/you.tsx",
-                            lineNumber: 54,
+                            lineNumber: 56,
                             columnNumber: 13
                         }, undefined))
                 }, void 0, false, {
                     fileName: "src/components/you.tsx",
-                    lineNumber: 52,
+                    lineNumber: 54,
                     columnNumber: 9
                 }, undefined),
                 actions
             ]
         }, void 0, true, {
             fileName: "src/components/you.tsx",
-            lineNumber: 51,
+            lineNumber: 53,
             columnNumber: 7
         }, undefined);
     };
@@ -76483,6 +76491,7 @@ class Game {
         this.players = [];
         this.deck = new (0, _deckDefault.default)();
         this.playedCards = [];
+        this.draw = false;
         this.playerIndex = 0;
         this.primaryCard = (0, _lodashDefault.default).sample(this.deck.cards);
         while(this.primaryCard.suit === "\uD83C\uDCCF")this.primaryCard = (0, _lodashDefault.default).sample(this.deck.cards);
@@ -78745,6 +78754,12 @@ class AI {
             await (0, _waitForAsyncDefault.default)({
                 interval: 1000
             });
+            // If no one can play, it's a draw
+            if (this.game.players.every((player)=>{
+                return player.hand.every((card)=>{
+                    return !this.game.canPlayCard(card);
+                });
+            })) this.game.draw = true;
         }
         this.game.moveOn();
         (0, _antd.message).info("It is your turn.");

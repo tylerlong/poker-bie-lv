@@ -73,6 +73,16 @@ class AI {
     } else {
       message.info('AI is passing...');
       await waitFor({ interval: 1000 });
+      // If no one can play, it's a draw
+      if (
+        this.game.players.every((player) => {
+          return player.hand.every((card) => {
+            return !this.game.canPlayCard(card);
+          });
+        })
+      ) {
+        this.game.draw = true;
+      }
     }
     this.game.moveOn();
     message.info('It is your turn.');

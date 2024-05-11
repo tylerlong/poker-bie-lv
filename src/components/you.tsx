@@ -13,9 +13,11 @@ const You = (props: { game: Game }) => {
     const youPlayer = game.findPlayer('You');
     const isYourTurn = game.currentTurnPlayer === youPlayer;
     const actions = [];
-    if (game.over) {
+    if (game.over || game.draw) {
       actions.push(<Title key="title-game-over">Game Over!</Title>);
-      if (game.findPlayer('You').won) {
+      if (game.draw) {
+        actions.push(<Alert key="alert-draw" message="Draw!" type="warning" />);
+      } else if (game.findPlayer('You').won) {
         actions.push(<Alert key="alert-you-win" message="You Win!" type="success" />);
       } else {
         actions.push(<Alert key="alert-you-lose" message="You Lose!" type="error" />);
