@@ -14,7 +14,7 @@ const You = (props: { game: Game }) => {
     if (game.over || game.draw) {
       actions.push(<NoticeBar content="Game Over!" color="info" />);
       if (game.draw) {
-        actions.push(<Result status="info" title="Draw!" />);
+        actions.push(<Result status="info" title="Tie!" />);
       } else if (game.findPlayer('You').won) {
         actions.push(<Result status="success" title="You Win!" />);
       } else {
@@ -26,20 +26,6 @@ const You = (props: { game: Game }) => {
         </Button>,
       );
     } else {
-      actions.push(
-        <Button
-          color="primary"
-          key="button-draw-card"
-          block
-          size="large"
-          onClick={() => {
-            youPlayer.hand.push(game.deck.pop());
-          }}
-          disabled={!isYourTurn || game.deck.cards.length === 0}
-        >
-          Draw
-        </Button>,
-      );
       if (game.deck.cards.length === 0) {
         actions.push(
           <Button
@@ -51,6 +37,21 @@ const You = (props: { game: Game }) => {
             disabled={!isYourTurn}
           >
             Pass
+          </Button>,
+        );
+      } else {
+        actions.push(
+          <Button
+            color="primary"
+            key="button-draw-card"
+            block
+            size="large"
+            onClick={() => {
+              youPlayer.hand.push(game.deck.pop());
+            }}
+            disabled={!isYourTurn}
+          >
+            Draw
           </Button>,
         );
       }

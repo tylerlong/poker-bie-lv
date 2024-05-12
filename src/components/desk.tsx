@@ -18,8 +18,8 @@ const Desk = (props: { game: Game }) => {
           <CardComponent title="Current Suit">
             <img className="highlighted" src={Card.suiteImage(game.currentSuit)} />
           </CardComponent>
-          <CardComponent title="Deck" extra={`${game.deck.cards.length} Cards`}>
-            <img src={Card.backImage} className="card-img" />
+          <CardComponent title={`Deck(${game.deck.cards.length} cards)`}>
+            <img src={game.deck.cards.length > 0 ? Card.backImage : Card.blankImage} className="card-img" />
           </CardComponent>
         </Space>
         <CardComponent title="Played Cards">
