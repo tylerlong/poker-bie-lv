@@ -11,7 +11,7 @@ const App = (props: { game: Game }) => {
   const { game } = props;
   const render = () => {
     return (
-      <Space direction="vertical">
+      <Space direction="vertical" block>
         <Opponent game={game} />
         <Desk game={game} />
         <You game={game} />

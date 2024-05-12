@@ -10,7 +10,7 @@ const Opponent = (props: { game: Game }) => {
   const render = () => {
     const aiPlayer = game.findPlayer('AI');
     return (
-      <Space wrap>
+      <Space wrap block justify="center">
         {aiPlayer.hand.map((card) => (
           <img
             key={`${card.suit}-${card.rank}`}

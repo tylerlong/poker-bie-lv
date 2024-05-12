@@ -57,9 +57,9 @@ const You = (props: { game: Game }) => {
       }
     }
     return (
-      <Space direction="vertical" style={{ width: '100%' }}>
+      <Space direction="vertical" block>
         {actions}
-        <Space wrap>
+        <Space wrap block justify="center">
           {youPlayer.hand.map((card) => (
             <CardComponent key={`${card.suit}-${card.rank}`} game={game} player={youPlayer} card={card} />
           ))}
