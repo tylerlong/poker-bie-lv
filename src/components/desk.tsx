@@ -36,9 +36,9 @@ const Desk = (props: { game: Game }) => {
         <Divider>Played Cards</Divider>
         {game.playedCards.length === 0 && <img src={Card.blankImage} className="card-img" />}
         <Space wrap block justify="center">
-          {_.reverse(_.takeRight(game.playedCards, 5)).map((card, index) => (
+          {_.takeRight(game.playedCards, 5).map((card) => (
             <img
-              className={`card-img ${index === 0 ? 'highlighted' : ''}`}
+              className={`card-img ${card === _.last(game.playedCards) ? 'highlighted-gold' : ''}`}
               key={`${card.suit}-${card.rank}`}
               src={card.image}
             />
