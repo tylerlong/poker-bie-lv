@@ -27473,6 +27473,7 @@ const App = (props)=>{
     const render = ()=>{
         return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antdMobile.Space), {
             direction: "vertical",
+            block: true,
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _opponentDefault.default), {
                     game: game
@@ -27878,7 +27879,7 @@ var _footer = require("./components/footer");
 var _footerDefault = parcelHelpers.interopDefault(_footer);
 var _reduceAndRestoreMotion = require("./utils/reduce-and-restore-motion");
 
-},{"./global":"9Bcn8","./components/config-provider":false,"./components/action-sheet":"lyfUp","./components/auto-center":false,"./components/avatar":false,"./components/badge":false,"./components/button":"21Pcj","./components/calendar":false,"./components/calendar-picker":false,"./components/calendar-picker-view":false,"./components/capsule-tabs":false,"./components/card":"6A9Rl","./components/cascade-picker":false,"./components/cascade-picker-view":false,"./components/cascader":false,"./components/cascader-view":false,"./components/center-popup":false,"./components/check-list":false,"./components/checkbox":false,"./components/collapse":false,"./components/date-picker":false,"./components/date-picker-view":false,"./components/dialog":false,"./components/divider":false,"./components/dot-loading":false,"./components/dropdown":false,"./components/ellipsis":false,"./components/empty":false,"./components/error-block":false,"./components/floating-bubble":false,"./components/floating-panel":false,"./components/form":false,"./components/grid":false,"./components/image":false,"./components/image-uploader":false,"./components/image-viewer":false,"./components/index-bar":false,"./components/infinite-scroll":false,"./components/input":false,"./components/jumbo-tabs":false,"./components/list":false,"./components/loading":false,"./components/mask":false,"./components/modal":false,"./components/nav-bar":false,"./components/notice-bar":"fTMC8","./components/number-keyboard":false,"./components/page-indicator":false,"./components/passcode-input":false,"./components/picker":false,"./components/picker-view":false,"./components/popover":false,"./components/popup":false,"./components/progress-bar":false,"./components/progress-circle":false,"./components/pull-to-refresh":false,"./components/radio":false,"./components/rate":false,"./components/result":"4SQc8","./components/result-page":false,"./components/safe-area":"awjHY","./components/scroll-mask":false,"./components/search-bar":false,"./components/selector":false,"./components/side-bar":false,"./components/skeleton":false,"./components/slider":false,"./components/space":"fetqH","./components/spin-loading":false,"./components/stepper":false,"./components/steps":false,"./components/swipe-action":false,"./components/swiper":false,"./components/switch":false,"./components/tab-bar":false,"./components/tabs":false,"./components/tag":false,"./components/text-area":false,"./components/toast":"hYxKD","./components/tree-select":false,"./components/virtual-input":false,"./components/water-mark":false,"./components/footer":false,"./utils/reduce-and-restore-motion":false,"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9Bcn8":[function(require,module,exports) {
+},{"./global":"9Bcn8","./components/config-provider":false,"./components/action-sheet":"lyfUp","./components/auto-center":false,"./components/avatar":false,"./components/badge":false,"./components/button":"21Pcj","./components/calendar":false,"./components/calendar-picker":false,"./components/calendar-picker-view":false,"./components/capsule-tabs":false,"./components/card":false,"./components/cascade-picker":false,"./components/cascade-picker-view":false,"./components/cascader":false,"./components/cascader-view":false,"./components/center-popup":false,"./components/check-list":false,"./components/checkbox":false,"./components/collapse":false,"./components/date-picker":false,"./components/date-picker-view":false,"./components/dialog":false,"./components/divider":"lKBbb","./components/dot-loading":false,"./components/dropdown":false,"./components/ellipsis":false,"./components/empty":false,"./components/error-block":false,"./components/floating-bubble":false,"./components/floating-panel":false,"./components/form":false,"./components/grid":false,"./components/image":false,"./components/image-uploader":false,"./components/image-viewer":false,"./components/index-bar":false,"./components/infinite-scroll":false,"./components/input":false,"./components/jumbo-tabs":false,"./components/list":false,"./components/loading":false,"./components/mask":false,"./components/modal":false,"./components/nav-bar":false,"./components/notice-bar":"fTMC8","./components/number-keyboard":false,"./components/page-indicator":false,"./components/passcode-input":false,"./components/picker":false,"./components/picker-view":false,"./components/popover":false,"./components/popup":false,"./components/progress-bar":false,"./components/progress-circle":false,"./components/pull-to-refresh":false,"./components/radio":false,"./components/rate":false,"./components/result":"4SQc8","./components/result-page":false,"./components/safe-area":"awjHY","./components/scroll-mask":false,"./components/search-bar":false,"./components/selector":false,"./components/side-bar":false,"./components/skeleton":false,"./components/slider":false,"./components/space":"fetqH","./components/spin-loading":false,"./components/stepper":false,"./components/steps":false,"./components/swipe-action":false,"./components/swiper":false,"./components/switch":false,"./components/tab-bar":false,"./components/tabs":false,"./components/tag":false,"./components/text-area":false,"./components/toast":"hYxKD","./components/tree-select":false,"./components/virtual-input":false,"./components/water-mark":false,"./components/footer":false,"./utils/reduce-and-restore-motion":false,"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9Bcn8":[function(require,module,exports) {
 var _globalCss = require("./global.css");
 var _canUseDom = require("../utils/can-use-dom");
 if (0, _canUseDom.canUseDom) // Make sure the `:active` CSS selector of `button` and `a` take effect
@@ -36560,49 +36561,38 @@ function isIOS() {
     return (0, _canUseDom.canUseDom) ? /ios|iphone|ipad|ipod/.test(navigator.userAgent.toLowerCase()) : false;
 }
 
-},{"./can-use-dom":"luetq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6A9Rl":[function(require,module,exports) {
+},{"./can-use-dom":"luetq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lKBbb":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-var _cardCss = require("./card.css");
-var _card = require("./card");
-exports.default = (0, _card.Card);
+var _dividerCss = require("./divider.css");
+var _divider = require("./divider");
+exports.default = (0, _divider.Divider);
 
-},{"./card.css":"HEcWj","./card":"8nD4U","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"HEcWj":[function() {},{}],"8nD4U":[function(require,module,exports) {
+},{"./divider.css":"lm3Lz","./divider":"bLNtb","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lm3Lz":[function() {},{}],"bLNtb":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Card", ()=>Card);
+parcelHelpers.export(exports, "Divider", ()=>Divider);
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _classnames = require("classnames");
 var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
 var _nativeProps = require("../../utils/native-props");
-const classPrefix = `adm-card`;
-const Card = (props)=>{
-    const renderHeader = ()=>{
-        if (!(props.title || props.extra)) return null;
-        return (0, _reactDefault.default).createElement("div", {
-            className: (0, _classnamesDefault.default)(`${classPrefix}-header`, props.headerClassName),
-            style: props.headerStyle,
-            onClick: props.onHeaderClick
-        }, (0, _reactDefault.default).createElement("div", {
-            className: `${classPrefix}-header-title`
-        }, props.title), props.extra);
-    };
-    const renderBody = ()=>{
-        if (!props.children) return null;
-        return (0, _reactDefault.default).createElement("div", {
-            className: (0, _classnamesDefault.default)(`${classPrefix}-body`, props.bodyClassName),
-            style: props.bodyStyle,
-            onClick: props.onBodyClick
-        }, props.children);
-    };
+var _withDefaultProps = require("../../utils/with-default-props");
+const classPrefix = `adm-divider`;
+const defaultProps = {
+    contentPosition: "center",
+    direction: "horizontal"
+};
+const Divider = (p)=>{
+    const props = (0, _withDefaultProps.mergeProps)(defaultProps, p);
     return (0, _nativeProps.withNativeProps)(props, (0, _reactDefault.default).createElement("div", {
-        className: classPrefix,
-        onClick: props.onClick
-    }, renderHeader(), renderBody()));
+        className: (0, _classnamesDefault.default)(classPrefix, `${classPrefix}-${props.direction}`, `${classPrefix}-${props.contentPosition}`)
+    }, props.children && (0, _reactDefault.default).createElement("div", {
+        className: `${classPrefix}-content`
+    }, props.children)));
 };
 
-},{"react":"21dqq","classnames":"jocGM","../../utils/native-props":"1M5QR","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fTMC8":[function(require,module,exports) {
+},{"react":"21dqq","classnames":"jocGM","../../utils/native-props":"1M5QR","../../utils/with-default-props":"ebN4M","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fTMC8":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _noticeBarCss = require("./notice-bar.css");
@@ -37294,7 +37284,7 @@ const You = (props)=>{
             }, undefined));
             if (game.draw) actions.push(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antdMobile.Result), {
                 status: "info",
-                title: "Draw!"
+                title: "Tie!"
             }, void 0, false, {
                 fileName: "src/components/you.tsx",
                 lineNumber: 17,
@@ -37327,61 +37317,59 @@ const You = (props)=>{
                 lineNumber: 24,
                 columnNumber: 9
             }, undefined));
-        } else {
-            actions.push(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antdMobile.Button), {
-                color: "primary",
-                block: true,
-                size: "large",
-                onClick: ()=>{
-                    youPlayer.hand.push(game.deck.pop());
-                },
-                disabled: !isYourTurn || game.deck.cards.length === 0,
-                children: "Draw"
-            }, "button-draw-card", false, {
-                fileName: "src/components/you.tsx",
-                lineNumber: 30,
-                columnNumber: 9
-            }, undefined));
-            if (game.deck.cards.length === 0) actions.push(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antdMobile.Button), {
-                block: true,
-                size: "large",
-                onClick: ()=>game.moveOn(),
-                color: "warning",
-                disabled: !isYourTurn,
-                children: "Pass"
-            }, "button-pass", false, {
-                fileName: "src/components/you.tsx",
-                lineNumber: 45,
-                columnNumber: 11
-            }, undefined));
-        }
+        } else if (game.deck.cards.length === 0) actions.push(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antdMobile.Button), {
+            block: true,
+            size: "large",
+            onClick: ()=>game.moveOn(),
+            color: "warning",
+            disabled: !isYourTurn,
+            children: "Pass"
+        }, "button-pass", false, {
+            fileName: "src/components/you.tsx",
+            lineNumber: 31,
+            columnNumber: 11
+        }, undefined));
+        else actions.push(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antdMobile.Button), {
+            color: "primary",
+            block: true,
+            size: "large",
+            onClick: ()=>{
+                youPlayer.hand.push(game.deck.pop());
+            },
+            disabled: !isYourTurn,
+            children: "Draw"
+        }, "button-draw-card", false, {
+            fileName: "src/components/you.tsx",
+            lineNumber: 44,
+            columnNumber: 11
+        }, undefined));
         return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antdMobile.Space), {
             direction: "vertical",
-            style: {
-                width: "100%"
-            },
+            block: true,
             children: [
                 actions,
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antdMobile.Space), {
                     wrap: true,
+                    block: true,
+                    justify: "center",
                     children: youPlayer.hand.map((card)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default), {
                             game: game,
                             player: youPlayer,
                             card: card
                         }, `${card.suit}-${card.rank}`, false, {
                             fileName: "src/components/you.tsx",
-                            lineNumber: 63,
+                            lineNumber: 64,
                             columnNumber: 13
                         }, undefined))
                 }, void 0, false, {
                     fileName: "src/components/you.tsx",
-                    lineNumber: 61,
+                    lineNumber: 62,
                     columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/components/you.tsx",
-            lineNumber: 59,
+            lineNumber: 60,
             columnNumber: 7
         }, undefined);
     };
@@ -37681,6 +37669,8 @@ const Opponent = (props)=>{
         const aiPlayer = game.findPlayer("AI");
         return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antdMobile.Space), {
             wrap: true,
+            block: true,
+            justify: "center",
             children: aiPlayer.hand.map((card)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                     src: game.over || game.draw ? card.image : (0, _cardDefault.default).backImage,
                     className: "card-img"
@@ -37736,7 +37726,7 @@ class Card {
 }
 exports.default = Card;
 
-},{"../assets/images/cards/**/*.svg":"fPMl9","../assets/images/cards/back.svg":"1iH7V","../assets/images/cards/blank.svg":"giaNx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fPMl9":[function(require,module,exports) {
+},{"../assets/images/cards/**/*.svg":"Or4yX","../assets/images/cards/back.svg":"1iH7V","../assets/images/cards/blank.svg":"giaNx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"Or4yX":[function(require,module,exports) {
 const _temp0 = require("2f91cc89662dd52b");
 const _temp1 = require("9569864c77c25b78");
 const _temp2 = require("ac6e984b8b9cc405");
@@ -37753,34 +37743,34 @@ const _temp12 = require("54b566be336f2a8c");
 const _temp13 = require("8b693725873476d9");
 const _temp14 = require("20d7982a6eca6e38");
 const _temp15 = require("d114d1cea1a3aa7d");
-const _temp16 = require("31286e94487f6323");
-const _temp17 = require("6c4133514a5d761e");
-const _temp18 = require("3e255f27859a3d8a");
-const _temp19 = require("c6902c3b30443f85");
-const _temp20 = require("89ece0f76fafc624");
-const _temp21 = require("4cb579abf71074fe");
-const _temp22 = require("63eac5bd1829ea31");
-const _temp23 = require("c669fb319440c884");
-const _temp24 = require("3a059a7e4565cc55");
-const _temp25 = require("fdcce7be29285465");
-const _temp26 = require("93f65bc596a9bc9e");
-const _temp27 = require("b26f8e93900e7132");
-const _temp28 = require("f5ff8828fcaae59c");
-const _temp29 = require("de9ded3a8cc8b3eb");
-const _temp30 = require("97861ce67318a42b");
-const _temp31 = require("1e9f38763f1574a7");
-const _temp32 = require("5a6fce09b53415fa");
-const _temp33 = require("3c3438c12e55af05");
-const _temp34 = require("d6cc6a0bd00217ce");
-const _temp35 = require("23f378cb9d72a305");
-const _temp36 = require("414bf86ca36a60f9");
-const _temp37 = require("eca8c25ea9af5445");
-const _temp38 = require("ab258847c572d3aa");
-const _temp39 = require("ba8f030169fd6575");
-const _temp40 = require("5ce45e4a9543d77d");
-const _temp41 = require("8049c09fe6ea9fe4");
-const _temp42 = require("9c86d617bff08202");
-const _temp43 = require("3ffebb61ccb1821a");
+const _temp16 = require("97861ce67318a42b");
+const _temp17 = require("1e9f38763f1574a7");
+const _temp18 = require("5a6fce09b53415fa");
+const _temp19 = require("3c3438c12e55af05");
+const _temp20 = require("d6cc6a0bd00217ce");
+const _temp21 = require("23f378cb9d72a305");
+const _temp22 = require("414bf86ca36a60f9");
+const _temp23 = require("eca8c25ea9af5445");
+const _temp24 = require("ab258847c572d3aa");
+const _temp25 = require("ba8f030169fd6575");
+const _temp26 = require("5ce45e4a9543d77d");
+const _temp27 = require("8049c09fe6ea9fe4");
+const _temp28 = require("9c86d617bff08202");
+const _temp29 = require("3ffebb61ccb1821a");
+const _temp30 = require("31286e94487f6323");
+const _temp31 = require("6c4133514a5d761e");
+const _temp32 = require("3e255f27859a3d8a");
+const _temp33 = require("c6902c3b30443f85");
+const _temp34 = require("89ece0f76fafc624");
+const _temp35 = require("4cb579abf71074fe");
+const _temp36 = require("63eac5bd1829ea31");
+const _temp37 = require("c669fb319440c884");
+const _temp38 = require("3a059a7e4565cc55");
+const _temp39 = require("fdcce7be29285465");
+const _temp40 = require("93f65bc596a9bc9e");
+const _temp41 = require("b26f8e93900e7132");
+const _temp42 = require("f5ff8828fcaae59c");
+const _temp43 = require("de9ded3a8cc8b3eb");
 const _temp44 = require("2fbb4fbbd80ef9e4");
 const _temp45 = require("1df7d85412601926");
 const _temp46 = require("a3c47903f95ec023");
@@ -37816,7 +37806,7 @@ module.exports = {
         "12": _temp14,
         "13": _temp15
     },
-    "\u2663\uFE0F": {
+    "\u2665\uFE0F": {
         "0": _temp16,
         "1": _temp17,
         "2": _temp18,
@@ -37832,7 +37822,7 @@ module.exports = {
         "12": _temp28,
         "13": _temp29
     },
-    "\u2665\uFE0F": {
+    "\u2663\uFE0F": {
         "0": _temp30,
         "1": _temp31,
         "2": _temp32,
@@ -37870,7 +37860,7 @@ module.exports = {
     }
 };
 
-},{"2f91cc89662dd52b":"1iH7V","9569864c77c25b78":"giaNx","ac6e984b8b9cc405":"4T27J","4e81570f4f1d08b9":"29h8V","f360b3d50c4224d5":"hQb98","37c115d6def12efd":"1kgmz","ae1f74afa70acc14":"ae5wz","65549826e096eb1c":"2ibNm","6a6c29c36f2468fa":"SbBmt","6b90bdb9546fc0a6":"6WRzF","9024a035e4045ccb":"h6bWI","1d3454da4fa6511f":"k3GMV","54b566be336f2a8c":"7SiKJ","8b693725873476d9":"4Oojb","20d7982a6eca6e38":"jfbRe","d114d1cea1a3aa7d":"6FX0H","31286e94487f6323":"ik1xy","6c4133514a5d761e":"hpU2p","3e255f27859a3d8a":"3QYcZ","c6902c3b30443f85":"dUhAN","89ece0f76fafc624":"9IUbj","4cb579abf71074fe":"bfssh","63eac5bd1829ea31":"6mh4Z","c669fb319440c884":"ULYVg","3a059a7e4565cc55":"g4hCZ","fdcce7be29285465":"3z0Rm","93f65bc596a9bc9e":"is309","b26f8e93900e7132":"aEVzc","f5ff8828fcaae59c":"gIpO6","de9ded3a8cc8b3eb":"5h9aY","97861ce67318a42b":"5HCFO","1e9f38763f1574a7":"ggwqL","5a6fce09b53415fa":"lDQvj","3c3438c12e55af05":"kWrVK","d6cc6a0bd00217ce":"2aC5i","23f378cb9d72a305":"ksfAR","414bf86ca36a60f9":"gbfjM","eca8c25ea9af5445":"dFgBO","ab258847c572d3aa":"eV4xR","ba8f030169fd6575":"1SWY5","5ce45e4a9543d77d":"hdOHV","8049c09fe6ea9fe4":"cZGtU","9c86d617bff08202":"h2Mo4","3ffebb61ccb1821a":"cgdQL","2fbb4fbbd80ef9e4":"18U6j","1df7d85412601926":"cHeNU","a3c47903f95ec023":"bdjmo","799521e2f0f1267b":"hbLuT","5993126fb1bb48ae":"i4PvL","25f85b69f81b1a1a":"4iv0s","131d20af614c8381":"dZXx4","afd03fecd4a398a4":"iAF2I","d30ff7b46c222bc1":"jBiXu","916ecf1595e1de1":"ifN6S","9ea8924e63668f4c":"eH7pK","38f5315b186779bb":"5arvA","d5f08a00b0f39bc7":"h0meH","9b280be859eeb427":"i7baI","821e64182faa1e0d":"jEbC7","92c30f297989f500":"5ibpV"}],"1iH7V":[function(require,module,exports) {
+},{"2f91cc89662dd52b":"1iH7V","9569864c77c25b78":"giaNx","ac6e984b8b9cc405":"4T27J","4e81570f4f1d08b9":"29h8V","f360b3d50c4224d5":"hQb98","37c115d6def12efd":"1kgmz","ae1f74afa70acc14":"ae5wz","65549826e096eb1c":"2ibNm","6a6c29c36f2468fa":"SbBmt","6b90bdb9546fc0a6":"6WRzF","9024a035e4045ccb":"h6bWI","1d3454da4fa6511f":"k3GMV","54b566be336f2a8c":"7SiKJ","8b693725873476d9":"4Oojb","20d7982a6eca6e38":"jfbRe","d114d1cea1a3aa7d":"6FX0H","97861ce67318a42b":"5HCFO","1e9f38763f1574a7":"ggwqL","5a6fce09b53415fa":"lDQvj","3c3438c12e55af05":"kWrVK","d6cc6a0bd00217ce":"2aC5i","23f378cb9d72a305":"ksfAR","414bf86ca36a60f9":"gbfjM","eca8c25ea9af5445":"dFgBO","ab258847c572d3aa":"eV4xR","ba8f030169fd6575":"1SWY5","5ce45e4a9543d77d":"hdOHV","8049c09fe6ea9fe4":"cZGtU","9c86d617bff08202":"h2Mo4","3ffebb61ccb1821a":"cgdQL","31286e94487f6323":"ik1xy","6c4133514a5d761e":"hpU2p","3e255f27859a3d8a":"3QYcZ","c6902c3b30443f85":"dUhAN","89ece0f76fafc624":"9IUbj","4cb579abf71074fe":"bfssh","63eac5bd1829ea31":"6mh4Z","c669fb319440c884":"ULYVg","3a059a7e4565cc55":"g4hCZ","fdcce7be29285465":"3z0Rm","93f65bc596a9bc9e":"is309","b26f8e93900e7132":"aEVzc","f5ff8828fcaae59c":"gIpO6","de9ded3a8cc8b3eb":"5h9aY","2fbb4fbbd80ef9e4":"18U6j","1df7d85412601926":"cHeNU","a3c47903f95ec023":"bdjmo","799521e2f0f1267b":"hbLuT","5993126fb1bb48ae":"i4PvL","25f85b69f81b1a1a":"4iv0s","131d20af614c8381":"dZXx4","afd03fecd4a398a4":"iAF2I","d30ff7b46c222bc1":"jBiXu","916ecf1595e1de1":"ifN6S","9ea8924e63668f4c":"eH7pK","38f5315b186779bb":"5arvA","d5f08a00b0f39bc7":"h0meH","9b280be859eeb427":"i7baI","821e64182faa1e0d":"jEbC7","92c30f297989f500":"5ibpV"}],"1iH7V":[function(require,module,exports) {
 module.exports = require("6aa86370c6d390bc").getBundleURL("lWxpx") + "back.52648d71.svg" + "?" + Date.now();
 
 },{"6aa86370c6d390bc":"lgJ39"}],"lgJ39":[function(require,module,exports) {
@@ -37953,49 +37943,7 @@ module.exports = require("2aa97d027244374f").getBundleURL("lWxpx") + "12.e622ca2
 },{"2aa97d027244374f":"lgJ39"}],"6FX0H":[function(require,module,exports) {
 module.exports = require("8633617a9cec1ec0").getBundleURL("lWxpx") + "13.15d7c8e8.svg" + "?" + Date.now();
 
-},{"8633617a9cec1ec0":"lgJ39"}],"ik1xy":[function(require,module,exports) {
-module.exports = require("a0602b1dcb1edda9").getBundleURL("lWxpx") + "0.7cdbaf79.svg" + "?" + Date.now();
-
-},{"a0602b1dcb1edda9":"lgJ39"}],"hpU2p":[function(require,module,exports) {
-module.exports = require("7447d630033fcf79").getBundleURL("lWxpx") + "1.864e32d4.svg" + "?" + Date.now();
-
-},{"7447d630033fcf79":"lgJ39"}],"3QYcZ":[function(require,module,exports) {
-module.exports = require("b989acec51502e32").getBundleURL("lWxpx") + "2.5118d7f1.svg" + "?" + Date.now();
-
-},{"b989acec51502e32":"lgJ39"}],"dUhAN":[function(require,module,exports) {
-module.exports = require("7c12c6ffced0b864").getBundleURL("lWxpx") + "3.7c992d73.svg" + "?" + Date.now();
-
-},{"7c12c6ffced0b864":"lgJ39"}],"9IUbj":[function(require,module,exports) {
-module.exports = require("d2c87188a2fc4299").getBundleURL("lWxpx") + "4.af390336.svg" + "?" + Date.now();
-
-},{"d2c87188a2fc4299":"lgJ39"}],"bfssh":[function(require,module,exports) {
-module.exports = require("f2d3e5e846103961").getBundleURL("lWxpx") + "5.a15ec125.svg" + "?" + Date.now();
-
-},{"f2d3e5e846103961":"lgJ39"}],"6mh4Z":[function(require,module,exports) {
-module.exports = require("7b83a450bf6a8fc1").getBundleURL("lWxpx") + "6.edb3e301.svg" + "?" + Date.now();
-
-},{"7b83a450bf6a8fc1":"lgJ39"}],"ULYVg":[function(require,module,exports) {
-module.exports = require("50ecbd7ab2485b71").getBundleURL("lWxpx") + "7.61cd753a.svg" + "?" + Date.now();
-
-},{"50ecbd7ab2485b71":"lgJ39"}],"g4hCZ":[function(require,module,exports) {
-module.exports = require("98ca324107ae8cb5").getBundleURL("lWxpx") + "8.2dc1cd62.svg" + "?" + Date.now();
-
-},{"98ca324107ae8cb5":"lgJ39"}],"3z0Rm":[function(require,module,exports) {
-module.exports = require("5eaf26c462056182").getBundleURL("lWxpx") + "9.1db06138.svg" + "?" + Date.now();
-
-},{"5eaf26c462056182":"lgJ39"}],"is309":[function(require,module,exports) {
-module.exports = require("8138bd34357143e").getBundleURL("lWxpx") + "10.5ea398f7.svg" + "?" + Date.now();
-
-},{"8138bd34357143e":"lgJ39"}],"aEVzc":[function(require,module,exports) {
-module.exports = require("fab342ecc2cafb70").getBundleURL("lWxpx") + "11.b5e57d89.svg" + "?" + Date.now();
-
-},{"fab342ecc2cafb70":"lgJ39"}],"gIpO6":[function(require,module,exports) {
-module.exports = require("569680d24b3c0697").getBundleURL("lWxpx") + "12.39b10348.svg" + "?" + Date.now();
-
-},{"569680d24b3c0697":"lgJ39"}],"5h9aY":[function(require,module,exports) {
-module.exports = require("5c38b5c0b8606758").getBundleURL("lWxpx") + "13.9937ac30.svg" + "?" + Date.now();
-
-},{"5c38b5c0b8606758":"lgJ39"}],"5HCFO":[function(require,module,exports) {
+},{"8633617a9cec1ec0":"lgJ39"}],"5HCFO":[function(require,module,exports) {
 module.exports = require("933595b24023ddf3").getBundleURL("lWxpx") + "0.d0a1740c.svg" + "?" + Date.now();
 
 },{"933595b24023ddf3":"lgJ39"}],"ggwqL":[function(require,module,exports) {
@@ -38037,7 +37985,49 @@ module.exports = require("9e57944b17c46aad").getBundleURL("lWxpx") + "12.570d80c
 },{"9e57944b17c46aad":"lgJ39"}],"cgdQL":[function(require,module,exports) {
 module.exports = require("27e1ae5a7e3ec730").getBundleURL("lWxpx") + "13.1cfa0aa7.svg" + "?" + Date.now();
 
-},{"27e1ae5a7e3ec730":"lgJ39"}],"18U6j":[function(require,module,exports) {
+},{"27e1ae5a7e3ec730":"lgJ39"}],"ik1xy":[function(require,module,exports) {
+module.exports = require("a0602b1dcb1edda9").getBundleURL("lWxpx") + "0.7cdbaf79.svg" + "?" + Date.now();
+
+},{"a0602b1dcb1edda9":"lgJ39"}],"hpU2p":[function(require,module,exports) {
+module.exports = require("7447d630033fcf79").getBundleURL("lWxpx") + "1.864e32d4.svg" + "?" + Date.now();
+
+},{"7447d630033fcf79":"lgJ39"}],"3QYcZ":[function(require,module,exports) {
+module.exports = require("b989acec51502e32").getBundleURL("lWxpx") + "2.5118d7f1.svg" + "?" + Date.now();
+
+},{"b989acec51502e32":"lgJ39"}],"dUhAN":[function(require,module,exports) {
+module.exports = require("7c12c6ffced0b864").getBundleURL("lWxpx") + "3.7c992d73.svg" + "?" + Date.now();
+
+},{"7c12c6ffced0b864":"lgJ39"}],"9IUbj":[function(require,module,exports) {
+module.exports = require("d2c87188a2fc4299").getBundleURL("lWxpx") + "4.af390336.svg" + "?" + Date.now();
+
+},{"d2c87188a2fc4299":"lgJ39"}],"bfssh":[function(require,module,exports) {
+module.exports = require("f2d3e5e846103961").getBundleURL("lWxpx") + "5.a15ec125.svg" + "?" + Date.now();
+
+},{"f2d3e5e846103961":"lgJ39"}],"6mh4Z":[function(require,module,exports) {
+module.exports = require("7b83a450bf6a8fc1").getBundleURL("lWxpx") + "6.edb3e301.svg" + "?" + Date.now();
+
+},{"7b83a450bf6a8fc1":"lgJ39"}],"ULYVg":[function(require,module,exports) {
+module.exports = require("50ecbd7ab2485b71").getBundleURL("lWxpx") + "7.61cd753a.svg" + "?" + Date.now();
+
+},{"50ecbd7ab2485b71":"lgJ39"}],"g4hCZ":[function(require,module,exports) {
+module.exports = require("98ca324107ae8cb5").getBundleURL("lWxpx") + "8.2dc1cd62.svg" + "?" + Date.now();
+
+},{"98ca324107ae8cb5":"lgJ39"}],"3z0Rm":[function(require,module,exports) {
+module.exports = require("5eaf26c462056182").getBundleURL("lWxpx") + "9.1db06138.svg" + "?" + Date.now();
+
+},{"5eaf26c462056182":"lgJ39"}],"is309":[function(require,module,exports) {
+module.exports = require("8138bd34357143e").getBundleURL("lWxpx") + "10.5ea398f7.svg" + "?" + Date.now();
+
+},{"8138bd34357143e":"lgJ39"}],"aEVzc":[function(require,module,exports) {
+module.exports = require("fab342ecc2cafb70").getBundleURL("lWxpx") + "11.b5e57d89.svg" + "?" + Date.now();
+
+},{"fab342ecc2cafb70":"lgJ39"}],"gIpO6":[function(require,module,exports) {
+module.exports = require("569680d24b3c0697").getBundleURL("lWxpx") + "12.39b10348.svg" + "?" + Date.now();
+
+},{"569680d24b3c0697":"lgJ39"}],"5h9aY":[function(require,module,exports) {
+module.exports = require("5c38b5c0b8606758").getBundleURL("lWxpx") + "13.9937ac30.svg" + "?" + Date.now();
+
+},{"5c38b5c0b8606758":"lgJ39"}],"18U6j":[function(require,module,exports) {
 module.exports = require("5b499864883e64c6").getBundleURL("lWxpx") + "0.ad4296a8.svg" + "?" + Date.now();
 
 },{"5b499864883e64c6":"lgJ39"}],"cHeNU":[function(require,module,exports) {
@@ -38109,89 +38099,118 @@ const Desk = (props)=>{
         return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antdMobile.Space), {
+                    block: true,
+                    justify: "center",
                     children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antdMobile.Card), {
-                            title: "Primary Card",
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                                className: "highlighted-gold",
-                                src: game.primaryCard.image
-                            }, void 0, false, {
-                                fileName: "src/components/desk.tsx",
-                                lineNumber: 16,
-                                columnNumber: 13
-                            }, undefined)
-                        }, void 0, false, {
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antdMobile.Divider), {
+                                    children: "Primary Card"
+                                }, void 0, false, {
+                                    fileName: "src/components/desk.tsx",
+                                    lineNumber: 16,
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                    className: "card-img",
+                                    src: game.primaryCard.image,
+                                    style: {
+                                        display: "block",
+                                        margin: "0 auto"
+                                    }
+                                }, void 0, false, {
+                                    fileName: "src/components/desk.tsx",
+                                    lineNumber: 17,
+                                    columnNumber: 13
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
                             fileName: "src/components/desk.tsx",
                             lineNumber: 15,
                             columnNumber: 11
                         }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antdMobile.Card), {
-                            title: "Current Suit",
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                                className: "highlighted",
-                                src: (0, _cardDefault.default).suiteImage(game.currentSuit)
-                            }, void 0, false, {
-                                fileName: "src/components/desk.tsx",
-                                lineNumber: 19,
-                                columnNumber: 13
-                            }, undefined)
-                        }, void 0, false, {
-                            fileName: "src/components/desk.tsx",
-                            lineNumber: 18,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antdMobile.Card), {
-                            title: "Deck",
-                            extra: `${game.deck.cards.length} Cards`,
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                                src: (0, _cardDefault.default).backImage,
-                                className: "card-img"
-                            }, void 0, false, {
-                                fileName: "src/components/desk.tsx",
-                                lineNumber: 22,
-                                columnNumber: 13
-                            }, undefined)
-                        }, void 0, false, {
-                            fileName: "src/components/desk.tsx",
-                            lineNumber: 21,
-                            columnNumber: 11
-                        }, undefined)
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antdMobile.Divider), {
+                                    children: "Current Suit"
+                                }, void 0, false, {
+                                    fileName: "src/components/desk.tsx",
+                                    lineNumber: 20,
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                    className: "card-img",
+                                    src: (0, _cardDefault.default).suiteImage(game.currentSuit),
+                                    style: {
+                                        display: "block",
+                                        margin: "0 auto"
+                                    }
+                                }, void 0, false, {
+                                    fileName: "src/components/desk.tsx",
+                                    lineNumber: 21,
+                                    columnNumber: 13
+                                }, undefined)
+                            ]
+                        }, void 0, true),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antdMobile.Divider), {
+                                    children: `Deck(${game.deck.cards.length} cards)`
+                                }, void 0, false, {
+                                    fileName: "src/components/desk.tsx",
+                                    lineNumber: 28,
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                    src: game.deck.cards.length > 0 ? (0, _cardDefault.default).backImage : (0, _cardDefault.default).blankImage,
+                                    className: "card-img",
+                                    style: {
+                                        display: "block",
+                                        margin: "0 auto"
+                                    }
+                                }, void 0, false, {
+                                    fileName: "src/components/desk.tsx",
+                                    lineNumber: 29,
+                                    columnNumber: 13
+                                }, undefined)
+                            ]
+                        }, void 0, true)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/desk.tsx",
                     lineNumber: 14,
                     columnNumber: 9
                 }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antdMobile.Card), {
-                    title: "Played Cards",
-                    children: [
-                        game.playedCards.length === 0 && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                            src: (0, _cardDefault.default).blankImage,
-                            className: "card-img"
-                        }, void 0, false, {
-                            fileName: "src/components/desk.tsx",
-                            lineNumber: 26,
-                            columnNumber: 45
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antdMobile.Space), {
-                            wrap: true,
-                            children: (0, _lodashDefault.default).reverse((0, _lodashDefault.default).takeRight(game.playedCards, 5)).map((card, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                                    className: `card-img ${index === 0 ? "highlighted" : ""}`,
-                                    src: card.image
-                                }, `${card.suit}-${card.rank}`, false, {
-                                    fileName: "src/components/desk.tsx",
-                                    lineNumber: 29,
-                                    columnNumber: 15
-                                }, undefined))
-                        }, void 0, false, {
-                            fileName: "src/components/desk.tsx",
-                            lineNumber: 27,
-                            columnNumber: 11
-                        }, undefined)
-                    ]
-                }, void 0, true, {
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antdMobile.Divider), {
+                    children: "Played Cards"
+                }, void 0, false, {
                     fileName: "src/components/desk.tsx",
-                    lineNumber: 25,
+                    lineNumber: 36,
+                    columnNumber: 9
+                }, undefined),
+                game.playedCards.length === 0 && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                    src: (0, _cardDefault.default).blankImage,
+                    className: "card-img"
+                }, void 0, false, {
+                    fileName: "src/components/desk.tsx",
+                    lineNumber: 37,
+                    columnNumber: 43
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antdMobile.Space), {
+                    wrap: true,
+                    block: true,
+                    justify: "center",
+                    children: (0, _lodashDefault.default).takeRight(game.playedCards, 5).map((card)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                            className: `card-img ${card === (0, _lodashDefault.default).last(game.playedCards) ? "highlighted-gold" : ""}`,
+                            src: card.image
+                        }, `${card.suit}-${card.rank}`, false, {
+                            fileName: "src/components/desk.tsx",
+                            lineNumber: 40,
+                            columnNumber: 13
+                        }, undefined))
+                }, void 0, false, {
+                    fileName: "src/components/desk.tsx",
+                    lineNumber: 38,
                     columnNumber: 9
                 }, undefined)
             ]
