@@ -14,16 +14,12 @@ const Desk = (props: { game: Game }) => {
         <Space block justify="center">
           <div>
             <Divider>Primary Card</Divider>
-            <img
-              className="highlighted-gold"
-              src={game.primaryCard.image}
-              style={{ display: 'block', margin: '0 auto' }}
-            />
+            <img className="card-img" src={game.primaryCard.image} style={{ display: 'block', margin: '0 auto' }} />
           </div>
           <>
             <Divider>Current Suit</Divider>
             <img
-              className="highlighted"
+              className="card-img"
               src={Card.suiteImage(game.currentSuit)}
               style={{ display: 'block', margin: '0 auto' }}
             />

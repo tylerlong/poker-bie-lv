@@ -211,49 +211,6 @@
    inkscape:window-y="25"
    inkscape:window-maximized="1"
    inkscape:current-layer="svg2" />
-	<g
-   id="Layer_x0020_1"
-   style="fill-rule:nonzero;clip-rule:nonzero;stroke:#000000;stroke-miterlimit:4;">
-		<path
-   style="fill:#FFFFFF;stroke-width:0.5;"
-   d="M166.8369141,235.5478516c0,3.7773438-3.0869141,6.8691406-6.8710938,6.8691406H7.1108398c-3.7749023,0-6.8608398-3.0917969-6.8608398-6.8691406V7.1201172C0.25,3.3427734,3.3359375,0.25,7.1108398,0.25h152.8549805    c3.7841797,0,6.8710938,3.0927734,6.8710938,6.8701172v228.4277344z"
-   id="path5" />
-		<g
-   style="stroke:none;"
-   id="g7">
-			<g
-   id="g9">
-				
-			</g>
-			
-		</g>
-		<g
-   id="g15">
-			
-		</g>
-		<g
-   id="g19">
-			
-		</g>
-		<g
-   style="stroke:none;"
-   id="g23">
-			<g
-   id="g25">
-				
-			</g>
-			
-		</g>
-		<g
-   style="stroke:none;"
-   id="g31">
-			<g
-   id="g33">
-				
-			</g>
-			
-		</g>
-	</g>
 
 <g
    transform="matrix(0.19686979,0,0,0.19686979,11.54991,16.869674)"
@@ -277,22 +234,5 @@
      inkscape:connector-curvature="0"
      id="path3762-6-2-3"
      d="m 117.3013,604.26609 c 0,0 -8.06755,-94.94997 22.85715,-122.85714 34.76052,-31.36871 140,-11.42857 140,-11.42857 0,0 -63.09295,37.07057 -91.55255,60.80438 -27.21033,22.69199 -71.3046,73.48133 -71.3046,73.48133 z"
-     style="fill:url(#radialGradient3073);fill-opacity:1;stroke:none;filter:url(#filter3834-6-3)" /></g><g
-   transform="matrix(1.6743072,0,0,1.5669921,17.177511,46.385321)"
-   id="layer1-9-6"
-   style="fill:#df0000;fill-opacity:1"><path
-     style="fill:#df0000;fill-opacity:1"
-     inkscape:connector-curvature="0"
-     id="hl-8"
-     d="M 3.676,-9 C 0.433,-9 0,-5.523 0,-5.523 0,-5.523 -0.433,-9 -3.676,-9 -5.946,-9 -8,-7.441 -8,-4.5 -8,-0.614 -1.4208493,3.2938141 0,9 1.35201,3.2985969 8,-0.614 8,-4.5 8,-7.441 5.946,-9 3.676,-9 z"
-     sodipodi:nodetypes="scsscss" /></g>
-
-<g
-   transform="matrix(-1.6743072,0,0,-1.5669921,150.15601,195.14313)"
-   id="layer1-9-6-5"
-   style="fill:#df0000;fill-opacity:1"><path
-     style="fill:#df0000;fill-opacity:1"
-     inkscape:connector-curvature="0"
-     id="hl-8-1"
-     d="M 3.676,-9 C 0.433,-9 0,-5.523 0,-5.523 0,-5.523 -0.433,-9 -3.676,-9 -5.946,-9 -8,-7.441 -8,-4.5 -8,-0.614 -1.4208493,3.2938141 0,9 1.35201,3.2985969 8,-0.614 8,-4.5 8,-7.441 5.946,-9 3.676,-9 z"
-     sodipodi:nodetypes="scsscss" /></g></svg>
+     style="fill:url(#radialGradient3073);fill-opacity:1;stroke:none;filter:url(#filter3834-6-3)" /></g>
+</svg>
