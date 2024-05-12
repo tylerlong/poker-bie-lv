@@ -84,9 +84,8 @@ const CardComponent = (props: { game: Game; player: Player; card: Card }) => {
     }
     return (
       <img
-        className={`${player === game.currentTurnPlayer && game.canPlayCard(card) ? 'highlighted' : ''}`}
+        className={`card-img ${player === game.currentTurnPlayer && game.canPlayCard(card) ? 'highlighted' : ''}`}
         src={card.image}
-        width="64px"
         onClick={() => {
           actionSheetShowHandler = ActionSheet.show(actionSheetProps);
         }}

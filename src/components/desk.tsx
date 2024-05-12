@@ -13,24 +13,23 @@ const Desk = (props: { game: Game }) => {
       <>
         <Space>
           <CardComponent title="Primary Card">
-            <img className="highlighted-gold" src={game.primaryCard.image} width="64px" />
+            <img className="highlighted-gold" src={game.primaryCard.image} />
           </CardComponent>
           <CardComponent title="Current Suit">
-            <img className="highlighted" src={Card.suiteImage(game.currentSuit)} width="64px" />
+            <img className="highlighted" src={Card.suiteImage(game.currentSuit)} />
           </CardComponent>
           <CardComponent title="Deck" extra={`${game.deck.cards.length} Cards`}>
-            <img src={Card.backImage} width="64px" />
+            <img src={Card.backImage} className="card-img" />
           </CardComponent>
         </Space>
         <CardComponent title="Played Cards">
-          {game.playedCards.length === 0 && <img src={Card.blankImage} width="64px" />}
+          {game.playedCards.length === 0 && <img src={Card.blankImage} className="card-img" />}
           <Space wrap>
             {_.reverse(_.takeRight(game.playedCards, 5)).map((card, index) => (
               <img
-                className={`${index === 0 ? 'highlighted' : ''}`}
+                className={`card-img ${index === 0 ? 'highlighted' : ''}`}
                 key={`${card.suit}-${card.rank}`}
                 src={card.image}
-                width="64px"
               />
             ))}
           </Space>

@@ -1,8 +1,14 @@
+.card-img {
+  width: 64px;
+}
+
 .highlighted {
   border: 2px solid #adff2f;
+  width: 62px !important;
 }
 
 .highlighted-gold {
   border: 2px solid gold;
+  width: 62px !important;
 }
 /*# sourceMappingURL=index.fc7cabbb.css.map */

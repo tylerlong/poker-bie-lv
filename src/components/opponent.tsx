@@ -15,7 +15,7 @@ const Opponent = (props: { game: Game }) => {
           <img
             key={`${card.suit}-${card.rank}`}
             src={game.over || game.draw ? card.image : Card.backImage}
-            width="64px"
+            className="card-img"
           />
         ))}
       </Space>

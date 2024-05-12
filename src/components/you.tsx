@@ -10,7 +10,6 @@ const You = (props: { game: Game }) => {
   const render = () => {
     const youPlayer = game.findPlayer('You');
     const isYourTurn = game.currentTurnPlayer === youPlayer;
-    const preActions = [];
     const actions = [];
     if (game.over || game.draw) {
       actions.push(<NoticeBar content="Game Over!" color="info" />);
@@ -27,7 +26,7 @@ const You = (props: { game: Game }) => {
         </Button>,
       );
     } else {
-      preActions.push(
+      actions.push(
         <Button
           color="primary"
           key="button-draw-card"
@@ -42,7 +41,7 @@ const You = (props: { game: Game }) => {
         </Button>,
       );
       if (game.deck.cards.length === 0) {
-        preActions.push(
+        actions.push(
           <Button
             key="button-pass"
             block
@@ -58,13 +57,12 @@ const You = (props: { game: Game }) => {
     }
     return (
       <Space direction="vertical" style={{ width: '100%' }}>
-        {preActions}
+        {actions}
         <Space wrap>
           {youPlayer.hand.map((card) => (
             <CardComponent key={`${card.suit}-${card.rank}`} game={game} player={youPlayer} card={card} />
           ))}
         </Space>
-        {actions}
       </Space>
     );
   };
