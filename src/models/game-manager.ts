@@ -1,6 +1,7 @@
 import type { Managed, ManateEvent } from 'manate/models';
 
 import type Game from './game';
+import type Player from './player';
 
 class GameManager {
   public game: Managed<Game>;
@@ -32,10 +33,17 @@ class GameManager {
         return;
       }
     }
+    // nobody can play
     if (this.game.deckEmpty && this.game.players.every((player) => !player.canPlay(this.game))) {
       this.game.over = true;
-      this.game.winner = undefined;
-      // todo: compare the players' hands and find the winner
+      const map = new Map<number, Player>();
+      for (const player of this.game.players) {
+        map.set(
+          player.hand.reduce((acc, card) => acc + card.weight, 0),
+          player,
+        );
+      }
+      this.game.winner = map.size <= 1 ? undefined : map.get(Math.min(...map.keys()));
     }
   }
 }

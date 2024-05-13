@@ -11,13 +11,13 @@ const You = (props: { game: Game }) => {
     const youPlayer = game.findPlayer('You');
     const actions = [];
     if (game.over) {
-      actions.push(<NoticeBar content="Game Over!" color="info" />);
+      actions.push(<NoticeBar key="notice-game-over" content="Game Over!" color="info" />);
       if (game.winner === undefined) {
-        actions.push(<Result status="info" title="Tie!" />);
+        actions.push(<Result key="result-tie" status="info" title="Tie!" />);
       } else if (game.findPlayer('You').won) {
-        actions.push(<Result status="success" title="You Win!" />);
+        actions.push(<Result key="result-win" status="success" title="You Win!" />);
       } else {
-        actions.push(<Result status="error" title="You Lose!" />);
+        actions.push(<Result key="result-lose" status="error" title="You Lose!" />);
       }
       actions.push(
         <Button color="success" key="button-restart" block size="large" onClick={() => game.restart()}>

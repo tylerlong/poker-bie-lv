@@ -27,6 +27,16 @@ class Card {
   public get image(): string {
     return cardImages[this.suit][this.rank];
   }
+
+  public get weight(): number {
+    if (this.suit === '🃏') {
+      return 0;
+    }
+    if (this.rank < 11) {
+      return this.rank;
+    }
+    return 0.5; // face cards
+  }
 }
 
 export default Card;

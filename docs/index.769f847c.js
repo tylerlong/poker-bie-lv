@@ -2957,17 +2957,21 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _client = require("react-dom/client");
 var _manate = require("manate");
+var _antdMobile = require("antd-mobile");
 var _app = require("./components/app");
 var _appDefault = parcelHelpers.interopDefault(_app);
 var _game = require("./models/game");
 var _gameDefault = parcelHelpers.interopDefault(_game);
 var _ai = require("./models/ai");
 var _aiDefault = parcelHelpers.interopDefault(_ai);
-var _antdMobile = require("antd-mobile");
+var _gameManager = require("./models/game-manager");
+var _gameManagerDefault = parcelHelpers.interopDefault(_gameManager);
 const game = (0, _manate.manage)(new (0, _gameDefault.default)());
 game.addPlayer("You");
 game.addPlayer("AI");
 for(let i = 0; i < 5; i++)game.players.forEach((player)=>player.hand.push(game.deck.pop()));
+const gameManager = new (0, _gameManagerDefault.default)(game);
+gameManager.start();
 // begin of AI
 const ai = new (0, _aiDefault.default)(game, game.findPlayer("AI"));
 ai.start();
@@ -2982,19 +2986,19 @@ root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment
                 position: "top"
             }, void 0, false, {
                 fileName: "src/index.tsx",
-                lineNumber: 28,
+                lineNumber: 31,
                 columnNumber: 7
             }, undefined)
         }, void 0, false, {
             fileName: "src/index.tsx",
-            lineNumber: 27,
+            lineNumber: 30,
             columnNumber: 5
         }, undefined),
         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _appDefault.default), {
             game: game
         }, void 0, false, {
             fileName: "src/index.tsx",
-            lineNumber: 30,
+            lineNumber: 33,
             columnNumber: 5
         }, undefined),
         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -3002,12 +3006,12 @@ root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment
                 position: "bottom"
             }, void 0, false, {
                 fileName: "src/index.tsx",
-                lineNumber: 32,
+                lineNumber: 35,
                 columnNumber: 7
             }, undefined)
         }, void 0, false, {
             fileName: "src/index.tsx",
-            lineNumber: 31,
+            lineNumber: 34,
             columnNumber: 5
         }, undefined)
     ]
@@ -3020,7 +3024,7 @@ window.game = game;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","manate":"hVCau","./components/app":"8lvH4","./models/game":"iKhYv","./models/ai":"7yfu2","antd-mobile":"4Nprw","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","manate":"hVCau","antd-mobile":"4Nprw","./components/app":"8lvH4","./models/game":"iKhYv","./models/ai":"7yfu2","./models/game-manager":"gsqmY","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("ee51401569654d91");
 
@@ -27448,181 +27452,7 @@ class Children {
 }
 exports.Children = Children;
 
-},{}],"8lvH4":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$ebbe = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$ebbe.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _react1 = require("manate/react");
-var _antdMobile = require("antd-mobile");
-var _you = require("./you");
-var _youDefault = parcelHelpers.interopDefault(_you);
-var _opponent = require("./opponent");
-var _opponentDefault = parcelHelpers.interopDefault(_opponent);
-var _desk = require("./desk");
-var _deskDefault = parcelHelpers.interopDefault(_desk);
-const App = (props)=>{
-    const { game } = props;
-    const render = ()=>{
-        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antdMobile.Space), {
-            direction: "vertical",
-            block: true,
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _opponentDefault.default), {
-                    game: game
-                }, void 0, false, {
-                    fileName: "src/components/app.tsx",
-                    lineNumber: 15,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _deskDefault.default), {
-                    game: game
-                }, void 0, false, {
-                    fileName: "src/components/app.tsx",
-                    lineNumber: 16,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _youDefault.default), {
-                    game: game
-                }, void 0, false, {
-                    fileName: "src/components/app.tsx",
-                    lineNumber: 17,
-                    columnNumber: 9
-                }, undefined)
-            ]
-        }, void 0, true, {
-            fileName: "src/components/app.tsx",
-            lineNumber: 14,
-            columnNumber: 7
-        }, undefined);
-    };
-    return (0, _react1.auto)(render, props);
-};
-_c = App;
-exports.default = App;
-var _c;
-$RefreshReg$(_c, "App");
-
-  $parcel$ReactRefreshHelpers$ebbe.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","manate/react":"670os","antd-mobile":"4Nprw","./you":"kVWKC","./opponent":"dUngB","./desk":"hzTUu","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"670os":[function(require,module,exports) {
-"use strict";
-var __createBinding = this && this.__createBinding || (Object.create ? function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) desc = {
-        enumerable: true,
-        get: function() {
-            return m[k];
-        }
-    };
-    Object.defineProperty(o, k2, desc);
-} : function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-});
-var __setModuleDefault = this && this.__setModuleDefault || (Object.create ? function(o, v) {
-    Object.defineProperty(o, "default", {
-        enumerable: true,
-        value: v
-    });
-} : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = this && this.__importStar || function(mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) {
-        for(var k in mod)if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    }
-    __setModuleDefault(result, mod);
-    return result;
-};
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.auto = exports.Component = void 0;
-const react_1 = __importStar(require("adbcdbbc4cb73f07"));
-const _1 = require("e7e61f8d37aa5665");
-class Component extends react_1.default.Component {
-    managed;
-    isTrigger;
-    constructor(props){
-        super(props);
-        // rewrite render()
-        const render = this.render.bind(this);
-        this.render = ()=>{
-            this.dispose();
-            this.managed = (0, _1.manage)(this.props);
-            const [result, isTrigger] = (0, _1.run)(this.managed, render);
-            this.isTrigger = isTrigger;
-            this.managed.$e.on(this.listener);
-            return result;
-        };
-        // rewrite componentDidMount()
-        const componentDidMount = this.componentDidMount ? this.componentDidMount.bind(this) : ()=>{};
-        this.componentDidMount = ()=>{
-            // strict mode re-mount
-            if (!this.managed) {
-                this.managed = (0, _1.manage)(this.props);
-                this.managed.$e.on(this.listener);
-            }
-            componentDidMount();
-        };
-        // rewrite componentWillUnmount()
-        const componentWillUnmount = this.componentWillUnmount ? this.componentWillUnmount.bind(this) : ()=>{};
-        this.componentWillUnmount = ()=>{
-            this.dispose();
-            componentWillUnmount();
-        };
-    }
-    listener = (event)=>{
-        if (this.isTrigger(event)) this.forceUpdate();
-    };
-    dispose() {
-        this.managed?.dispose();
-        this.managed = undefined;
-    }
-}
-exports.Component = Component;
-const auto = (render, props)=>{
-    const prev = (0, react_1.useRef)();
-    prev.current?.();
-    const dispose = ()=>{
-        managed?.dispose();
-        managed = undefined;
-    };
-    prev.current = dispose;
-    (0, react_1.useEffect)(()=>{
-        if (!managed) {
-            // strict mode re-mount
-            managed = (0, _1.manage)(props);
-            managed.$e.on(listener);
-        }
-        return dispose;
-    }, []);
-    let managed = (0, _1.manage)(props);
-    const [result, isTrigger] = (0, _1.run)(managed, render);
-    const [, refresh] = (0, react_1.useState)(0);
-    const listener = (event)=>{
-        if (isTrigger(event)) refresh((i)=>i + 1);
-    };
-    managed.$e.on(listener);
-    return result;
-};
-exports.auto = auto;
-
-},{"adbcdbbc4cb73f07":"21dqq","e7e61f8d37aa5665":"hVCau"}],"4Nprw":[function(require,module,exports) {
+},{}],"4Nprw":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "setDefaultConfig", ()=>(0, _configProvider.setDefaultConfig));
@@ -37251,7 +37081,181 @@ const InternalToast = (p)=>{
     }, iconElement), (0, _reactDefault.default).createElement((0, _autoCenterDefault.default), null, content))));
 };
 
-},{"react":"21dqq","classnames":"jocGM","antd-mobile-icons":"de4E5","../mask":"fZKGi","../../utils/with-default-props":"ebN4M","../auto-center":"4MF5T","../spin-loading":"25Lkn","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kVWKC":[function(require,module,exports) {
+},{"react":"21dqq","classnames":"jocGM","antd-mobile-icons":"de4E5","../mask":"fZKGi","../../utils/with-default-props":"ebN4M","../auto-center":"4MF5T","../spin-loading":"25Lkn","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8lvH4":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$ebbe = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$ebbe.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _react1 = require("manate/react");
+var _antdMobile = require("antd-mobile");
+var _you = require("./you");
+var _youDefault = parcelHelpers.interopDefault(_you);
+var _opponent = require("./opponent");
+var _opponentDefault = parcelHelpers.interopDefault(_opponent);
+var _desk = require("./desk");
+var _deskDefault = parcelHelpers.interopDefault(_desk);
+const App = (props)=>{
+    const { game } = props;
+    const render = ()=>{
+        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antdMobile.Space), {
+            direction: "vertical",
+            block: true,
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _opponentDefault.default), {
+                    game: game
+                }, void 0, false, {
+                    fileName: "src/components/app.tsx",
+                    lineNumber: 15,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _deskDefault.default), {
+                    game: game
+                }, void 0, false, {
+                    fileName: "src/components/app.tsx",
+                    lineNumber: 16,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _youDefault.default), {
+                    game: game
+                }, void 0, false, {
+                    fileName: "src/components/app.tsx",
+                    lineNumber: 17,
+                    columnNumber: 9
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/app.tsx",
+            lineNumber: 14,
+            columnNumber: 7
+        }, undefined);
+    };
+    return (0, _react1.auto)(render, props);
+};
+_c = App;
+exports.default = App;
+var _c;
+$RefreshReg$(_c, "App");
+
+  $parcel$ReactRefreshHelpers$ebbe.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","manate/react":"670os","antd-mobile":"4Nprw","./you":"kVWKC","./opponent":"dUngB","./desk":"hzTUu","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"670os":[function(require,module,exports) {
+"use strict";
+var __createBinding = this && this.__createBinding || (Object.create ? function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) desc = {
+        enumerable: true,
+        get: function() {
+            return m[k];
+        }
+    };
+    Object.defineProperty(o, k2, desc);
+} : function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+});
+var __setModuleDefault = this && this.__setModuleDefault || (Object.create ? function(o, v) {
+    Object.defineProperty(o, "default", {
+        enumerable: true,
+        value: v
+    });
+} : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = this && this.__importStar || function(mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) {
+        for(var k in mod)if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    }
+    __setModuleDefault(result, mod);
+    return result;
+};
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.auto = exports.Component = void 0;
+const react_1 = __importStar(require("adbcdbbc4cb73f07"));
+const _1 = require("e7e61f8d37aa5665");
+class Component extends react_1.default.Component {
+    managed;
+    isTrigger;
+    constructor(props){
+        super(props);
+        // rewrite render()
+        const render = this.render.bind(this);
+        this.render = ()=>{
+            this.dispose();
+            this.managed = (0, _1.manage)(this.props);
+            const [result, isTrigger] = (0, _1.run)(this.managed, render);
+            this.isTrigger = isTrigger;
+            this.managed.$e.on(this.listener);
+            return result;
+        };
+        // rewrite componentDidMount()
+        const componentDidMount = this.componentDidMount ? this.componentDidMount.bind(this) : ()=>{};
+        this.componentDidMount = ()=>{
+            // strict mode re-mount
+            if (!this.managed) {
+                this.managed = (0, _1.manage)(this.props);
+                this.managed.$e.on(this.listener);
+            }
+            componentDidMount();
+        };
+        // rewrite componentWillUnmount()
+        const componentWillUnmount = this.componentWillUnmount ? this.componentWillUnmount.bind(this) : ()=>{};
+        this.componentWillUnmount = ()=>{
+            this.dispose();
+            componentWillUnmount();
+        };
+    }
+    listener = (event)=>{
+        if (this.isTrigger(event)) this.forceUpdate();
+    };
+    dispose() {
+        this.managed?.dispose();
+        this.managed = undefined;
+    }
+}
+exports.Component = Component;
+const auto = (render, props)=>{
+    const prev = (0, react_1.useRef)();
+    prev.current?.();
+    const dispose = ()=>{
+        managed?.dispose();
+        managed = undefined;
+    };
+    prev.current = dispose;
+    (0, react_1.useEffect)(()=>{
+        if (!managed) {
+            // strict mode re-mount
+            managed = (0, _1.manage)(props);
+            managed.$e.on(listener);
+        }
+        return dispose;
+    }, []);
+    let managed = (0, _1.manage)(props);
+    const [result, isTrigger] = (0, _1.run)(managed, render);
+    const [, refresh] = (0, react_1.useState)(0);
+    const listener = (event)=>{
+        if (isTrigger(event)) refresh((i)=>i + 1);
+    };
+    managed.$e.on(listener);
+    return result;
+};
+exports.auto = auto;
+
+},{"adbcdbbc4cb73f07":"21dqq","e7e61f8d37aa5665":"hVCau"}],"kVWKC":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$e387 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -37271,39 +37275,38 @@ const You = (props)=>{
     const { game } = props;
     const render = ()=>{
         const youPlayer = game.findPlayer("You");
-        const isYourTurn = game.currentTurnPlayer === youPlayer;
         const actions = [];
-        if (game.over || game.draw) {
+        if (game.over) {
             actions.push(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antdMobile.NoticeBar), {
                 content: "Game Over!",
                 color: "info"
-            }, void 0, false, {
+            }, "notice-game-over", false, {
                 fileName: "src/components/you.tsx",
-                lineNumber: 15,
+                lineNumber: 14,
                 columnNumber: 20
             }, undefined));
-            if (game.draw) actions.push(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antdMobile.Result), {
+            if (game.winner === undefined) actions.push(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antdMobile.Result), {
                 status: "info",
                 title: "Tie!"
-            }, void 0, false, {
+            }, "result-tie", false, {
                 fileName: "src/components/you.tsx",
-                lineNumber: 17,
+                lineNumber: 16,
                 columnNumber: 22
             }, undefined));
             else if (game.findPlayer("You").won) actions.push(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antdMobile.Result), {
                 status: "success",
                 title: "You Win!"
-            }, void 0, false, {
+            }, "result-win", false, {
                 fileName: "src/components/you.tsx",
-                lineNumber: 19,
+                lineNumber: 18,
                 columnNumber: 22
             }, undefined));
             else actions.push(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antdMobile.Result), {
                 status: "error",
                 title: "You Lose!"
-            }, void 0, false, {
+            }, "result-lose", false, {
                 fileName: "src/components/you.tsx",
-                lineNumber: 21,
+                lineNumber: 20,
                 columnNumber: 22
             }, undefined));
             actions.push(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antdMobile.Button), {
@@ -37314,19 +37317,19 @@ const You = (props)=>{
                 children: "Restart"
             }, "button-restart", false, {
                 fileName: "src/components/you.tsx",
-                lineNumber: 24,
+                lineNumber: 23,
                 columnNumber: 9
             }, undefined));
-        } else if (game.deck.cards.length === 0) actions.push(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antdMobile.Button), {
+        } else if (game.deckEmpty) actions.push(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antdMobile.Button), {
             block: true,
             size: "large",
             onClick: ()=>game.moveOn(),
             color: "warning",
-            disabled: !isYourTurn,
+            disabled: !youPlayer.isCurrent(game),
             children: "Pass"
         }, "button-pass", false, {
             fileName: "src/components/you.tsx",
-            lineNumber: 31,
+            lineNumber: 30,
             columnNumber: 11
         }, undefined));
         else actions.push(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antdMobile.Button), {
@@ -37336,11 +37339,11 @@ const You = (props)=>{
             onClick: ()=>{
                 youPlayer.hand.push(game.deck.pop());
             },
-            disabled: !isYourTurn,
+            disabled: !youPlayer.isCurrent(game),
             children: "Draw"
         }, "button-draw-card", false, {
             fileName: "src/components/you.tsx",
-            lineNumber: 44,
+            lineNumber: 43,
             columnNumber: 11
         }, undefined));
         return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antdMobile.Space), {
@@ -37358,18 +37361,18 @@ const You = (props)=>{
                             card: card
                         }, `${card.suit}-${card.rank}`, false, {
                             fileName: "src/components/you.tsx",
-                            lineNumber: 64,
+                            lineNumber: 63,
                             columnNumber: 13
                         }, undefined))
                 }, void 0, false, {
                     fileName: "src/components/you.tsx",
-                    lineNumber: 62,
+                    lineNumber: 61,
                     columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/components/you.tsx",
-            lineNumber: 60,
+            lineNumber: 59,
             columnNumber: 7
         }, undefined);
     };
@@ -37409,7 +37412,7 @@ const CardComponent = (props)=>{
         let actionSheetShowHandler;
         if (game.over) actionSheetProps.extra = "Game is over";
         else {
-            if (player !== game.currentTurnPlayer) actionSheetProps.extra = "Not your turn";
+            if (!player.isCurrent(game)) actionSheetProps.extra = "Not your turn";
             else if (game.canPlayCard(card)) {
                 if (game.canChangeSuit(card)) {
                     actionSheetProps.extra = "Play a card and change suit to:";
@@ -37486,7 +37489,7 @@ const CardComponent = (props)=>{
             } else actionSheetProps.extra = "Cannot play this card";
         }
         return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-            className: `card-img ${player === game.currentTurnPlayer && game.canPlayCard(card) ? "highlighted" : ""}`,
+            className: `card-img ${player.isCurrent(game) && game.canPlayCard(card) ? "highlighted" : ""}`,
             src: card.image,
             onClick: ()=>{
                 actionSheetShowHandler = (0, _antdMobile.ActionSheet).show(actionSheetProps);
@@ -37672,7 +37675,7 @@ const Opponent = (props)=>{
             block: true,
             justify: "center",
             children: aiPlayer.hand.map((card)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                    src: game.over || game.draw ? card.image : (0, _cardDefault.default).backImage,
+                    src: game.over ? card.image : (0, _cardDefault.default).backImage,
                     className: "card-img"
                 }, `${card.suit}-${card.rank}`, false, {
                     fileName: "src/components/opponent.tsx",
@@ -37723,10 +37726,15 @@ class Card {
     get image() {
         return (0, _svgDefault.default)[this.suit][this.rank];
     }
+    get weight() {
+        if (this.suit === "\uD83C\uDCCF") return 0;
+        if (this.rank < 11) return this.rank;
+        return 0.5; // face cards
+    }
 }
 exports.default = Card;
 
-},{"../assets/images/cards/**/*.svg":"Or4yX","../assets/images/cards/back.svg":"1iH7V","../assets/images/cards/blank.svg":"giaNx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"Or4yX":[function(require,module,exports) {
+},{"../assets/images/cards/**/*.svg":"fPMl9","../assets/images/cards/back.svg":"1iH7V","../assets/images/cards/blank.svg":"giaNx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fPMl9":[function(require,module,exports) {
 const _temp0 = require("2f91cc89662dd52b");
 const _temp1 = require("9569864c77c25b78");
 const _temp2 = require("ac6e984b8b9cc405");
@@ -37743,34 +37751,34 @@ const _temp12 = require("54b566be336f2a8c");
 const _temp13 = require("8b693725873476d9");
 const _temp14 = require("20d7982a6eca6e38");
 const _temp15 = require("d114d1cea1a3aa7d");
-const _temp16 = require("97861ce67318a42b");
-const _temp17 = require("1e9f38763f1574a7");
-const _temp18 = require("5a6fce09b53415fa");
-const _temp19 = require("3c3438c12e55af05");
-const _temp20 = require("d6cc6a0bd00217ce");
-const _temp21 = require("23f378cb9d72a305");
-const _temp22 = require("414bf86ca36a60f9");
-const _temp23 = require("eca8c25ea9af5445");
-const _temp24 = require("ab258847c572d3aa");
-const _temp25 = require("ba8f030169fd6575");
-const _temp26 = require("5ce45e4a9543d77d");
-const _temp27 = require("8049c09fe6ea9fe4");
-const _temp28 = require("9c86d617bff08202");
-const _temp29 = require("3ffebb61ccb1821a");
-const _temp30 = require("31286e94487f6323");
-const _temp31 = require("6c4133514a5d761e");
-const _temp32 = require("3e255f27859a3d8a");
-const _temp33 = require("c6902c3b30443f85");
-const _temp34 = require("89ece0f76fafc624");
-const _temp35 = require("4cb579abf71074fe");
-const _temp36 = require("63eac5bd1829ea31");
-const _temp37 = require("c669fb319440c884");
-const _temp38 = require("3a059a7e4565cc55");
-const _temp39 = require("fdcce7be29285465");
-const _temp40 = require("93f65bc596a9bc9e");
-const _temp41 = require("b26f8e93900e7132");
-const _temp42 = require("f5ff8828fcaae59c");
-const _temp43 = require("de9ded3a8cc8b3eb");
+const _temp16 = require("31286e94487f6323");
+const _temp17 = require("6c4133514a5d761e");
+const _temp18 = require("3e255f27859a3d8a");
+const _temp19 = require("c6902c3b30443f85");
+const _temp20 = require("89ece0f76fafc624");
+const _temp21 = require("4cb579abf71074fe");
+const _temp22 = require("63eac5bd1829ea31");
+const _temp23 = require("c669fb319440c884");
+const _temp24 = require("3a059a7e4565cc55");
+const _temp25 = require("fdcce7be29285465");
+const _temp26 = require("93f65bc596a9bc9e");
+const _temp27 = require("b26f8e93900e7132");
+const _temp28 = require("f5ff8828fcaae59c");
+const _temp29 = require("de9ded3a8cc8b3eb");
+const _temp30 = require("97861ce67318a42b");
+const _temp31 = require("1e9f38763f1574a7");
+const _temp32 = require("5a6fce09b53415fa");
+const _temp33 = require("3c3438c12e55af05");
+const _temp34 = require("d6cc6a0bd00217ce");
+const _temp35 = require("23f378cb9d72a305");
+const _temp36 = require("414bf86ca36a60f9");
+const _temp37 = require("eca8c25ea9af5445");
+const _temp38 = require("ab258847c572d3aa");
+const _temp39 = require("ba8f030169fd6575");
+const _temp40 = require("5ce45e4a9543d77d");
+const _temp41 = require("8049c09fe6ea9fe4");
+const _temp42 = require("9c86d617bff08202");
+const _temp43 = require("3ffebb61ccb1821a");
 const _temp44 = require("2fbb4fbbd80ef9e4");
 const _temp45 = require("1df7d85412601926");
 const _temp46 = require("a3c47903f95ec023");
@@ -37806,7 +37814,7 @@ module.exports = {
         "12": _temp14,
         "13": _temp15
     },
-    "\u2665\uFE0F": {
+    "\u2663\uFE0F": {
         "0": _temp16,
         "1": _temp17,
         "2": _temp18,
@@ -37822,7 +37830,7 @@ module.exports = {
         "12": _temp28,
         "13": _temp29
     },
-    "\u2663\uFE0F": {
+    "\u2665\uFE0F": {
         "0": _temp30,
         "1": _temp31,
         "2": _temp32,
@@ -37860,7 +37868,7 @@ module.exports = {
     }
 };
 
-},{"2f91cc89662dd52b":"1iH7V","9569864c77c25b78":"giaNx","ac6e984b8b9cc405":"4T27J","4e81570f4f1d08b9":"29h8V","f360b3d50c4224d5":"hQb98","37c115d6def12efd":"1kgmz","ae1f74afa70acc14":"ae5wz","65549826e096eb1c":"2ibNm","6a6c29c36f2468fa":"SbBmt","6b90bdb9546fc0a6":"6WRzF","9024a035e4045ccb":"h6bWI","1d3454da4fa6511f":"k3GMV","54b566be336f2a8c":"7SiKJ","8b693725873476d9":"4Oojb","20d7982a6eca6e38":"jfbRe","d114d1cea1a3aa7d":"6FX0H","97861ce67318a42b":"5HCFO","1e9f38763f1574a7":"ggwqL","5a6fce09b53415fa":"lDQvj","3c3438c12e55af05":"kWrVK","d6cc6a0bd00217ce":"2aC5i","23f378cb9d72a305":"ksfAR","414bf86ca36a60f9":"gbfjM","eca8c25ea9af5445":"dFgBO","ab258847c572d3aa":"eV4xR","ba8f030169fd6575":"1SWY5","5ce45e4a9543d77d":"hdOHV","8049c09fe6ea9fe4":"cZGtU","9c86d617bff08202":"h2Mo4","3ffebb61ccb1821a":"cgdQL","31286e94487f6323":"ik1xy","6c4133514a5d761e":"hpU2p","3e255f27859a3d8a":"3QYcZ","c6902c3b30443f85":"dUhAN","89ece0f76fafc624":"9IUbj","4cb579abf71074fe":"bfssh","63eac5bd1829ea31":"6mh4Z","c669fb319440c884":"ULYVg","3a059a7e4565cc55":"g4hCZ","fdcce7be29285465":"3z0Rm","93f65bc596a9bc9e":"is309","b26f8e93900e7132":"aEVzc","f5ff8828fcaae59c":"gIpO6","de9ded3a8cc8b3eb":"5h9aY","2fbb4fbbd80ef9e4":"18U6j","1df7d85412601926":"cHeNU","a3c47903f95ec023":"bdjmo","799521e2f0f1267b":"hbLuT","5993126fb1bb48ae":"i4PvL","25f85b69f81b1a1a":"4iv0s","131d20af614c8381":"dZXx4","afd03fecd4a398a4":"iAF2I","d30ff7b46c222bc1":"jBiXu","916ecf1595e1de1":"ifN6S","9ea8924e63668f4c":"eH7pK","38f5315b186779bb":"5arvA","d5f08a00b0f39bc7":"h0meH","9b280be859eeb427":"i7baI","821e64182faa1e0d":"jEbC7","92c30f297989f500":"5ibpV"}],"1iH7V":[function(require,module,exports) {
+},{"2f91cc89662dd52b":"1iH7V","9569864c77c25b78":"giaNx","ac6e984b8b9cc405":"4T27J","4e81570f4f1d08b9":"29h8V","f360b3d50c4224d5":"hQb98","37c115d6def12efd":"1kgmz","ae1f74afa70acc14":"ae5wz","65549826e096eb1c":"2ibNm","6a6c29c36f2468fa":"SbBmt","6b90bdb9546fc0a6":"6WRzF","9024a035e4045ccb":"h6bWI","1d3454da4fa6511f":"k3GMV","54b566be336f2a8c":"7SiKJ","8b693725873476d9":"4Oojb","20d7982a6eca6e38":"jfbRe","d114d1cea1a3aa7d":"6FX0H","31286e94487f6323":"ik1xy","6c4133514a5d761e":"hpU2p","3e255f27859a3d8a":"3QYcZ","c6902c3b30443f85":"dUhAN","89ece0f76fafc624":"9IUbj","4cb579abf71074fe":"bfssh","63eac5bd1829ea31":"6mh4Z","c669fb319440c884":"ULYVg","3a059a7e4565cc55":"g4hCZ","fdcce7be29285465":"3z0Rm","93f65bc596a9bc9e":"is309","b26f8e93900e7132":"aEVzc","f5ff8828fcaae59c":"gIpO6","de9ded3a8cc8b3eb":"5h9aY","97861ce67318a42b":"5HCFO","1e9f38763f1574a7":"ggwqL","5a6fce09b53415fa":"lDQvj","3c3438c12e55af05":"kWrVK","d6cc6a0bd00217ce":"2aC5i","23f378cb9d72a305":"ksfAR","414bf86ca36a60f9":"gbfjM","eca8c25ea9af5445":"dFgBO","ab258847c572d3aa":"eV4xR","ba8f030169fd6575":"1SWY5","5ce45e4a9543d77d":"hdOHV","8049c09fe6ea9fe4":"cZGtU","9c86d617bff08202":"h2Mo4","3ffebb61ccb1821a":"cgdQL","2fbb4fbbd80ef9e4":"18U6j","1df7d85412601926":"cHeNU","a3c47903f95ec023":"bdjmo","799521e2f0f1267b":"hbLuT","5993126fb1bb48ae":"i4PvL","25f85b69f81b1a1a":"4iv0s","131d20af614c8381":"dZXx4","afd03fecd4a398a4":"iAF2I","d30ff7b46c222bc1":"jBiXu","916ecf1595e1de1":"ifN6S","9ea8924e63668f4c":"eH7pK","38f5315b186779bb":"5arvA","d5f08a00b0f39bc7":"h0meH","9b280be859eeb427":"i7baI","821e64182faa1e0d":"jEbC7","92c30f297989f500":"5ibpV"}],"1iH7V":[function(require,module,exports) {
 module.exports = require("6aa86370c6d390bc").getBundleURL("lWxpx") + "back.52648d71.svg" + "?" + Date.now();
 
 },{"6aa86370c6d390bc":"lgJ39"}],"lgJ39":[function(require,module,exports) {
@@ -37943,49 +37951,7 @@ module.exports = require("2aa97d027244374f").getBundleURL("lWxpx") + "12.e622ca2
 },{"2aa97d027244374f":"lgJ39"}],"6FX0H":[function(require,module,exports) {
 module.exports = require("8633617a9cec1ec0").getBundleURL("lWxpx") + "13.15d7c8e8.svg" + "?" + Date.now();
 
-},{"8633617a9cec1ec0":"lgJ39"}],"5HCFO":[function(require,module,exports) {
-module.exports = require("933595b24023ddf3").getBundleURL("lWxpx") + "0.d0a1740c.svg" + "?" + Date.now();
-
-},{"933595b24023ddf3":"lgJ39"}],"ggwqL":[function(require,module,exports) {
-module.exports = require("98e8888b3fe91957").getBundleURL("lWxpx") + "1.7fa0a90f.svg" + "?" + Date.now();
-
-},{"98e8888b3fe91957":"lgJ39"}],"lDQvj":[function(require,module,exports) {
-module.exports = require("cc576283f607b35b").getBundleURL("lWxpx") + "2.1499ed95.svg" + "?" + Date.now();
-
-},{"cc576283f607b35b":"lgJ39"}],"kWrVK":[function(require,module,exports) {
-module.exports = require("24d53520a3a8c8cb").getBundleURL("lWxpx") + "3.e16b8a48.svg" + "?" + Date.now();
-
-},{"24d53520a3a8c8cb":"lgJ39"}],"2aC5i":[function(require,module,exports) {
-module.exports = require("66307e1318f7d0e9").getBundleURL("lWxpx") + "4.304f3fd2.svg" + "?" + Date.now();
-
-},{"66307e1318f7d0e9":"lgJ39"}],"ksfAR":[function(require,module,exports) {
-module.exports = require("25de111342818766").getBundleURL("lWxpx") + "5.297918c0.svg" + "?" + Date.now();
-
-},{"25de111342818766":"lgJ39"}],"gbfjM":[function(require,module,exports) {
-module.exports = require("d3f70f4983bb8ac3").getBundleURL("lWxpx") + "6.68b0c207.svg" + "?" + Date.now();
-
-},{"d3f70f4983bb8ac3":"lgJ39"}],"dFgBO":[function(require,module,exports) {
-module.exports = require("ee43605838201c2").getBundleURL("lWxpx") + "7.6b705389.svg" + "?" + Date.now();
-
-},{"ee43605838201c2":"lgJ39"}],"eV4xR":[function(require,module,exports) {
-module.exports = require("bd5934787055b912").getBundleURL("lWxpx") + "8.e11a0ea6.svg" + "?" + Date.now();
-
-},{"bd5934787055b912":"lgJ39"}],"1SWY5":[function(require,module,exports) {
-module.exports = require("6873f8bda6d8ca5f").getBundleURL("lWxpx") + "9.8ce33734.svg" + "?" + Date.now();
-
-},{"6873f8bda6d8ca5f":"lgJ39"}],"hdOHV":[function(require,module,exports) {
-module.exports = require("a3f39d1e821fa8f3").getBundleURL("lWxpx") + "10.9a27e234.svg" + "?" + Date.now();
-
-},{"a3f39d1e821fa8f3":"lgJ39"}],"cZGtU":[function(require,module,exports) {
-module.exports = require("e28eecc572770073").getBundleURL("lWxpx") + "11.6a6369cf.svg" + "?" + Date.now();
-
-},{"e28eecc572770073":"lgJ39"}],"h2Mo4":[function(require,module,exports) {
-module.exports = require("9e57944b17c46aad").getBundleURL("lWxpx") + "12.570d80cd.svg" + "?" + Date.now();
-
-},{"9e57944b17c46aad":"lgJ39"}],"cgdQL":[function(require,module,exports) {
-module.exports = require("27e1ae5a7e3ec730").getBundleURL("lWxpx") + "13.1cfa0aa7.svg" + "?" + Date.now();
-
-},{"27e1ae5a7e3ec730":"lgJ39"}],"ik1xy":[function(require,module,exports) {
+},{"8633617a9cec1ec0":"lgJ39"}],"ik1xy":[function(require,module,exports) {
 module.exports = require("a0602b1dcb1edda9").getBundleURL("lWxpx") + "0.7cdbaf79.svg" + "?" + Date.now();
 
 },{"a0602b1dcb1edda9":"lgJ39"}],"hpU2p":[function(require,module,exports) {
@@ -38027,7 +37993,49 @@ module.exports = require("569680d24b3c0697").getBundleURL("lWxpx") + "12.39b1034
 },{"569680d24b3c0697":"lgJ39"}],"5h9aY":[function(require,module,exports) {
 module.exports = require("5c38b5c0b8606758").getBundleURL("lWxpx") + "13.9937ac30.svg" + "?" + Date.now();
 
-},{"5c38b5c0b8606758":"lgJ39"}],"18U6j":[function(require,module,exports) {
+},{"5c38b5c0b8606758":"lgJ39"}],"5HCFO":[function(require,module,exports) {
+module.exports = require("933595b24023ddf3").getBundleURL("lWxpx") + "0.d0a1740c.svg" + "?" + Date.now();
+
+},{"933595b24023ddf3":"lgJ39"}],"ggwqL":[function(require,module,exports) {
+module.exports = require("98e8888b3fe91957").getBundleURL("lWxpx") + "1.7fa0a90f.svg" + "?" + Date.now();
+
+},{"98e8888b3fe91957":"lgJ39"}],"lDQvj":[function(require,module,exports) {
+module.exports = require("cc576283f607b35b").getBundleURL("lWxpx") + "2.1499ed95.svg" + "?" + Date.now();
+
+},{"cc576283f607b35b":"lgJ39"}],"kWrVK":[function(require,module,exports) {
+module.exports = require("24d53520a3a8c8cb").getBundleURL("lWxpx") + "3.e16b8a48.svg" + "?" + Date.now();
+
+},{"24d53520a3a8c8cb":"lgJ39"}],"2aC5i":[function(require,module,exports) {
+module.exports = require("66307e1318f7d0e9").getBundleURL("lWxpx") + "4.304f3fd2.svg" + "?" + Date.now();
+
+},{"66307e1318f7d0e9":"lgJ39"}],"ksfAR":[function(require,module,exports) {
+module.exports = require("25de111342818766").getBundleURL("lWxpx") + "5.297918c0.svg" + "?" + Date.now();
+
+},{"25de111342818766":"lgJ39"}],"gbfjM":[function(require,module,exports) {
+module.exports = require("d3f70f4983bb8ac3").getBundleURL("lWxpx") + "6.68b0c207.svg" + "?" + Date.now();
+
+},{"d3f70f4983bb8ac3":"lgJ39"}],"dFgBO":[function(require,module,exports) {
+module.exports = require("ee43605838201c2").getBundleURL("lWxpx") + "7.6b705389.svg" + "?" + Date.now();
+
+},{"ee43605838201c2":"lgJ39"}],"eV4xR":[function(require,module,exports) {
+module.exports = require("bd5934787055b912").getBundleURL("lWxpx") + "8.e11a0ea6.svg" + "?" + Date.now();
+
+},{"bd5934787055b912":"lgJ39"}],"1SWY5":[function(require,module,exports) {
+module.exports = require("6873f8bda6d8ca5f").getBundleURL("lWxpx") + "9.8ce33734.svg" + "?" + Date.now();
+
+},{"6873f8bda6d8ca5f":"lgJ39"}],"hdOHV":[function(require,module,exports) {
+module.exports = require("a3f39d1e821fa8f3").getBundleURL("lWxpx") + "10.9a27e234.svg" + "?" + Date.now();
+
+},{"a3f39d1e821fa8f3":"lgJ39"}],"cZGtU":[function(require,module,exports) {
+module.exports = require("e28eecc572770073").getBundleURL("lWxpx") + "11.6a6369cf.svg" + "?" + Date.now();
+
+},{"e28eecc572770073":"lgJ39"}],"h2Mo4":[function(require,module,exports) {
+module.exports = require("9e57944b17c46aad").getBundleURL("lWxpx") + "12.570d80cd.svg" + "?" + Date.now();
+
+},{"9e57944b17c46aad":"lgJ39"}],"cgdQL":[function(require,module,exports) {
+module.exports = require("27e1ae5a7e3ec730").getBundleURL("lWxpx") + "13.1cfa0aa7.svg" + "?" + Date.now();
+
+},{"27e1ae5a7e3ec730":"lgJ39"}],"18U6j":[function(require,module,exports) {
 module.exports = require("5b499864883e64c6").getBundleURL("lWxpx") + "0.ad4296a8.svg" + "?" + Date.now();
 
 },{"5b499864883e64c6":"lgJ39"}],"cHeNU":[function(require,module,exports) {
@@ -38162,7 +38170,7 @@ const Desk = (props)=>{
                                     columnNumber: 13
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                                    src: game.deck.cards.length > 0 ? (0, _cardDefault.default).backImage : (0, _cardDefault.default).blankImage,
+                                    src: game.deckEmpty ? (0, _cardDefault.default).blankImage : (0, _cardDefault.default).backImage,
                                     className: "card-img",
                                     style: {
                                         display: "block",
@@ -52474,7 +52482,8 @@ class Game {
         this.players = [];
         this.deck = new (0, _deckDefault.default)();
         this.playedCards = [];
-        this.draw = false;
+        this.over = false;
+        this.winner = undefined;
         this.playerIndex = 0;
         this.primaryCard = (0, _lodashDefault.default).sample(this.deck.cards);
         while(this.primaryCard.suit === "\uD83C\uDCCF")this.primaryCard = (0, _lodashDefault.default).sample(this.deck.cards);
@@ -52484,24 +52493,20 @@ class Game {
         const player = new (0, _playerDefault.default)(name);
         this.players.push(player);
     }
-    get currentTurnPlayer() {
+    get currentPlayer() {
         return this.players[this.playerIndex];
-    }
-    // only one player not won
-    get over() {
-        return this.players.filter((player)=>!player.won).length <= 1;
     }
     // move on to the next player
     moveOn() {
         if (this.over) return;
         this.playerIndex = (this.playerIndex + 1) % this.players.length;
-        while(this.currentTurnPlayer.won)this.playerIndex = (this.playerIndex + 1) % this.players.length;
+        while(this.currentPlayer.won)this.playerIndex = (this.playerIndex + 1) % this.players.length;
     }
     findPlayer(name) {
         return this.players.find((player)=>player.name === name);
     }
     playCard(card) {
-        this.currentTurnPlayer.play(card);
+        this.currentPlayer.play(card);
         this.playedCards.push(card);
     }
     get currentRank() {
@@ -52527,9 +52532,14 @@ class Game {
             for(let i = 0; i < 5; i++)player.hand.push(this.deck.pop());
         });
         this.playerIndex = 0;
+        this.over = false;
+        this.winner = undefined;
     }
     changeSuit(suit) {
         this.currentSuit = suit;
+    }
+    get deckEmpty() {
+        return this.deck.cards.length === 0;
     }
 }
 exports.default = Game;
@@ -52579,7 +52589,13 @@ class Player {
         return this.hand.length === 0;
     }
     isCurrent(game) {
-        return game.currentTurnPlayer.uuid === this.uuid;
+        return game.currentPlayer.uuid === this.uuid;
+    }
+    playableCards(game) {
+        return this.hand.filter((card)=>game.canPlayCard(card));
+    }
+    canPlay(game) {
+        return this.playableCards(game).length > 0;
     }
     play(card) {
         this.hand = this.hand.filter((c)=>c !== card);
@@ -54685,7 +54701,7 @@ class AI {
         this.player = player;
         this.listener = (event)=>{
             if (event.name !== "set" || event.pathString !== "playerIndex") return;
-            if (this.game.currentTurnPlayer !== this.player) return;
+            if (!this.player.isCurrent(game)) return;
             this.play();
         };
     }
@@ -54696,7 +54712,7 @@ class AI {
         this.game.$e.off(this.listener);
     }
     async play() {
-        if (this.game.currentTurnPlayer !== this.player) {
+        if (!this.player.isCurrent(this.game)) {
             console.log("Not AI's turn.");
             return;
         }
@@ -54706,10 +54722,10 @@ class AI {
         await (0, _waitForAsyncDefault.default)({
             interval: 1000
         });
-        const playableCards = this.player.hand.filter((card)=>this.game.canPlayCard(card));
-        if (playableCards.length === 0 && this.game.deck.cards.length > 0) {
+        const playableCards = this.player.playableCards(this.game);
+        if (playableCards.length === 0 && !this.game.deckEmpty) {
             this.player.hand.push(this.game.deck.pop());
-            while(!this.game.canPlayCard((0, _lodashDefault.default).last(this.player.hand)) && this.game.deck.cards.length > 0){
+            while(!this.game.canPlayCard((0, _lodashDefault.default).last(this.player.hand)) && !this.game.deckEmpty){
                 (0, _antdMobile.Toast).show({
                     content: "AI is drawing..."
                 });
@@ -54747,12 +54763,6 @@ class AI {
             await (0, _waitForAsyncDefault.default)({
                 interval: 1000
             });
-            // If no one can play, it's a draw
-            if (this.game.players.every((player)=>{
-                return player.hand.every((card)=>{
-                    return !this.game.canPlayCard(card);
-                });
-            })) this.game.draw = true;
         }
         this.game.moveOn();
         (0, _antdMobile.Toast).show({
@@ -54940,6 +54950,40 @@ var defaultOptions = {
 };
 exports.default = waitFor;
 
-},{}]},["6u0VT","1xC6H","4aBH6"], "4aBH6", "parcelRequire0dc9")
+},{}],"gsqmY":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+class GameManager {
+    constructor(game){
+        this.game = game;
+        this.listener = (event)=>{
+            if (event.name !== "set" || event.pathString !== "playerIndex") return;
+            this.update();
+        };
+    }
+    start() {
+        this.game.$e.on(this.listener);
+    }
+    stop() {
+        this.game.$e.off(this.listener);
+    }
+    update() {
+        for (const player of this.game.players)if (player.won) {
+            this.game.over = true;
+            this.game.winner = player;
+            return;
+        }
+        // nobody can play
+        if (this.game.deckEmpty && this.game.players.every((player)=>!player.canPlay(this.game))) {
+            this.game.over = true;
+            const map = new Map();
+            for (const player of this.game.players)map.set(player.hand.reduce((acc, card)=>acc + card.weight, 0), player);
+            this.game.winner = map.size <= 1 ? undefined : map.get(Math.min(...map.keys()));
+        }
+    }
+}
+exports.default = GameManager;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["6u0VT","1xC6H","4aBH6"], "4aBH6", "parcelRequire0dc9")
 
 //# sourceMappingURL=index.769f847c.js.map
