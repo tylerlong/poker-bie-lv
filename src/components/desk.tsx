@@ -27,7 +27,7 @@ const Desk = (props: { game: Game }) => {
           <>
             <Divider>{`Deck(${game.deck.cards.length} cards)`}</Divider>
             <img
-              src={game.deck.cards.length > 0 ? Card.backImage : Card.blankImage}
+              src={game.deckEmpty ? Card.blankImage : Card.backImage}
               className="card-img"
               style={{ display: 'block', margin: '0 auto' }}
             />

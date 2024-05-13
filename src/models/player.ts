@@ -20,7 +20,15 @@ class Player {
   }
 
   public isCurrent(game: Game): boolean {
-    return game.currentTurnPlayer.uuid === this.uuid;
+    return game.currentPlayer.uuid === this.uuid;
+  }
+
+  public playableCards(game: Game): Card[] {
+    return this.hand.filter((card) => game.canPlayCard(card));
+  }
+
+  public canPlay(game: Game): boolean {
+    return this.playableCards(game).length > 0;
   }
 
   public play(card: Card) {

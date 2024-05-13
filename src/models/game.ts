@@ -11,7 +11,8 @@ class Game {
   public playedCards: Card[] = [];
   public primaryCard: Card;
   public currentSuit: SuitType;
-  public draw = false;
+  public over = false;
+  public winner: Player = undefined;
 
   private playerIndex = 0;
 
@@ -28,13 +29,8 @@ class Game {
     this.players.push(player);
   }
 
-  public get currentTurnPlayer(): Player {
+  public get currentPlayer(): Player {
     return this.players[this.playerIndex];
-  }
-
-  // only one player not won
-  public get over() {
-    return this.players.filter((player) => !player.won).length <= 1;
   }
 
   // move on to the next player
@@ -43,7 +39,7 @@ class Game {
       return;
     }
     this.playerIndex = (this.playerIndex + 1) % this.players.length;
-    while (this.currentTurnPlayer.won) {
+    while (this.currentPlayer.won) {
       this.playerIndex = (this.playerIndex + 1) % this.players.length;
     }
   }
@@ -53,7 +49,7 @@ class Game {
   }
 
   public playCard(card: Card): void {
-    this.currentTurnPlayer.play(card);
+    this.currentPlayer.play(card);
     this.playedCards.push(card);
   }
 
@@ -94,10 +90,16 @@ class Game {
       }
     });
     this.playerIndex = 0;
+    this.over = false;
+    this.winner = undefined;
   }
 
   public changeSuit(suit: SuitType): void {
     this.currentSuit = suit;
+  }
+
+  public get deckEmpty() {
+    return this.deck.cards.length === 0;
   }
 }
 

@@ -12,11 +12,7 @@ const Opponent = (props: { game: Game }) => {
     return (
       <Space wrap block justify="center">
         {aiPlayer.hand.map((card) => (
-          <img
-            key={`${card.suit}-${card.rank}`}
-            src={game.over || game.draw ? card.image : Card.backImage}
-            className="card-img"
-          />
+          <img key={`${card.suit}-${card.rank}`} src={game.over ? card.image : Card.backImage} className="card-img" />
         ))}
       </Space>
     );

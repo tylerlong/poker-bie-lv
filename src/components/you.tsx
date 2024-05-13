@@ -9,11 +9,10 @@ const You = (props: { game: Game }) => {
   const { game } = props;
   const render = () => {
     const youPlayer = game.findPlayer('You');
-    const isYourTurn = game.currentTurnPlayer === youPlayer;
     const actions = [];
-    if (game.over || game.draw) {
+    if (game.over) {
       actions.push(<NoticeBar content="Game Over!" color="info" />);
-      if (game.draw) {
+      if (game.winner === undefined) {
         actions.push(<Result status="info" title="Tie!" />);
       } else if (game.findPlayer('You').won) {
         actions.push(<Result status="success" title="You Win!" />);
@@ -26,7 +25,7 @@ const You = (props: { game: Game }) => {
         </Button>,
       );
     } else {
-      if (game.deck.cards.length === 0) {
+      if (game.deckEmpty) {
         actions.push(
           <Button
             key="button-pass"
@@ -34,7 +33,7 @@ const You = (props: { game: Game }) => {
             size="large"
             onClick={() => game.moveOn()}
             color="warning"
-            disabled={!isYourTurn}
+            disabled={!youPlayer.isCurrent(game)}
           >
             Pass
           </Button>,
@@ -49,7 +48,7 @@ const You = (props: { game: Game }) => {
             onClick={() => {
               youPlayer.hand.push(game.deck.pop());
             }}
-            disabled={!isYourTurn}
+            disabled={!youPlayer.isCurrent(game)}
           >
             Draw
           </Button>,

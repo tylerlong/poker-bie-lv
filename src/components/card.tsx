@@ -19,7 +19,7 @@ const CardComponent = (props: { game: Game; player: Player; card: Card }) => {
     if (game.over) {
       actionSheetProps.extra = 'Game is over';
     } else {
-      if (player !== game.currentTurnPlayer) {
+      if (!player.isCurrent(game)) {
         actionSheetProps.extra = 'Not your turn';
       } else {
         if (game.canPlayCard(card)) {
@@ -84,7 +84,7 @@ const CardComponent = (props: { game: Game; player: Player; card: Card }) => {
     }
     return (
       <img
-        className={`card-img ${player === game.currentTurnPlayer && game.canPlayCard(card) ? 'highlighted' : ''}`}
+        className={`card-img ${player.isCurrent(game) && game.canPlayCard(card) ? 'highlighted' : ''}`}
         src={card.image}
         onClick={() => {
           actionSheetShowHandler = ActionSheet.show(actionSheetProps);

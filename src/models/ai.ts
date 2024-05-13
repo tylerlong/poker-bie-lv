@@ -19,7 +19,7 @@ class AI {
       if (event.name !== 'set' || event.pathString !== 'playerIndex') {
         return;
       }
-      if (this.game.currentTurnPlayer !== this.player) {
+      if (!this.player.isCurrent(game)) {
         return;
       }
       this.play();
@@ -35,16 +35,16 @@ class AI {
   }
 
   public async play() {
-    if (this.game.currentTurnPlayer !== this.player) {
+    if (!this.player.isCurrent(this.game)) {
       console.log("Not AI's turn.");
       return;
     }
     Toast.show({ content: 'AI is thinking...' });
     await waitFor({ interval: 1000 });
-    const playableCards = this.player.hand.filter((card) => this.game.canPlayCard(card));
-    if (playableCards.length === 0 && this.game.deck.cards.length > 0) {
+    const playableCards = this.player.playableCards(this.game);
+    if (playableCards.length === 0 && !this.game.deckEmpty) {
       this.player.hand.push(this.game.deck.pop());
-      while (!this.game.canPlayCard(_.last(this.player.hand)) && this.game.deck.cards.length > 0) {
+      while (!this.game.canPlayCard(_.last(this.player.hand)) && !this.game.deckEmpty) {
         Toast.show({ content: 'AI is drawing...' });
         await waitFor({ interval: 1000 });
         this.player.hand.push(this.game.deck.pop());
@@ -73,16 +73,6 @@ class AI {
     } else {
       Toast.show({ content: 'AI is passing...' });
       await waitFor({ interval: 1000 });
-      // If no one can play, it's a draw
-      if (
-        this.game.players.every((player) => {
-          return player.hand.every((card) => {
-            return !this.game.canPlayCard(card);
-          });
-        })
-      ) {
-        this.game.draw = true;
-      }
     }
     this.game.moveOn();
     Toast.show({ content: 'It is your turn.' });
