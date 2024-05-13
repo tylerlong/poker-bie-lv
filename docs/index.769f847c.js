@@ -3001,17 +3001,148 @@ root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment
             lineNumber: 33,
             columnNumber: 5
         }, undefined),
+        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antdMobile.Divider), {}, void 0, false, {
+            fileName: "src/index.tsx",
+            lineNumber: 34,
+            columnNumber: 5
+        }, undefined),
+        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antdMobile.Footer), {
+            chips: [
+                {
+                    text: "Rules",
+                    type: "link"
+                }
+            ],
+            onChipClick: ()=>{
+                (0, _antdMobile.Dialog).show({
+                    content: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antdMobile.Divider), {
+                                children: "How to start?"
+                            }, void 0, false, {
+                                fileName: "src/index.tsx",
+                                lineNumber: 41,
+                                columnNumber: 15
+                            }, void 0),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                children: "Shuffle the deck and randomly choose a primary card(and put it back into the deck). The primary card's suit will be used as the current suit. Each player draw 5 cards."
+                            }, void 0, false, {
+                                fileName: "src/index.tsx",
+                                lineNumber: 42,
+                                columnNumber: 15
+                            }, void 0),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antdMobile.Divider), {
+                                children: "How to win?"
+                            }, void 0, false, {
+                                fileName: "src/index.tsx",
+                                lineNumber: 46,
+                                columnNumber: 15
+                            }, void 0),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                children: "Be the first to get rid of all your cards."
+                            }, void 0, false, {
+                                fileName: "src/index.tsx",
+                                lineNumber: 47,
+                                columnNumber: 15
+                            }, void 0),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antdMobile.Divider), {
+                                children: "How to play?"
+                            }, void 0, false, {
+                                fileName: "src/index.tsx",
+                                lineNumber: 48,
+                                columnNumber: 15
+                            }, void 0),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                children: "On your turn, play a card and optionally change the current suit. If you can't play a card, draw from the deck until you can. If the deck is empty, pass your turn."
+                            }, void 0, false, {
+                                fileName: "src/index.tsx",
+                                lineNumber: 49,
+                                columnNumber: 15
+                            }, void 0),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antdMobile.Divider), {
+                                children: "What cards are playable?"
+                            }, void 0, false, {
+                                fileName: "src/index.tsx",
+                                lineNumber: 53,
+                                columnNumber: 15
+                            }, void 0),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                children: "You can play a card if it matches the following conditions: 1. Its suit matches the current suit. 2. Its rank matches the current rank. 3. Its rank matches the primary card's rank. 4. It's a Joker card."
+                            }, void 0, false, {
+                                fileName: "src/index.tsx",
+                                lineNumber: 54,
+                                columnNumber: 15
+                            }, void 0),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antdMobile.Divider), {
+                                children: "What is the current rank?"
+                            }, void 0, false, {
+                                fileName: "src/index.tsx",
+                                lineNumber: 58,
+                                columnNumber: 15
+                            }, void 0),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                children: "The current rank is always the last played card's rank (unless it's a Joker card)."
+                            }, void 0, false, {
+                                fileName: "src/index.tsx",
+                                lineNumber: 59,
+                                columnNumber: 15
+                            }, void 0),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antdMobile.Divider), {
+                                children: "How to change the current suit?"
+                            }, void 0, false, {
+                                fileName: "src/index.tsx",
+                                lineNumber: 60,
+                                columnNumber: 15
+                            }, void 0),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                children: "You can change the suit if you play a card that matches the following conditions: 1. Its rank matches the primary card's rank. 2. Its rank matches the current rank."
+                            }, void 0, false, {
+                                fileName: "src/index.tsx",
+                                lineNumber: 61,
+                                columnNumber: 15
+                            }, void 0),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antdMobile.Divider), {
+                                children: "Anything special about Joker cards?"
+                            }, void 0, false, {
+                                fileName: "src/index.tsx",
+                                lineNumber: 65,
+                                columnNumber: 15
+                            }, void 0),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                children: "Joker cards can be played no matter what is the current suit and rank. It doesn't change the current suit or rank."
+                            }, void 0, false, {
+                                fileName: "src/index.tsx",
+                                lineNumber: 66,
+                                columnNumber: 15
+                            }, void 0)
+                        ]
+                    }, void 0, true),
+                    closeOnMaskClick: true,
+                    closeOnAction: true,
+                    actions: [
+                        {
+                            key: "close",
+                            text: "Got it"
+                        }
+                    ]
+                });
+            }
+        }, void 0, false, {
+            fileName: "src/index.tsx",
+            lineNumber: 35,
+            columnNumber: 5
+        }, undefined),
         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antdMobile.SafeArea), {
                 position: "bottom"
             }, void 0, false, {
                 fileName: "src/index.tsx",
-                lineNumber: 35,
+                lineNumber: 84,
                 columnNumber: 7
             }, undefined)
         }, void 0, false, {
             fileName: "src/index.tsx",
-            lineNumber: 34,
+            lineNumber: 83,
             columnNumber: 5
         }, undefined)
     ]
@@ -27709,7 +27840,7 @@ var _footer = require("./components/footer");
 var _footerDefault = parcelHelpers.interopDefault(_footer);
 var _reduceAndRestoreMotion = require("./utils/reduce-and-restore-motion");
 
-},{"./global":"9Bcn8","./components/config-provider":false,"./components/action-sheet":"lyfUp","./components/auto-center":false,"./components/avatar":false,"./components/badge":false,"./components/button":"21Pcj","./components/calendar":false,"./components/calendar-picker":false,"./components/calendar-picker-view":false,"./components/capsule-tabs":false,"./components/card":false,"./components/cascade-picker":false,"./components/cascade-picker-view":false,"./components/cascader":false,"./components/cascader-view":false,"./components/center-popup":false,"./components/check-list":false,"./components/checkbox":false,"./components/collapse":false,"./components/date-picker":false,"./components/date-picker-view":false,"./components/dialog":false,"./components/divider":"lKBbb","./components/dot-loading":false,"./components/dropdown":false,"./components/ellipsis":false,"./components/empty":false,"./components/error-block":false,"./components/floating-bubble":false,"./components/floating-panel":false,"./components/form":false,"./components/grid":false,"./components/image":false,"./components/image-uploader":false,"./components/image-viewer":false,"./components/index-bar":false,"./components/infinite-scroll":false,"./components/input":false,"./components/jumbo-tabs":false,"./components/list":false,"./components/loading":false,"./components/mask":false,"./components/modal":false,"./components/nav-bar":false,"./components/notice-bar":"fTMC8","./components/number-keyboard":false,"./components/page-indicator":false,"./components/passcode-input":false,"./components/picker":false,"./components/picker-view":false,"./components/popover":false,"./components/popup":false,"./components/progress-bar":false,"./components/progress-circle":false,"./components/pull-to-refresh":false,"./components/radio":false,"./components/rate":false,"./components/result":"4SQc8","./components/result-page":false,"./components/safe-area":"awjHY","./components/scroll-mask":false,"./components/search-bar":false,"./components/selector":false,"./components/side-bar":false,"./components/skeleton":false,"./components/slider":false,"./components/space":"fetqH","./components/spin-loading":false,"./components/stepper":false,"./components/steps":false,"./components/swipe-action":false,"./components/swiper":false,"./components/switch":false,"./components/tab-bar":false,"./components/tabs":false,"./components/tag":false,"./components/text-area":false,"./components/toast":"hYxKD","./components/tree-select":false,"./components/virtual-input":false,"./components/water-mark":false,"./components/footer":false,"./utils/reduce-and-restore-motion":false,"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9Bcn8":[function(require,module,exports) {
+},{"./global":"9Bcn8","./components/config-provider":false,"./components/action-sheet":"lyfUp","./components/auto-center":false,"./components/avatar":false,"./components/badge":false,"./components/button":"21Pcj","./components/calendar":false,"./components/calendar-picker":false,"./components/calendar-picker-view":false,"./components/capsule-tabs":false,"./components/card":false,"./components/cascade-picker":false,"./components/cascade-picker-view":false,"./components/cascader":false,"./components/cascader-view":false,"./components/center-popup":false,"./components/check-list":false,"./components/checkbox":false,"./components/collapse":false,"./components/date-picker":false,"./components/date-picker-view":false,"./components/dialog":"bSFsX","./components/divider":"lKBbb","./components/dot-loading":false,"./components/dropdown":false,"./components/ellipsis":false,"./components/empty":false,"./components/error-block":false,"./components/floating-bubble":false,"./components/floating-panel":false,"./components/form":false,"./components/grid":false,"./components/image":false,"./components/image-uploader":false,"./components/image-viewer":false,"./components/index-bar":false,"./components/infinite-scroll":false,"./components/input":false,"./components/jumbo-tabs":false,"./components/list":false,"./components/loading":false,"./components/mask":false,"./components/modal":false,"./components/nav-bar":false,"./components/notice-bar":"fTMC8","./components/number-keyboard":false,"./components/page-indicator":false,"./components/passcode-input":false,"./components/picker":false,"./components/picker-view":false,"./components/popover":false,"./components/popup":false,"./components/progress-bar":false,"./components/progress-circle":false,"./components/pull-to-refresh":false,"./components/radio":false,"./components/rate":false,"./components/result":"4SQc8","./components/result-page":false,"./components/safe-area":"awjHY","./components/scroll-mask":false,"./components/search-bar":false,"./components/selector":false,"./components/side-bar":false,"./components/skeleton":false,"./components/slider":false,"./components/space":"fetqH","./components/spin-loading":false,"./components/stepper":false,"./components/steps":false,"./components/swipe-action":false,"./components/swiper":false,"./components/switch":false,"./components/tab-bar":false,"./components/tabs":false,"./components/tag":false,"./components/text-area":false,"./components/toast":"hYxKD","./components/tree-select":false,"./components/virtual-input":false,"./components/water-mark":false,"./components/footer":"bx6vF","./utils/reduce-and-restore-motion":false,"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9Bcn8":[function(require,module,exports) {
 var _globalCss = require("./global.css");
 var _canUseDom = require("../utils/can-use-dom");
 if (0, _canUseDom.canUseDom) // Make sure the `:active` CSS selector of `button` and `a` take effect
@@ -29041,7 +29172,980 @@ var _useWhyDidYouUpdateDefault = parcelHelpers.interopDefault(_useWhyDidYouUpdat
 var _useMutationObserver = require("./useMutationObserver");
 var _useMutationObserverDefault = parcelHelpers.interopDefault(_useMutationObserver);
 
-},{"./createUpdateEffect":false,"./useAntdTable":false,"./useAsyncEffect":false,"./useBoolean":false,"./useClickAway":false,"./useControllableValue":false,"./useCookieState":false,"./useCountDown":false,"./useCounter":false,"./useCreation":false,"./useDebounce":false,"./useDebounceEffect":false,"./useDebounceFn":false,"./useDeepCompareEffect":false,"./useDeepCompareLayoutEffect":false,"./useDocumentVisibility":false,"./useDrag":false,"./useDrop":false,"./useDynamicList":false,"./useEventEmitter":false,"./useEventListener":false,"./useEventTarget":false,"./useExternal":false,"./useFavicon":false,"./useFocusWithin":false,"./useFullscreen":false,"./useFusionTable":false,"./useGetState":false,"./useHistoryTravel":false,"./useHover":false,"./useInfiniteScroll":false,"./useInterval":false,"./useInViewport":false,"./useIsomorphicLayoutEffect":"ka0fg","./useKeyPress":false,"./useLatest":false,"./useLocalStorageState":false,"./useLockFn":false,"./useLongPress":false,"./useMap":false,"./useMemoizedFn":"dpV1Q","./useMount":false,"./useMouse":false,"./useNetwork":false,"./usePagination":false,"./usePrevious":false,"./useRafInterval":false,"./useRafState":false,"./useRafTimeout":false,"./useReactive":false,"./useRequest":false,"./useResetState":false,"./useResponsive":false,"./useSafeState":false,"./useScroll":false,"./useSelections":false,"./useSessionStorageState":false,"./useSet":false,"./useSetState":false,"./useSize":false,"./useTextSelection":false,"./useThrottle":false,"./useThrottleEffect":false,"./useThrottleFn":false,"./useTimeout":"6xxJh","./useTitle":false,"./useToggle":false,"./useTrackedEffect":false,"./useUnmount":false,"./useUnmountedRef":"hAvkR","./useUpdate":false,"./useUpdateEffect":false,"./useUpdateLayoutEffect":false,"./useVirtualList":false,"./useWebSocket":false,"./useWhyDidYouUpdate":false,"./useMutationObserver":false,"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ka0fg":[function(require,module,exports) {
+},{"./createUpdateEffect":"4AaVp","./useAntdTable":false,"./useAsyncEffect":false,"./useBoolean":false,"./useClickAway":false,"./useControllableValue":false,"./useCookieState":false,"./useCountDown":false,"./useCounter":false,"./useCreation":false,"./useDebounce":false,"./useDebounceEffect":false,"./useDebounceFn":false,"./useDeepCompareEffect":false,"./useDeepCompareLayoutEffect":false,"./useDocumentVisibility":false,"./useDrag":false,"./useDrop":false,"./useDynamicList":false,"./useEventEmitter":false,"./useEventListener":false,"./useEventTarget":false,"./useExternal":false,"./useFavicon":false,"./useFocusWithin":false,"./useFullscreen":false,"./useFusionTable":false,"./useGetState":false,"./useHistoryTravel":false,"./useHover":false,"./useInfiniteScroll":false,"./useInterval":false,"./useInViewport":"e9QXB","./useIsomorphicLayoutEffect":"ka0fg","./useKeyPress":false,"./useLatest":false,"./useLocalStorageState":false,"./useLockFn":false,"./useLongPress":false,"./useMap":false,"./useMemoizedFn":"dpV1Q","./useMount":false,"./useMouse":false,"./useNetwork":false,"./usePagination":false,"./usePrevious":false,"./useRafInterval":false,"./useRafState":false,"./useRafTimeout":false,"./useReactive":false,"./useRequest":false,"./useResetState":false,"./useResponsive":false,"./useSafeState":false,"./useScroll":false,"./useSelections":false,"./useSessionStorageState":false,"./useSet":false,"./useSetState":false,"./useSize":false,"./useTextSelection":false,"./useThrottle":false,"./useThrottleEffect":false,"./useThrottleFn":false,"./useTimeout":"6xxJh","./useTitle":false,"./useToggle":false,"./useTrackedEffect":false,"./useUnmount":false,"./useUnmountedRef":"hAvkR","./useUpdate":false,"./useUpdateEffect":false,"./useUpdateLayoutEffect":false,"./useVirtualList":false,"./useWebSocket":false,"./useWhyDidYouUpdate":false,"./useMutationObserver":false,"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4AaVp":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "createUpdateEffect", ()=>createUpdateEffect);
+var _react = require("react");
+var createUpdateEffect = function(hook) {
+    return function(effect, deps) {
+        var isMounted = (0, _react.useRef)(false);
+        // for react-refresh
+        hook(function() {
+            return function() {
+                isMounted.current = false;
+            };
+        }, []);
+        hook(function() {
+            if (!isMounted.current) isMounted.current = true;
+            else return effect();
+        }, deps);
+    };
+};
+exports.default = createUpdateEffect;
+
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"e9QXB":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _tslib = require("tslib");
+var _intersectionObserver = require("intersection-observer");
+var _react = require("react");
+var _domTarget = require("../utils/domTarget");
+var _useEffectWithTarget = require("../utils/useEffectWithTarget");
+var _useEffectWithTargetDefault = parcelHelpers.interopDefault(_useEffectWithTarget);
+function useInViewport(target, options) {
+    var _a = options || {}, callback = _a.callback, option = (0, _tslib.__rest)(_a, [
+        "callback"
+    ]);
+    var _b = (0, _tslib.__read)((0, _react.useState)(), 2), state = _b[0], setState = _b[1];
+    var _c = (0, _tslib.__read)((0, _react.useState)(), 2), ratio = _c[0], setRatio = _c[1];
+    (0, _useEffectWithTargetDefault.default)(function() {
+        var targets = Array.isArray(target) ? target : [
+            target
+        ];
+        var els = targets.map(function(element) {
+            return (0, _domTarget.getTargetElement)(element);
+        }).filter(Boolean);
+        if (!els.length) return;
+        var observer = new IntersectionObserver(function(entries) {
+            var e_1, _a;
+            try {
+                for(var entries_1 = (0, _tslib.__values)(entries), entries_1_1 = entries_1.next(); !entries_1_1.done; entries_1_1 = entries_1.next()){
+                    var entry = entries_1_1.value;
+                    setRatio(entry.intersectionRatio);
+                    setState(entry.isIntersecting);
+                    callback === null || callback === void 0 || callback(entry);
+                }
+            } catch (e_1_1) {
+                e_1 = {
+                    error: e_1_1
+                };
+            } finally{
+                try {
+                    if (entries_1_1 && !entries_1_1.done && (_a = entries_1.return)) _a.call(entries_1);
+                } finally{
+                    if (e_1) throw e_1.error;
+                }
+            }
+        }, (0, _tslib.__assign)((0, _tslib.__assign)({}, option), {
+            root: (0, _domTarget.getTargetElement)(options === null || options === void 0 ? void 0 : options.root)
+        }));
+        els.forEach(function(el) {
+            return observer.observe(el);
+        });
+        return function() {
+            observer.disconnect();
+        };
+    }, [
+        options === null || options === void 0 ? void 0 : options.rootMargin,
+        options === null || options === void 0 ? void 0 : options.threshold,
+        callback
+    ], target);
+    return [
+        state,
+        ratio
+    ];
+}
+exports.default = useInViewport;
+
+},{"tslib":"lRdW5","intersection-observer":"kkum8","react":"21dqq","../utils/domTarget":"1O94Y","../utils/useEffectWithTarget":"2PaME","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kkum8":[function(require,module,exports) {
+/**
+ * Copyright 2016 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the W3C SOFTWARE AND DOCUMENT NOTICE AND LICENSE.
+ *
+ *  https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document
+ *
+ */ (function() {
+    "use strict";
+    // Exit early if we're not running in a browser.
+    if (typeof window !== "object") return;
+    // Exit early if all IntersectionObserver and IntersectionObserverEntry
+    // features are natively supported.
+    if ("IntersectionObserver" in window && "IntersectionObserverEntry" in window && "intersectionRatio" in window.IntersectionObserverEntry.prototype) {
+        // Minimal polyfill for Edge 15's lack of `isIntersecting`
+        // See: https://github.com/w3c/IntersectionObserver/issues/211
+        if (!("isIntersecting" in window.IntersectionObserverEntry.prototype)) Object.defineProperty(window.IntersectionObserverEntry.prototype, "isIntersecting", {
+            get: function() {
+                return this.intersectionRatio > 0;
+            }
+        });
+        return;
+    }
+    /**
+ * Returns the embedding frame element, if any.
+ * @param {!Document} doc
+ * @return {!Element}
+ */ function getFrameElement(doc) {
+        try {
+            return doc.defaultView && doc.defaultView.frameElement || null;
+        } catch (e) {
+            // Ignore the error.
+            return null;
+        }
+    }
+    /**
+ * A local reference to the root document.
+ */ var document = function(startDoc) {
+        var doc = startDoc;
+        var frame = getFrameElement(doc);
+        while(frame){
+            doc = frame.ownerDocument;
+            frame = getFrameElement(doc);
+        }
+        return doc;
+    }(window.document);
+    /**
+ * An IntersectionObserver registry. This registry exists to hold a strong
+ * reference to IntersectionObserver instances currently observing a target
+ * element. Without this registry, instances without another reference may be
+ * garbage collected.
+ */ var registry = [];
+    /**
+ * The signal updater for cross-origin intersection. When not null, it means
+ * that the polyfill is configured to work in a cross-origin mode.
+ * @type {function(DOMRect|ClientRect, DOMRect|ClientRect)}
+ */ var crossOriginUpdater = null;
+    /**
+ * The current cross-origin intersection. Only used in the cross-origin mode.
+ * @type {DOMRect|ClientRect}
+ */ var crossOriginRect = null;
+    /**
+ * Creates the global IntersectionObserverEntry constructor.
+ * https://w3c.github.io/IntersectionObserver/#intersection-observer-entry
+ * @param {Object} entry A dictionary of instance properties.
+ * @constructor
+ */ function IntersectionObserverEntry(entry) {
+        this.time = entry.time;
+        this.target = entry.target;
+        this.rootBounds = ensureDOMRect(entry.rootBounds);
+        this.boundingClientRect = ensureDOMRect(entry.boundingClientRect);
+        this.intersectionRect = ensureDOMRect(entry.intersectionRect || getEmptyRect());
+        this.isIntersecting = !!entry.intersectionRect;
+        // Calculates the intersection ratio.
+        var targetRect = this.boundingClientRect;
+        var targetArea = targetRect.width * targetRect.height;
+        var intersectionRect = this.intersectionRect;
+        var intersectionArea = intersectionRect.width * intersectionRect.height;
+        // Sets intersection ratio.
+        if (targetArea) // Round the intersection ratio to avoid floating point math issues:
+        // https://github.com/w3c/IntersectionObserver/issues/324
+        this.intersectionRatio = Number((intersectionArea / targetArea).toFixed(4));
+        else // If area is zero and is intersecting, sets to 1, otherwise to 0
+        this.intersectionRatio = this.isIntersecting ? 1 : 0;
+    }
+    /**
+ * Creates the global IntersectionObserver constructor.
+ * https://w3c.github.io/IntersectionObserver/#intersection-observer-interface
+ * @param {Function} callback The function to be invoked after intersection
+ *     changes have queued. The function is not invoked if the queue has
+ *     been emptied by calling the `takeRecords` method.
+ * @param {Object=} opt_options Optional configuration options.
+ * @constructor
+ */ function IntersectionObserver(callback, opt_options) {
+        var options = opt_options || {};
+        if (typeof callback != "function") throw new Error("callback must be a function");
+        if (options.root && options.root.nodeType != 1 && options.root.nodeType != 9) throw new Error("root must be a Document or Element");
+        // Binds and throttles `this._checkForIntersections`.
+        this._checkForIntersections = throttle(this._checkForIntersections.bind(this), this.THROTTLE_TIMEOUT);
+        // Private properties.
+        this._callback = callback;
+        this._observationTargets = [];
+        this._queuedEntries = [];
+        this._rootMarginValues = this._parseRootMargin(options.rootMargin);
+        // Public properties.
+        this.thresholds = this._initThresholds(options.threshold);
+        this.root = options.root || null;
+        this.rootMargin = this._rootMarginValues.map(function(margin) {
+            return margin.value + margin.unit;
+        }).join(" ");
+        /** @private @const {!Array<!Document>} */ this._monitoringDocuments = [];
+        /** @private @const {!Array<function()>} */ this._monitoringUnsubscribes = [];
+    }
+    /**
+ * The minimum interval within which the document will be checked for
+ * intersection changes.
+ */ IntersectionObserver.prototype.THROTTLE_TIMEOUT = 100;
+    /**
+ * The frequency in which the polyfill polls for intersection changes.
+ * this can be updated on a per instance basis and must be set prior to
+ * calling `observe` on the first target.
+ */ IntersectionObserver.prototype.POLL_INTERVAL = null;
+    /**
+ * Use a mutation observer on the root element
+ * to detect intersection changes.
+ */ IntersectionObserver.prototype.USE_MUTATION_OBSERVER = true;
+    /**
+ * Sets up the polyfill in the cross-origin mode. The result is the
+ * updater function that accepts two arguments: `boundingClientRect` and
+ * `intersectionRect` - just as these fields would be available to the
+ * parent via `IntersectionObserverEntry`. This function should be called
+ * each time the iframe receives intersection information from the parent
+ * window, e.g. via messaging.
+ * @return {function(DOMRect|ClientRect, DOMRect|ClientRect)}
+ */ IntersectionObserver._setupCrossOriginUpdater = function() {
+        if (!crossOriginUpdater) /**
+     * @param {DOMRect|ClientRect} boundingClientRect
+     * @param {DOMRect|ClientRect} intersectionRect
+     */ crossOriginUpdater = function(boundingClientRect, intersectionRect) {
+            if (!boundingClientRect || !intersectionRect) crossOriginRect = getEmptyRect();
+            else crossOriginRect = convertFromParentRect(boundingClientRect, intersectionRect);
+            registry.forEach(function(observer) {
+                observer._checkForIntersections();
+            });
+        };
+        return crossOriginUpdater;
+    };
+    /**
+ * Resets the cross-origin mode.
+ */ IntersectionObserver._resetCrossOriginUpdater = function() {
+        crossOriginUpdater = null;
+        crossOriginRect = null;
+    };
+    /**
+ * Starts observing a target element for intersection changes based on
+ * the thresholds values.
+ * @param {Element} target The DOM element to observe.
+ */ IntersectionObserver.prototype.observe = function(target) {
+        var isTargetAlreadyObserved = this._observationTargets.some(function(item) {
+            return item.element == target;
+        });
+        if (isTargetAlreadyObserved) return;
+        if (!(target && target.nodeType == 1)) throw new Error("target must be an Element");
+        this._registerInstance();
+        this._observationTargets.push({
+            element: target,
+            entry: null
+        });
+        this._monitorIntersections(target.ownerDocument);
+        this._checkForIntersections();
+    };
+    /**
+ * Stops observing a target element for intersection changes.
+ * @param {Element} target The DOM element to observe.
+ */ IntersectionObserver.prototype.unobserve = function(target) {
+        this._observationTargets = this._observationTargets.filter(function(item) {
+            return item.element != target;
+        });
+        this._unmonitorIntersections(target.ownerDocument);
+        if (this._observationTargets.length == 0) this._unregisterInstance();
+    };
+    /**
+ * Stops observing all target elements for intersection changes.
+ */ IntersectionObserver.prototype.disconnect = function() {
+        this._observationTargets = [];
+        this._unmonitorAllIntersections();
+        this._unregisterInstance();
+    };
+    /**
+ * Returns any queue entries that have not yet been reported to the
+ * callback and clears the queue. This can be used in conjunction with the
+ * callback to obtain the absolute most up-to-date intersection information.
+ * @return {Array} The currently queued entries.
+ */ IntersectionObserver.prototype.takeRecords = function() {
+        var records = this._queuedEntries.slice();
+        this._queuedEntries = [];
+        return records;
+    };
+    /**
+ * Accepts the threshold value from the user configuration object and
+ * returns a sorted array of unique threshold values. If a value is not
+ * between 0 and 1 and error is thrown.
+ * @private
+ * @param {Array|number=} opt_threshold An optional threshold value or
+ *     a list of threshold values, defaulting to [0].
+ * @return {Array} A sorted list of unique and valid threshold values.
+ */ IntersectionObserver.prototype._initThresholds = function(opt_threshold) {
+        var threshold = opt_threshold || [
+            0
+        ];
+        if (!Array.isArray(threshold)) threshold = [
+            threshold
+        ];
+        return threshold.sort().filter(function(t, i, a) {
+            if (typeof t != "number" || isNaN(t) || t < 0 || t > 1) throw new Error("threshold must be a number between 0 and 1 inclusively");
+            return t !== a[i - 1];
+        });
+    };
+    /**
+ * Accepts the rootMargin value from the user configuration object
+ * and returns an array of the four margin values as an object containing
+ * the value and unit properties. If any of the values are not properly
+ * formatted or use a unit other than px or %, and error is thrown.
+ * @private
+ * @param {string=} opt_rootMargin An optional rootMargin value,
+ *     defaulting to '0px'.
+ * @return {Array<Object>} An array of margin objects with the keys
+ *     value and unit.
+ */ IntersectionObserver.prototype._parseRootMargin = function(opt_rootMargin) {
+        var marginString = opt_rootMargin || "0px";
+        var margins = marginString.split(/\s+/).map(function(margin) {
+            var parts = /^(-?\d*\.?\d+)(px|%)$/.exec(margin);
+            if (!parts) throw new Error("rootMargin must be specified in pixels or percent");
+            return {
+                value: parseFloat(parts[1]),
+                unit: parts[2]
+            };
+        });
+        // Handles shorthand.
+        margins[1] = margins[1] || margins[0];
+        margins[2] = margins[2] || margins[0];
+        margins[3] = margins[3] || margins[1];
+        return margins;
+    };
+    /**
+ * Starts polling for intersection changes if the polling is not already
+ * happening, and if the page's visibility state is visible.
+ * @param {!Document} doc
+ * @private
+ */ IntersectionObserver.prototype._monitorIntersections = function(doc) {
+        var win = doc.defaultView;
+        if (!win) // Already destroyed.
+        return;
+        if (this._monitoringDocuments.indexOf(doc) != -1) // Already monitoring.
+        return;
+        // Private state for monitoring.
+        var callback = this._checkForIntersections;
+        var monitoringInterval = null;
+        var domObserver = null;
+        // If a poll interval is set, use polling instead of listening to
+        // resize and scroll events or DOM mutations.
+        if (this.POLL_INTERVAL) monitoringInterval = win.setInterval(callback, this.POLL_INTERVAL);
+        else {
+            addEvent(win, "resize", callback, true);
+            addEvent(doc, "scroll", callback, true);
+            if (this.USE_MUTATION_OBSERVER && "MutationObserver" in win) {
+                domObserver = new win.MutationObserver(callback);
+                domObserver.observe(doc, {
+                    attributes: true,
+                    childList: true,
+                    characterData: true,
+                    subtree: true
+                });
+            }
+        }
+        this._monitoringDocuments.push(doc);
+        this._monitoringUnsubscribes.push(function() {
+            // Get the window object again. When a friendly iframe is destroyed, it
+            // will be null.
+            var win = doc.defaultView;
+            if (win) {
+                if (monitoringInterval) win.clearInterval(monitoringInterval);
+                removeEvent(win, "resize", callback, true);
+            }
+            removeEvent(doc, "scroll", callback, true);
+            if (domObserver) domObserver.disconnect();
+        });
+        // Also monitor the parent.
+        var rootDoc = this.root && (this.root.ownerDocument || this.root) || document;
+        if (doc != rootDoc) {
+            var frame = getFrameElement(doc);
+            if (frame) this._monitorIntersections(frame.ownerDocument);
+        }
+    };
+    /**
+ * Stops polling for intersection changes.
+ * @param {!Document} doc
+ * @private
+ */ IntersectionObserver.prototype._unmonitorIntersections = function(doc) {
+        var index = this._monitoringDocuments.indexOf(doc);
+        if (index == -1) return;
+        var rootDoc = this.root && (this.root.ownerDocument || this.root) || document;
+        // Check if any dependent targets are still remaining.
+        var hasDependentTargets = this._observationTargets.some(function(item) {
+            var itemDoc = item.element.ownerDocument;
+            // Target is in this context.
+            if (itemDoc == doc) return true;
+            // Target is nested in this context.
+            while(itemDoc && itemDoc != rootDoc){
+                var frame = getFrameElement(itemDoc);
+                itemDoc = frame && frame.ownerDocument;
+                if (itemDoc == doc) return true;
+            }
+            return false;
+        });
+        if (hasDependentTargets) return;
+        // Unsubscribe.
+        var unsubscribe = this._monitoringUnsubscribes[index];
+        this._monitoringDocuments.splice(index, 1);
+        this._monitoringUnsubscribes.splice(index, 1);
+        unsubscribe();
+        // Also unmonitor the parent.
+        if (doc != rootDoc) {
+            var frame = getFrameElement(doc);
+            if (frame) this._unmonitorIntersections(frame.ownerDocument);
+        }
+    };
+    /**
+ * Stops polling for intersection changes.
+ * @param {!Document} doc
+ * @private
+ */ IntersectionObserver.prototype._unmonitorAllIntersections = function() {
+        var unsubscribes = this._monitoringUnsubscribes.slice(0);
+        this._monitoringDocuments.length = 0;
+        this._monitoringUnsubscribes.length = 0;
+        for(var i = 0; i < unsubscribes.length; i++)unsubscribes[i]();
+    };
+    /**
+ * Scans each observation target for intersection changes and adds them
+ * to the internal entries queue. If new entries are found, it
+ * schedules the callback to be invoked.
+ * @private
+ */ IntersectionObserver.prototype._checkForIntersections = function() {
+        if (!this.root && crossOriginUpdater && !crossOriginRect) // Cross origin monitoring, but no initial data available yet.
+        return;
+        var rootIsInDom = this._rootIsInDom();
+        var rootRect = rootIsInDom ? this._getRootRect() : getEmptyRect();
+        this._observationTargets.forEach(function(item) {
+            var target = item.element;
+            var targetRect = getBoundingClientRect(target);
+            var rootContainsTarget = this._rootContainsTarget(target);
+            var oldEntry = item.entry;
+            var intersectionRect = rootIsInDom && rootContainsTarget && this._computeTargetAndRootIntersection(target, targetRect, rootRect);
+            var rootBounds = null;
+            if (!this._rootContainsTarget(target)) rootBounds = getEmptyRect();
+            else if (!crossOriginUpdater || this.root) rootBounds = rootRect;
+            var newEntry = item.entry = new IntersectionObserverEntry({
+                time: now(),
+                target: target,
+                boundingClientRect: targetRect,
+                rootBounds: rootBounds,
+                intersectionRect: intersectionRect
+            });
+            if (!oldEntry) this._queuedEntries.push(newEntry);
+            else if (rootIsInDom && rootContainsTarget) // If the new entry intersection ratio has crossed any of the
+            // thresholds, add a new entry.
+            {
+                if (this._hasCrossedThreshold(oldEntry, newEntry)) this._queuedEntries.push(newEntry);
+            } else // If the root is not in the DOM or target is not contained within
+            // root but the previous entry for this target had an intersection,
+            // add a new record indicating removal.
+            if (oldEntry && oldEntry.isIntersecting) this._queuedEntries.push(newEntry);
+        }, this);
+        if (this._queuedEntries.length) this._callback(this.takeRecords(), this);
+    };
+    /**
+ * Accepts a target and root rect computes the intersection between then
+ * following the algorithm in the spec.
+ * TODO(philipwalton): at this time clip-path is not considered.
+ * https://w3c.github.io/IntersectionObserver/#calculate-intersection-rect-algo
+ * @param {Element} target The target DOM element
+ * @param {Object} targetRect The bounding rect of the target.
+ * @param {Object} rootRect The bounding rect of the root after being
+ *     expanded by the rootMargin value.
+ * @return {?Object} The final intersection rect object or undefined if no
+ *     intersection is found.
+ * @private
+ */ IntersectionObserver.prototype._computeTargetAndRootIntersection = function(target, targetRect, rootRect) {
+        // If the element isn't displayed, an intersection can't happen.
+        if (window.getComputedStyle(target).display == "none") return;
+        var intersectionRect = targetRect;
+        var parent = getParentNode(target);
+        var atRoot = false;
+        while(!atRoot && parent){
+            var parentRect = null;
+            var parentComputedStyle = parent.nodeType == 1 ? window.getComputedStyle(parent) : {};
+            // If the parent isn't displayed, an intersection can't happen.
+            if (parentComputedStyle.display == "none") return null;
+            if (parent == this.root || parent.nodeType == /* DOCUMENT */ 9) {
+                atRoot = true;
+                if (parent == this.root || parent == document) {
+                    if (crossOriginUpdater && !this.root) {
+                        if (!crossOriginRect || crossOriginRect.width == 0 && crossOriginRect.height == 0) {
+                            // A 0-size cross-origin intersection means no-intersection.
+                            parent = null;
+                            parentRect = null;
+                            intersectionRect = null;
+                        } else parentRect = crossOriginRect;
+                    } else parentRect = rootRect;
+                } else {
+                    // Check if there's a frame that can be navigated to.
+                    var frame = getParentNode(parent);
+                    var frameRect = frame && getBoundingClientRect(frame);
+                    var frameIntersect = frame && this._computeTargetAndRootIntersection(frame, frameRect, rootRect);
+                    if (frameRect && frameIntersect) {
+                        parent = frame;
+                        parentRect = convertFromParentRect(frameRect, frameIntersect);
+                    } else {
+                        parent = null;
+                        intersectionRect = null;
+                    }
+                }
+            } else {
+                // If the element has a non-visible overflow, and it's not the <body>
+                // or <html> element, update the intersection rect.
+                // Note: <body> and <html> cannot be clipped to a rect that's not also
+                // the document rect, so no need to compute a new intersection.
+                var doc = parent.ownerDocument;
+                if (parent != doc.body && parent != doc.documentElement && parentComputedStyle.overflow != "visible") parentRect = getBoundingClientRect(parent);
+            }
+            // If either of the above conditionals set a new parentRect,
+            // calculate new intersection data.
+            if (parentRect) intersectionRect = computeRectIntersection(parentRect, intersectionRect);
+            if (!intersectionRect) break;
+            parent = parent && getParentNode(parent);
+        }
+        return intersectionRect;
+    };
+    /**
+ * Returns the root rect after being expanded by the rootMargin value.
+ * @return {ClientRect} The expanded root rect.
+ * @private
+ */ IntersectionObserver.prototype._getRootRect = function() {
+        var rootRect;
+        if (this.root && !isDoc(this.root)) rootRect = getBoundingClientRect(this.root);
+        else {
+            // Use <html>/<body> instead of window since scroll bars affect size.
+            var doc = isDoc(this.root) ? this.root : document;
+            var html = doc.documentElement;
+            var body = doc.body;
+            rootRect = {
+                top: 0,
+                left: 0,
+                right: html.clientWidth || body.clientWidth,
+                width: html.clientWidth || body.clientWidth,
+                bottom: html.clientHeight || body.clientHeight,
+                height: html.clientHeight || body.clientHeight
+            };
+        }
+        return this._expandRectByRootMargin(rootRect);
+    };
+    /**
+ * Accepts a rect and expands it by the rootMargin value.
+ * @param {DOMRect|ClientRect} rect The rect object to expand.
+ * @return {ClientRect} The expanded rect.
+ * @private
+ */ IntersectionObserver.prototype._expandRectByRootMargin = function(rect) {
+        var margins = this._rootMarginValues.map(function(margin, i) {
+            return margin.unit == "px" ? margin.value : margin.value * (i % 2 ? rect.width : rect.height) / 100;
+        });
+        var newRect = {
+            top: rect.top - margins[0],
+            right: rect.right + margins[1],
+            bottom: rect.bottom + margins[2],
+            left: rect.left - margins[3]
+        };
+        newRect.width = newRect.right - newRect.left;
+        newRect.height = newRect.bottom - newRect.top;
+        return newRect;
+    };
+    /**
+ * Accepts an old and new entry and returns true if at least one of the
+ * threshold values has been crossed.
+ * @param {?IntersectionObserverEntry} oldEntry The previous entry for a
+ *    particular target element or null if no previous entry exists.
+ * @param {IntersectionObserverEntry} newEntry The current entry for a
+ *    particular target element.
+ * @return {boolean} Returns true if a any threshold has been crossed.
+ * @private
+ */ IntersectionObserver.prototype._hasCrossedThreshold = function(oldEntry, newEntry) {
+        // To make comparing easier, an entry that has a ratio of 0
+        // but does not actually intersect is given a value of -1
+        var oldRatio = oldEntry && oldEntry.isIntersecting ? oldEntry.intersectionRatio || 0 : -1;
+        var newRatio = newEntry.isIntersecting ? newEntry.intersectionRatio || 0 : -1;
+        // Ignore unchanged ratios
+        if (oldRatio === newRatio) return;
+        for(var i = 0; i < this.thresholds.length; i++){
+            var threshold = this.thresholds[i];
+            // Return true if an entry matches a threshold or if the new ratio
+            // and the old ratio are on the opposite sides of a threshold.
+            if (threshold == oldRatio || threshold == newRatio || threshold < oldRatio !== threshold < newRatio) return true;
+        }
+    };
+    /**
+ * Returns whether or not the root element is an element and is in the DOM.
+ * @return {boolean} True if the root element is an element and is in the DOM.
+ * @private
+ */ IntersectionObserver.prototype._rootIsInDom = function() {
+        return !this.root || containsDeep(document, this.root);
+    };
+    /**
+ * Returns whether or not the target element is a child of root.
+ * @param {Element} target The target element to check.
+ * @return {boolean} True if the target element is a child of root.
+ * @private
+ */ IntersectionObserver.prototype._rootContainsTarget = function(target) {
+        var rootDoc = this.root && (this.root.ownerDocument || this.root) || document;
+        return containsDeep(rootDoc, target) && (!this.root || rootDoc == target.ownerDocument);
+    };
+    /**
+ * Adds the instance to the global IntersectionObserver registry if it isn't
+ * already present.
+ * @private
+ */ IntersectionObserver.prototype._registerInstance = function() {
+        if (registry.indexOf(this) < 0) registry.push(this);
+    };
+    /**
+ * Removes the instance from the global IntersectionObserver registry.
+ * @private
+ */ IntersectionObserver.prototype._unregisterInstance = function() {
+        var index = registry.indexOf(this);
+        if (index != -1) registry.splice(index, 1);
+    };
+    /**
+ * Returns the result of the performance.now() method or null in browsers
+ * that don't support the API.
+ * @return {number} The elapsed time since the page was requested.
+ */ function now() {
+        return window.performance && performance.now && performance.now();
+    }
+    /**
+ * Throttles a function and delays its execution, so it's only called at most
+ * once within a given time period.
+ * @param {Function} fn The function to throttle.
+ * @param {number} timeout The amount of time that must pass before the
+ *     function can be called again.
+ * @return {Function} The throttled function.
+ */ function throttle(fn, timeout) {
+        var timer = null;
+        return function() {
+            if (!timer) timer = setTimeout(function() {
+                fn();
+                timer = null;
+            }, timeout);
+        };
+    }
+    /**
+ * Adds an event handler to a DOM node ensuring cross-browser compatibility.
+ * @param {Node} node The DOM node to add the event handler to.
+ * @param {string} event The event name.
+ * @param {Function} fn The event handler to add.
+ * @param {boolean} opt_useCapture Optionally adds the even to the capture
+ *     phase. Note: this only works in modern browsers.
+ */ function addEvent(node, event, fn, opt_useCapture) {
+        if (typeof node.addEventListener == "function") node.addEventListener(event, fn, opt_useCapture || false);
+        else if (typeof node.attachEvent == "function") node.attachEvent("on" + event, fn);
+    }
+    /**
+ * Removes a previously added event handler from a DOM node.
+ * @param {Node} node The DOM node to remove the event handler from.
+ * @param {string} event The event name.
+ * @param {Function} fn The event handler to remove.
+ * @param {boolean} opt_useCapture If the event handler was added with this
+ *     flag set to true, it should be set to true here in order to remove it.
+ */ function removeEvent(node, event, fn, opt_useCapture) {
+        if (typeof node.removeEventListener == "function") node.removeEventListener(event, fn, opt_useCapture || false);
+        else if (typeof node.detachEvent == "function") node.detachEvent("on" + event, fn);
+    }
+    /**
+ * Returns the intersection between two rect objects.
+ * @param {Object} rect1 The first rect.
+ * @param {Object} rect2 The second rect.
+ * @return {?Object|?ClientRect} The intersection rect or undefined if no
+ *     intersection is found.
+ */ function computeRectIntersection(rect1, rect2) {
+        var top = Math.max(rect1.top, rect2.top);
+        var bottom = Math.min(rect1.bottom, rect2.bottom);
+        var left = Math.max(rect1.left, rect2.left);
+        var right = Math.min(rect1.right, rect2.right);
+        var width = right - left;
+        var height = bottom - top;
+        return width >= 0 && height >= 0 && {
+            top: top,
+            bottom: bottom,
+            left: left,
+            right: right,
+            width: width,
+            height: height
+        } || null;
+    }
+    /**
+ * Shims the native getBoundingClientRect for compatibility with older IE.
+ * @param {Element} el The element whose bounding rect to get.
+ * @return {DOMRect|ClientRect} The (possibly shimmed) rect of the element.
+ */ function getBoundingClientRect(el) {
+        var rect;
+        try {
+            rect = el.getBoundingClientRect();
+        } catch (err) {
+        // Ignore Windows 7 IE11 "Unspecified error"
+        // https://github.com/w3c/IntersectionObserver/pull/205
+        }
+        if (!rect) return getEmptyRect();
+        // Older IE
+        if (!(rect.width && rect.height)) rect = {
+            top: rect.top,
+            right: rect.right,
+            bottom: rect.bottom,
+            left: rect.left,
+            width: rect.right - rect.left,
+            height: rect.bottom - rect.top
+        };
+        return rect;
+    }
+    /**
+ * Returns an empty rect object. An empty rect is returned when an element
+ * is not in the DOM.
+ * @return {ClientRect} The empty rect.
+ */ function getEmptyRect() {
+        return {
+            top: 0,
+            bottom: 0,
+            left: 0,
+            right: 0,
+            width: 0,
+            height: 0
+        };
+    }
+    /**
+ * Ensure that the result has all of the necessary fields of the DOMRect.
+ * Specifically this ensures that `x` and `y` fields are set.
+ *
+ * @param {?DOMRect|?ClientRect} rect
+ * @return {?DOMRect}
+ */ function ensureDOMRect(rect) {
+        // A `DOMRect` object has `x` and `y` fields.
+        if (!rect || "x" in rect) return rect;
+        // A IE's `ClientRect` type does not have `x` and `y`. The same is the case
+        // for internally calculated Rect objects. For the purposes of
+        // `IntersectionObserver`, it's sufficient to simply mirror `left` and `top`
+        // for these fields.
+        return {
+            top: rect.top,
+            y: rect.top,
+            bottom: rect.bottom,
+            left: rect.left,
+            x: rect.left,
+            right: rect.right,
+            width: rect.width,
+            height: rect.height
+        };
+    }
+    /**
+ * Inverts the intersection and bounding rect from the parent (frame) BCR to
+ * the local BCR space.
+ * @param {DOMRect|ClientRect} parentBoundingRect The parent's bound client rect.
+ * @param {DOMRect|ClientRect} parentIntersectionRect The parent's own intersection rect.
+ * @return {ClientRect} The local root bounding rect for the parent's children.
+ */ function convertFromParentRect(parentBoundingRect, parentIntersectionRect) {
+        var top = parentIntersectionRect.top - parentBoundingRect.top;
+        var left = parentIntersectionRect.left - parentBoundingRect.left;
+        return {
+            top: top,
+            left: left,
+            height: parentIntersectionRect.height,
+            width: parentIntersectionRect.width,
+            bottom: top + parentIntersectionRect.height,
+            right: left + parentIntersectionRect.width
+        };
+    }
+    /**
+ * Checks to see if a parent element contains a child element (including inside
+ * shadow DOM).
+ * @param {Node} parent The parent element.
+ * @param {Node} child The child element.
+ * @return {boolean} True if the parent node contains the child node.
+ */ function containsDeep(parent, child) {
+        var node = child;
+        while(node){
+            if (node == parent) return true;
+            node = getParentNode(node);
+        }
+        return false;
+    }
+    /**
+ * Gets the parent node of an element or its host element if the parent node
+ * is a shadow root.
+ * @param {Node} node The node whose parent to get.
+ * @return {Node|null} The parent node or null if no parent exists.
+ */ function getParentNode(node) {
+        var parent = node.parentNode;
+        if (node.nodeType == /* DOCUMENT */ 9 && node != document) // If this node is a document node, look for the embedding frame.
+        return getFrameElement(node);
+        // If the parent has element that is assigned through shadow root slot
+        if (parent && parent.assignedSlot) parent = parent.assignedSlot.parentNode;
+        if (parent && parent.nodeType == 11 && parent.host) // If the parent is a shadow root, return the host element.
+        return parent.host;
+        return parent;
+    }
+    /**
+ * Returns true if `node` is a Document.
+ * @param {!Node} node
+ * @returns {boolean}
+ */ function isDoc(node) {
+        return node && node.nodeType === 9;
+    }
+    // Exposes the constructors globally.
+    window.IntersectionObserver = IntersectionObserver;
+    window.IntersectionObserverEntry = IntersectionObserverEntry;
+})();
+
+},{}],"1O94Y":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "getTargetElement", ()=>getTargetElement);
+var _index = require("./index");
+var _isBrowser = require("./isBrowser");
+var _isBrowserDefault = parcelHelpers.interopDefault(_isBrowser);
+function getTargetElement(target, defaultElement) {
+    if (!(0, _isBrowserDefault.default)) return undefined;
+    if (!target) return defaultElement;
+    var targetElement;
+    if ((0, _index.isFunction)(target)) targetElement = target();
+    else if ("current" in target) targetElement = target.current;
+    else targetElement = target;
+    return targetElement;
+}
+
+},{"./index":"5RE7V","./isBrowser":"bIRS5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"5RE7V":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "isObject", ()=>isObject);
+parcelHelpers.export(exports, "isFunction", ()=>isFunction);
+parcelHelpers.export(exports, "isString", ()=>isString);
+parcelHelpers.export(exports, "isBoolean", ()=>isBoolean);
+parcelHelpers.export(exports, "isNumber", ()=>isNumber);
+parcelHelpers.export(exports, "isUndef", ()=>isUndef);
+var isObject = function(value) {
+    return value !== null && typeof value === "object";
+};
+var isFunction = function(value) {
+    return typeof value === "function";
+};
+var isString = function(value) {
+    return typeof value === "string";
+};
+var isBoolean = function(value) {
+    return typeof value === "boolean";
+};
+var isNumber = function(value) {
+    return typeof value === "number";
+};
+var isUndef = function(value) {
+    return typeof value === "undefined";
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"bIRS5":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var isBrowser = !!(typeof window !== "undefined" && window.document && window.document.createElement);
+exports.default = isBrowser;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2PaME":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _createEffectWithTarget = require("./createEffectWithTarget");
+var _createEffectWithTargetDefault = parcelHelpers.interopDefault(_createEffectWithTarget);
+var useEffectWithTarget = (0, _createEffectWithTargetDefault.default)((0, _react.useEffect));
+exports.default = useEffectWithTarget;
+
+},{"react":"21dqq","./createEffectWithTarget":"EMRP4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"EMRP4":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _useUnmount = require("../useUnmount");
+var _useUnmountDefault = parcelHelpers.interopDefault(_useUnmount);
+var _depsAreSame = require("./depsAreSame");
+var _depsAreSameDefault = parcelHelpers.interopDefault(_depsAreSame);
+var _domTarget = require("./domTarget");
+var createEffectWithTarget = function(useEffectType) {
+    /**
+   *
+   * @param effect
+   * @param deps
+   * @param target target should compare ref.current vs ref.current, dom vs dom, ()=>dom vs ()=>dom
+   */ var useEffectWithTarget = function(effect, deps, target) {
+        var hasInitRef = (0, _react.useRef)(false);
+        var lastElementRef = (0, _react.useRef)([]);
+        var lastDepsRef = (0, _react.useRef)([]);
+        var unLoadRef = (0, _react.useRef)();
+        useEffectType(function() {
+            var _a;
+            var targets = Array.isArray(target) ? target : [
+                target
+            ];
+            var els = targets.map(function(item) {
+                return (0, _domTarget.getTargetElement)(item);
+            });
+            // init run
+            if (!hasInitRef.current) {
+                hasInitRef.current = true;
+                lastElementRef.current = els;
+                lastDepsRef.current = deps;
+                unLoadRef.current = effect();
+                return;
+            }
+            if (els.length !== lastElementRef.current.length || !(0, _depsAreSameDefault.default)(lastElementRef.current, els) || !(0, _depsAreSameDefault.default)(lastDepsRef.current, deps)) {
+                (_a = unLoadRef.current) === null || _a === void 0 || _a.call(unLoadRef);
+                lastElementRef.current = els;
+                lastDepsRef.current = deps;
+                unLoadRef.current = effect();
+            }
+        });
+        (0, _useUnmountDefault.default)(function() {
+            var _a;
+            (_a = unLoadRef.current) === null || _a === void 0 || _a.call(unLoadRef);
+            // for react-refresh
+            hasInitRef.current = false;
+        });
+    };
+    return useEffectWithTarget;
+};
+exports.default = createEffectWithTarget;
+
+},{"react":"21dqq","../useUnmount":"aSL6f","./depsAreSame":"aXJlO","./domTarget":"1O94Y","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"aSL6f":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _useLatest = require("../useLatest");
+var _useLatestDefault = parcelHelpers.interopDefault(_useLatest);
+var _utils = require("../utils");
+var _isDev = require("../utils/isDev");
+var _isDevDefault = parcelHelpers.interopDefault(_isDev);
+var useUnmount = function(fn) {
+    if (0, _isDevDefault.default) {
+        if (!(0, _utils.isFunction)(fn)) console.error("useUnmount expected parameter is a function, got ".concat(typeof fn));
+    }
+    var fnRef = (0, _useLatestDefault.default)(fn);
+    (0, _react.useEffect)(function() {
+        return function() {
+            fnRef.current();
+        };
+    }, []);
+};
+exports.default = useUnmount;
+
+},{"react":"21dqq","../useLatest":"baLji","../utils":"5RE7V","../utils/isDev":"2TLtF","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"baLji":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+function useLatest(value) {
+    var ref = (0, _react.useRef)(value);
+    ref.current = value;
+    return ref;
+}
+exports.default = useLatest;
+
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2TLtF":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var isDev = true;
+exports.default = isDev;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"aXJlO":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>depsAreSame);
+function depsAreSame(oldDeps, deps) {
+    if (oldDeps === deps) return true;
+    for(var i = 0; i < oldDeps.length; i++){
+        if (!Object.is(oldDeps[i], deps[i])) return false;
+    }
+    return true;
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ka0fg":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
@@ -29050,13 +30154,7 @@ var _isBrowserDefault = parcelHelpers.interopDefault(_isBrowser);
 var useIsomorphicLayoutEffect = (0, _isBrowserDefault.default) ? (0, _react.useLayoutEffect) : (0, _react.useEffect);
 exports.default = useIsomorphicLayoutEffect;
 
-},{"react":"21dqq","../utils/isBrowser":"bIRS5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"bIRS5":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var isBrowser = !!(typeof window !== "undefined" && window.document && window.document.createElement);
-exports.default = isBrowser;
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"dpV1Q":[function(require,module,exports) {
+},{"react":"21dqq","../utils/isBrowser":"bIRS5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"dpV1Q":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
@@ -29085,41 +30183,7 @@ function useMemoizedFn(fn) {
 }
 exports.default = useMemoizedFn;
 
-},{"react":"21dqq","../utils":"5RE7V","../utils/isDev":"2TLtF","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"5RE7V":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "isObject", ()=>isObject);
-parcelHelpers.export(exports, "isFunction", ()=>isFunction);
-parcelHelpers.export(exports, "isString", ()=>isString);
-parcelHelpers.export(exports, "isBoolean", ()=>isBoolean);
-parcelHelpers.export(exports, "isNumber", ()=>isNumber);
-parcelHelpers.export(exports, "isUndef", ()=>isUndef);
-var isObject = function(value) {
-    return value !== null && typeof value === "object";
-};
-var isFunction = function(value) {
-    return typeof value === "function";
-};
-var isString = function(value) {
-    return typeof value === "string";
-};
-var isBoolean = function(value) {
-    return typeof value === "boolean";
-};
-var isNumber = function(value) {
-    return typeof value === "number";
-};
-var isUndef = function(value) {
-    return typeof value === "undefined";
-};
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2TLtF":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var isDev = true;
-exports.default = isDev;
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6xxJh":[function(require,module,exports) {
+},{"react":"21dqq","../utils":"5RE7V","../utils/isDev":"2TLtF","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6xxJh":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _react = require("react");
@@ -36391,7 +37455,567 @@ function isIOS() {
     return (0, _canUseDom.canUseDom) ? /ios|iphone|ipad|ipod/.test(navigator.userAgent.toLowerCase()) : false;
 }
 
-},{"./can-use-dom":"luetq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lKBbb":[function(require,module,exports) {
+},{"./can-use-dom":"luetq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1kTji":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _centerPopupCss = require("./center-popup.css");
+var _centerPopup = require("./center-popup");
+exports.default = (0, _centerPopup.CenterPopup);
+
+},{"./center-popup.css":"l9YWo","./center-popup":"4l81L","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"l9YWo":[function() {},{}],"4l81L":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "CenterPopup", ()=>CenterPopup);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _renderToContainer = require("../../utils/render-to-container");
+var _mask = require("../mask");
+var _maskDefault = parcelHelpers.interopDefault(_mask);
+var _withStopPropagation = require("../../utils/with-stop-propagation");
+var _withDefaultProps = require("../../utils/with-default-props");
+var _ahooks = require("ahooks");
+var _web = require("@react-spring/web");
+var _useInnerVisible = require("../../utils/use-inner-visible");
+var _classnames = require("classnames");
+var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
+var _nativeProps = require("../../utils/native-props");
+var _shouldRender = require("../../utils/should-render");
+var _useLockScroll = require("../../utils/use-lock-scroll");
+var _antdMobileIcons = require("antd-mobile-icons");
+var _popupBaseProps = require("../popup/popup-base-props");
+const classPrefix = "adm-center-popup";
+const defaultProps = Object.assign(Object.assign({}, (0, _popupBaseProps.defaultPopupBaseProps)), {
+    getContainer: null
+});
+const CenterPopup = (p)=>{
+    const props = (0, _withDefaultProps.mergeProps)(defaultProps, p);
+    const unmountedRef = (0, _ahooks.useUnmountedRef)();
+    const style = (0, _web.useSpring)({
+        scale: props.visible ? 1 : 0.8,
+        opacity: props.visible ? 1 : 0,
+        config: {
+            mass: 1.2,
+            tension: 200,
+            friction: 25,
+            clamp: true
+        },
+        onRest: ()=>{
+            var _a, _b;
+            if (unmountedRef.current) return;
+            setActive(props.visible);
+            if (props.visible) (_a = props.afterShow) === null || _a === void 0 || _a.call(props);
+            else (_b = props.afterClose) === null || _b === void 0 || _b.call(props);
+        }
+    });
+    const [active, setActive] = (0, _react.useState)(props.visible);
+    (0, _ahooks.useIsomorphicLayoutEffect)(()=>{
+        if (props.visible) setActive(true);
+    }, [
+        props.visible
+    ]);
+    const ref = (0, _react.useRef)(null);
+    (0, _useLockScroll.useLockScroll)(ref, props.disableBodyScroll && active);
+    const maskVisible = (0, _useInnerVisible.useInnerVisible)(active && props.visible);
+    const body = (0, _reactDefault.default).createElement("div", {
+        className: (0, _classnamesDefault.default)(`${classPrefix}-body`, props.bodyClassName),
+        style: props.bodyStyle
+    }, props.children);
+    const node = (0, _withStopPropagation.withStopPropagation)(props.stopPropagation, (0, _nativeProps.withNativeProps)(props, (0, _reactDefault.default).createElement("div", {
+        className: classPrefix,
+        style: {
+            display: active ? undefined : "none",
+            pointerEvents: active ? undefined : "none"
+        }
+    }, props.mask && (0, _reactDefault.default).createElement((0, _maskDefault.default), {
+        visible: maskVisible,
+        forceRender: props.forceRender,
+        destroyOnClose: props.destroyOnClose,
+        onMaskClick: (e)=>{
+            var _a, _b;
+            (_a = props.onMaskClick) === null || _a === void 0 || _a.call(props, e);
+            if (props.closeOnMaskClick) (_b = props.onClose) === null || _b === void 0 || _b.call(props);
+        },
+        style: props.maskStyle,
+        className: (0, _classnamesDefault.default)(`${classPrefix}-mask`, props.maskClassName),
+        disableBodyScroll: false,
+        stopPropagation: props.stopPropagation
+    }), (0, _reactDefault.default).createElement("div", {
+        className: `${classPrefix}-wrap`,
+        role: props.role,
+        "aria-label": props["aria-label"]
+    }, (0, _reactDefault.default).createElement((0, _web.animated).div, {
+        style: Object.assign(Object.assign({}, style), {
+            pointerEvents: style.opacity.to((v)=>v === 1 ? "unset" : "none")
+        }),
+        ref: ref
+    }, props.showCloseButton && (0, _reactDefault.default).createElement("a", {
+        className: (0, _classnamesDefault.default)(`${classPrefix}-close`, "adm-plain-anchor"),
+        onClick: ()=>{
+            var _a;
+            (_a = props.onClose) === null || _a === void 0 || _a.call(props);
+        }
+    }, (0, _reactDefault.default).createElement((0, _antdMobileIcons.CloseOutline), null)), body)))));
+    return (0, _reactDefault.default).createElement((0, _shouldRender.ShouldRender), {
+        active: active,
+        forceRender: props.forceRender,
+        destroyOnClose: props.destroyOnClose
+    }, (0, _renderToContainer.renderToContainer)(props.getContainer, node));
+};
+
+},{"react":"21dqq","../../utils/render-to-container":"jniI3","../mask":"fZKGi","../../utils/with-stop-propagation":"eKxU0","../../utils/with-default-props":"ebN4M","ahooks":"5b3bR","@react-spring/web":"75MAn","../../utils/use-inner-visible":"ek5mG","classnames":"jocGM","../../utils/native-props":"1M5QR","../../utils/should-render":"fUFmp","../../utils/use-lock-scroll":"7ALix","antd-mobile-icons":"de4E5","../popup/popup-base-props":"bPiaz","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"bSFsX":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _dialogCss = require("./dialog.css");
+var _show = require("./show");
+var _alert = require("./alert");
+var _confirm = require("./confirm");
+var _clear = require("./clear");
+var _attachPropertiesToComponent = require("../../utils/attach-properties-to-component");
+var _dialog = require("./dialog");
+exports.default = (0, _attachPropertiesToComponent.attachPropertiesToComponent)((0, _dialog.Dialog), {
+    show: (0, _show.show),
+    alert: (0, _alert.alert),
+    confirm: (0, _confirm.confirm),
+    clear: (0, _clear.clear)
+});
+
+},{"./dialog.css":"eAnoM","./show":"gUycz","./alert":"k5Upr","./confirm":"5u9vd","./clear":"bbYNP","../../utils/attach-properties-to-component":"g90y9","./dialog":"bN42C","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"eAnoM":[function() {},{}],"gUycz":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "closeFnSet", ()=>closeFnSet);
+parcelHelpers.export(exports, "show", ()=>show);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _dialog = require("./dialog");
+var _renderImperatively = require("../../utils/render-imperatively");
+const closeFnSet = new Set();
+function show(props) {
+    const handler = (0, _renderImperatively.renderImperatively)((0, _reactDefault.default).createElement((0, _dialog.Dialog), Object.assign({}, props, {
+        afterClose: ()=>{
+            var _a;
+            closeFnSet.delete(handler.close);
+            (_a = props.afterClose) === null || _a === void 0 || _a.call(props);
+        }
+    })));
+    closeFnSet.add(handler.close);
+    return handler;
+}
+
+},{"react":"21dqq","./dialog":"bN42C","../../utils/render-imperatively":"82Bfc","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"bN42C":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Dialog", ()=>Dialog);
+var _tslib = require("tslib");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _withDefaultProps = require("../../utils/with-default-props");
+var _classnames = require("classnames");
+var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
+var _dialogActionButton = require("./dialog-action-button");
+var _image = require("../image");
+var _imageDefault = parcelHelpers.interopDefault(_image);
+var _autoCenter = require("../auto-center");
+var _autoCenterDefault = parcelHelpers.interopDefault(_autoCenter);
+var _centerPopup = require("../center-popup");
+var _centerPopupDefault = parcelHelpers.interopDefault(_centerPopup);
+const defaultProps = {
+    actions: [],
+    closeOnAction: false,
+    closeOnMaskClick: false,
+    getContainer: null
+};
+const Dialog = (p)=>{
+    const props = (0, _withDefaultProps.mergeProps)(defaultProps, p);
+    const element = (0, _reactDefault.default).createElement((0, _reactDefault.default).Fragment, null, !!props.image && (0, _reactDefault.default).createElement("div", {
+        className: cls("image-container")
+    }, (0, _reactDefault.default).createElement((0, _imageDefault.default), {
+        src: props.image,
+        alt: "dialog header image",
+        width: "100%"
+    })), !!props.header && (0, _reactDefault.default).createElement("div", {
+        className: cls("header")
+    }, (0, _reactDefault.default).createElement((0, _autoCenterDefault.default), null, props.header)), !!props.title && (0, _reactDefault.default).createElement("div", {
+        className: cls("title")
+    }, props.title), (0, _reactDefault.default).createElement("div", {
+        className: (0, _classnamesDefault.default)(cls("content"), !props.content && cls("content-empty"))
+    }, typeof props.content === "string" ? (0, _reactDefault.default).createElement((0, _autoCenterDefault.default), null, props.content) : props.content), (0, _reactDefault.default).createElement("div", {
+        className: cls("footer")
+    }, props.actions.map((row, index)=>{
+        const actions = Array.isArray(row) ? row : [
+            row
+        ];
+        return (0, _reactDefault.default).createElement("div", {
+            className: cls("action-row"),
+            key: index
+        }, actions.map((action, index)=>(0, _reactDefault.default).createElement((0, _dialogActionButton.DialogActionButton), {
+                key: action.key,
+                action: action,
+                onAction: ()=>(0, _tslib.__awaiter)(void 0, void 0, void 0, function*() {
+                        var _a, _b, _c;
+                        yield Promise.all([
+                            (_a = action.onClick) === null || _a === void 0 ? void 0 : _a.call(action),
+                            (_b = props.onAction) === null || _b === void 0 ? void 0 : _b.call(props, action, index)
+                        ]);
+                        if (props.closeOnAction) (_c = props.onClose) === null || _c === void 0 || _c.call(props);
+                    })
+            })));
+    })));
+    return (0, _reactDefault.default).createElement((0, _centerPopupDefault.default), {
+        className: (0, _classnamesDefault.default)(cls(), props.className),
+        style: props.style,
+        afterClose: props.afterClose,
+        afterShow: props.afterShow,
+        onMaskClick: props.closeOnMaskClick ? ()=>{
+            var _a;
+            (_a = props.onClose) === null || _a === void 0 || _a.call(props);
+        } : undefined,
+        visible: props.visible,
+        getContainer: props.getContainer,
+        bodyStyle: props.bodyStyle,
+        bodyClassName: (0, _classnamesDefault.default)(cls("body"), props.image && cls("with-image"), props.bodyClassName),
+        maskStyle: props.maskStyle,
+        maskClassName: props.maskClassName,
+        stopPropagation: props.stopPropagation,
+        disableBodyScroll: props.disableBodyScroll,
+        destroyOnClose: props.destroyOnClose,
+        forceRender: props.forceRender,
+        role: "dialog",
+        "aria-label": props["aria-label"]
+    }, element);
+};
+function cls(name = "") {
+    return "adm-dialog" + (name && "-") + name;
+}
+
+},{"tslib":"lRdW5","react":"21dqq","../../utils/with-default-props":"ebN4M","classnames":"jocGM","./dialog-action-button":"6sM8H","../image":"cKtZG","../auto-center":"4MF5T","../center-popup":"1kTji","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6sM8H":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "DialogActionButton", ()=>DialogActionButton);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _classnames = require("classnames");
+var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
+var _button = require("../button");
+var _buttonDefault = parcelHelpers.interopDefault(_button);
+var _nativeProps = require("../../utils/native-props");
+const DialogActionButton = (props)=>{
+    const { action } = props;
+    return (0, _nativeProps.withNativeProps)(props.action, (0, _reactDefault.default).createElement((0, _buttonDefault.default), {
+        key: action.key,
+        onClick: props.onAction,
+        className: (0, _classnamesDefault.default)("adm-dialog-button", {
+            "adm-dialog-button-bold": action.bold
+        }),
+        fill: "none",
+        shape: "rectangular",
+        block: true,
+        color: action.danger ? "danger" : "primary",
+        loading: "auto",
+        disabled: action.disabled
+    }, action.text));
+};
+
+},{"react":"21dqq","classnames":"jocGM","../button":"21Pcj","../../utils/native-props":"1M5QR","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cKtZG":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _imageCss = require("./image.css");
+var _image = require("./image");
+exports.default = (0, _image.Image);
+
+},{"./image.css":"cIr2N","./image":"2nRzo","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cIr2N":[function() {},{}],"2nRzo":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Image", ()=>Image);
+var _withDefaultProps = require("../../utils/with-default-props");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _nativeProps = require("../../utils/native-props");
+var _stagedComponents = require("staged-components");
+var _toCssLength = require("../../utils/to-css-length");
+var _lazyDetector = require("./lazy-detector");
+var _useIsomorphicUpdateLayoutEffect = require("../../utils/use-isomorphic-update-layout-effect");
+var _imageIcon = require("./image-icon");
+var _brokenImageIcon = require("./broken-image-icon");
+const classPrefix = `adm-image`;
+const defaultProps = {
+    fit: "fill",
+    placeholder: (0, _reactDefault.default).createElement("div", {
+        className: `${classPrefix}-tip`
+    }, (0, _reactDefault.default).createElement((0, _imageIcon.ImageIcon), null)),
+    fallback: (0, _reactDefault.default).createElement("div", {
+        className: `${classPrefix}-tip`
+    }, (0, _reactDefault.default).createElement((0, _brokenImageIcon.BrokenImageIcon), null)),
+    lazy: false,
+    draggable: false
+};
+const Image = (0, _stagedComponents.staged)((p)=>{
+    const props = (0, _withDefaultProps.mergeProps)(defaultProps, p);
+    const [loaded, setLoaded] = (0, _react.useState)(false);
+    const [failed, setFailed] = (0, _react.useState)(false);
+    const ref = (0, _react.useRef)(null);
+    const imgRef = (0, _react.useRef)(null);
+    let src = props.src;
+    let srcSet = props.srcSet;
+    const [initialized, setInitialized] = (0, _react.useState)(!props.lazy);
+    src = initialized ? props.src : undefined;
+    srcSet = initialized ? props.srcSet : undefined;
+    (0, _useIsomorphicUpdateLayoutEffect.useIsomorphicUpdateLayoutEffect)(()=>{
+        setLoaded(false);
+        setFailed(false);
+    }, [
+        src
+    ]);
+    (0, _react.useEffect)(()=>{
+        var _a;
+        // for nextjs ssr
+        if ((_a = imgRef.current) === null || _a === void 0 ? void 0 : _a.complete) setLoaded(true);
+    }, []);
+    function renderInner() {
+        if (failed) return (0, _reactDefault.default).createElement((0, _reactDefault.default).Fragment, null, props.fallback);
+        const img = (0, _reactDefault.default).createElement("img", {
+            ref: imgRef,
+            id: props.id,
+            className: `${classPrefix}-img`,
+            src: src,
+            alt: props.alt,
+            onClick: props.onClick,
+            onLoad: (e)=>{
+                var _a;
+                setLoaded(true);
+                (_a = props.onLoad) === null || _a === void 0 || _a.call(props, e);
+            },
+            onError: (e)=>{
+                var _a;
+                setFailed(true);
+                (_a = props.onError) === null || _a === void 0 || _a.call(props, e);
+            },
+            style: {
+                objectFit: props.fit,
+                display: loaded ? "block" : "none"
+            },
+            crossOrigin: props.crossOrigin,
+            decoding: props.decoding,
+            loading: props.loading,
+            referrerPolicy: props.referrerPolicy,
+            sizes: props.sizes,
+            srcSet: srcSet,
+            useMap: props.useMap,
+            draggable: props.draggable
+        });
+        return (0, _reactDefault.default).createElement((0, _reactDefault.default).Fragment, null, !loaded && props.placeholder, img);
+    }
+    const style = {};
+    if (props.width) {
+        style["--width"] = (0, _toCssLength.toCSSLength)(props.width);
+        style["width"] = (0, _toCssLength.toCSSLength)(props.width);
+    }
+    if (props.height) {
+        style["--height"] = (0, _toCssLength.toCSSLength)(props.height);
+        style["height"] = (0, _toCssLength.toCSSLength)(props.height);
+    }
+    return (0, _nativeProps.withNativeProps)(props, (0, _reactDefault.default).createElement("div", {
+        ref: ref,
+        className: classPrefix,
+        style: style,
+        onClick: props.onContainerClick
+    }, props.lazy && !initialized && (0, _reactDefault.default).createElement((0, _lazyDetector.LazyDetector), {
+        onActive: ()=>{
+            setInitialized(true);
+        }
+    }), renderInner()));
+});
+
+},{"../../utils/with-default-props":"ebN4M","react":"21dqq","../../utils/native-props":"1M5QR","staged-components":"9ZgHT","../../utils/to-css-length":"bU55n","./lazy-detector":"6PjXS","../../utils/use-isomorphic-update-layout-effect":"1jv3b","./image-icon":"4ZIUi","./broken-image-icon":"2qi0R","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9ZgHT":[function(require,module,exports) {
+"use strict";
+var __importDefault = this && this.__importDefault || function(mod) {
+    return mod && mod.__esModule ? mod : {
+        "default": mod
+    };
+};
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.staged = void 0;
+const react_1 = __importDefault(require("4ea5048154ad6064"));
+function processNext(next) {
+    if (typeof next === "function") return react_1.default.createElement(Stage, {
+        stage: next
+    });
+    else return next;
+}
+function Stage(props) {
+    const next = props.stage();
+    return processNext(next);
+}
+function staged(stage) {
+    return function Staged(props, ref) {
+        const next = stage(props, ref);
+        return processNext(next);
+    };
+}
+exports.staged = staged;
+
+},{"4ea5048154ad6064":"21dqq"}],"bU55n":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "toCSSLength", ()=>toCSSLength);
+function toCSSLength(val) {
+    return typeof val === "number" ? `${val}px` : val;
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6PjXS":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "LazyDetector", ()=>LazyDetector);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _ahooks = require("ahooks");
+const LazyDetector = (props)=>{
+    const ref = (0, _react.useRef)(null);
+    const [inViewport] = (0, _ahooks.useInViewport)(ref);
+    (0, _react.useEffect)(()=>{
+        if (inViewport) props.onActive();
+    }, [
+        inViewport
+    ]);
+    return (0, _reactDefault.default).createElement("div", {
+        ref: ref
+    });
+};
+
+},{"react":"21dqq","ahooks":"5b3bR","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1jv3b":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "useIsomorphicUpdateLayoutEffect", ()=>useIsomorphicUpdateLayoutEffect);
+var _ahooks = require("ahooks");
+const useIsomorphicUpdateLayoutEffect = (0, _ahooks.createUpdateEffect)((0, _ahooks.useIsomorphicLayoutEffect));
+
+},{"ahooks":"5b3bR","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4ZIUi":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "ImageIcon", ()=>ImageIcon);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+const ImageIcon = ()=>(0, _reactDefault.default).createElement("svg", {
+        viewBox: "0 0 48 48",
+        xmlns: "http://www.w3.org/2000/svg"
+    }, (0, _reactDefault.default).createElement("path", {
+        d: "M41.396 6.234c1.923 0 3.487 1.574 3.487 3.505v29.14c0 1.937-1.568 3.51-3.491 3.51H6.604c-1.923 0-3.487-1.573-3.487-3.51V9.745c0-1.936 1.564-3.51 3.487-3.51Zm0 2.847H6.604c-.355 0-.654.3-.654.658V34.9l5.989-8.707a2.373 2.373 0 0 1 1.801-1.005 2.405 2.405 0 0 1 1.933.752l4.182 4.525 7.58-11.005a2.374 2.374 0 0 1 1.96-1.01c.79 0 1.532.38 1.966 1.01L42.05 34.89V9.74a.664.664 0 0 0-.654-.658Zm-28.305 2.763a3.119 3.119 0 0 1 3.117 3.117 3.119 3.119 0 0 1-3.117 3.117 3.122 3.122 0 0 1-3.117-3.117 3.119 3.119 0 0 1 3.117-3.117Z",
+        fill: "#DBDBDB",
+        fillRule: "nonzero"
+    }));
+
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2qi0R":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "BrokenImageIcon", ()=>BrokenImageIcon);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+const BrokenImageIcon = ()=>(0, _reactDefault.default).createElement("svg", {
+        viewBox: "0 0 48 48",
+        xmlns: "http://www.w3.org/2000/svg"
+    }, (0, _reactDefault.default).createElement("path", {
+        d: "M19.233 6.233 17.42 9.08l-10.817.001a.665.665 0 0 0-.647.562l-.007.096V34.9l5.989-8.707a2.373 2.373 0 0 1 1.801-1.005 2.415 2.415 0 0 1 1.807.625l.126.127 4.182 4.525 2.267-3.292 5.461 7.841-4.065 7.375H6.604c-1.86 0-3.382-1.47-3.482-3.317l-.005-.192V9.744c0-1.872 1.461-3.405 3.296-3.505l.19-.005h12.63Zm22.163 0c1.86 0 3.382 1.472 3.482 3.314l.005.192v29.14a3.507 3.507 0 0 1-3.3 3.505l-.191.006H27.789l3.63-6.587.06-.119a1.87 1.87 0 0 0-.163-1.853l-6.928-9.949 3.047-4.422a2.374 2.374 0 0 1 1.96-1.01 2.4 2.4 0 0 1 1.86.87l.106.14L42.05 34.89V9.74a.664.664 0 0 0-.654-.658H21.855l1.812-2.848h17.73Zm-28.305 5.611c.794 0 1.52.298 2.07.788l-.843 1.325-.067.114a1.87 1.87 0 0 0 .11 1.959l.848 1.217c-.556.515-1.3.83-2.118.83a3.122 3.122 0 0 1-3.117-3.116 3.119 3.119 0 0 1 3.117-3.117Z",
+        fill: "#DBDBDB",
+        fillRule: "nonzero"
+    }));
+
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"k5Upr":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "alert", ()=>alert);
+var _show = require("./show");
+var _withDefaultProps = require("../../utils/with-default-props");
+var _configProvider = require("../config-provider");
+function alert(p) {
+    const defaultProps = {
+        confirmText: (0, _configProvider.getDefaultConfig)().locale.Dialog.ok
+    };
+    const props = (0, _withDefaultProps.mergeProps)(defaultProps, p);
+    return new Promise((resolve)=>{
+        (0, _show.show)(Object.assign(Object.assign({}, props), {
+            closeOnAction: true,
+            actions: [
+                {
+                    key: "confirm",
+                    text: props.confirmText
+                }
+            ],
+            onAction: props.onConfirm,
+            onClose: ()=>{
+                var _a;
+                (_a = props.onClose) === null || _a === void 0 || _a.call(props);
+                resolve();
+            }
+        }));
+    });
+}
+
+},{"./show":"gUycz","../../utils/with-default-props":"ebN4M","../config-provider":"3QHdQ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"5u9vd":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "confirm", ()=>confirm);
+var _tslib = require("tslib");
+var _show = require("./show");
+var _withDefaultProps = require("../../utils/with-default-props");
+var _configProvider = require("../config-provider");
+const defaultProps = {
+    confirmText: "\u786E\u8BA4",
+    cancelText: "\u53D6\u6D88"
+};
+function confirm(p) {
+    const { locale } = (0, _configProvider.getDefaultConfig)();
+    const props = (0, _withDefaultProps.mergeProps)(defaultProps, {
+        confirmText: locale.common.confirm,
+        cancelText: locale.common.cancel
+    }, p);
+    return new Promise((resolve)=>{
+        (0, _show.show)(Object.assign(Object.assign({}, props), {
+            closeOnAction: true,
+            onClose: ()=>{
+                var _a;
+                (_a = props.onClose) === null || _a === void 0 || _a.call(props);
+                resolve(false);
+            },
+            actions: [
+                [
+                    {
+                        key: "cancel",
+                        text: props.cancelText,
+                        onClick: ()=>(0, _tslib.__awaiter)(this, void 0, void 0, function*() {
+                                var _a;
+                                yield (_a = props.onCancel) === null || _a === void 0 ? void 0 : _a.call(props);
+                                resolve(false);
+                            })
+                    },
+                    {
+                        key: "confirm",
+                        text: props.confirmText,
+                        bold: true,
+                        onClick: ()=>(0, _tslib.__awaiter)(this, void 0, void 0, function*() {
+                                var _b;
+                                yield (_b = props.onConfirm) === null || _b === void 0 ? void 0 : _b.call(props);
+                                resolve(true);
+                            })
+                    }
+                ]
+            ]
+        }));
+    });
+}
+
+},{"tslib":"lRdW5","./show":"gUycz","../../utils/with-default-props":"ebN4M","../config-provider":"3QHdQ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"bbYNP":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "clear", ()=>clear);
+var _show = require("./show");
+function clear() {
+    (0, _show.closeFnSet).forEach((close)=>{
+        close();
+    });
+}
+
+},{"./show":"gUycz","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lKBbb":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _dividerCss = require("./divider.css");
@@ -37081,7 +38705,72 @@ const InternalToast = (p)=>{
     }, iconElement), (0, _reactDefault.default).createElement((0, _autoCenterDefault.default), null, content))));
 };
 
-},{"react":"21dqq","classnames":"jocGM","antd-mobile-icons":"de4E5","../mask":"fZKGi","../../utils/with-default-props":"ebN4M","../auto-center":"4MF5T","../spin-loading":"25Lkn","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8lvH4":[function(require,module,exports) {
+},{"react":"21dqq","classnames":"jocGM","antd-mobile-icons":"de4E5","../mask":"fZKGi","../../utils/with-default-props":"ebN4M","../auto-center":"4MF5T","../spin-loading":"25Lkn","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"bx6vF":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _footerCss = require("./footer.css");
+var _footer = require("./footer");
+exports.default = (0, _footer.Footer);
+
+},{"./footer.css":"He08l","./footer":"avZmM","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"He08l":[function() {},{}],"avZmM":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Footer", ()=>Footer);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _classnames = require("classnames");
+var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
+var _nativeProps = require("../../utils/native-props");
+var _withDefaultProps = require("../../utils/with-default-props");
+var _divider = require("../divider");
+var _dividerDefault = parcelHelpers.interopDefault(_divider);
+const classPrefix = `adm-footer`;
+const defaultProps = {
+    label: "",
+    links: [],
+    content: "",
+    chips: []
+};
+const Footer = (p)=>{
+    const props = (0, _withDefaultProps.mergeProps)(defaultProps, p);
+    const { label, links, content, chips, onChipClick, onLinkClick } = props;
+    const clickChipItem = (item, index)=>{
+        if ((chips === null || chips === void 0 ? void 0 : chips.length) && item.type === "link") onChipClick === null || onChipClick === void 0 || onChipClick(item, index);
+    };
+    const clickLinkItem = (item, index, e)=>{
+        if (onLinkClick) {
+            e.preventDefault();
+            onLinkClick(item, index);
+        }
+    };
+    return (0, _nativeProps.withNativeProps)(props, (0, _reactDefault.default).createElement("div", {
+        className: (0, _classnamesDefault.default)(classPrefix)
+    }, label && (0, _reactDefault.default).createElement("div", {
+        className: `${classPrefix}-label`
+    }, (0, _reactDefault.default).createElement((0, _dividerDefault.default), null, label)), !!(links === null || links === void 0 ? void 0 : links.length) && (0, _reactDefault.default).createElement("div", {
+        className: `${classPrefix}-links`
+    }, links.map((link, index)=>(0, _reactDefault.default).createElement((0, _reactDefault.default).Fragment, {
+            key: index
+        }, (0, _reactDefault.default).createElement("a", {
+            href: link.href,
+            rel: "noopener noreferrer",
+            onClick: (event)=>clickLinkItem(link, index, event)
+        }, link.text), index !== links.length - 1 && (0, _reactDefault.default).createElement((0, _dividerDefault.default), {
+            direction: "vertical"
+        })))), content && (0, _reactDefault.default).createElement("div", {
+        className: `${classPrefix}-content`
+    }, content), chips && chips.length > 0 && (0, _reactDefault.default).createElement("div", {
+        className: `${classPrefix}-chips`
+    }, chips.map((chip, index)=>(0, _reactDefault.default).createElement("div", {
+            key: index,
+            onClick: ()=>clickChipItem(chip, index),
+            className: (0, _classnamesDefault.default)(`${classPrefix}-chip`, {
+                [`${classPrefix}-chip-link`]: chip.type === "link"
+            })
+        }, chip.text)))));
+};
+
+},{"react":"21dqq","classnames":"jocGM","../../utils/native-props":"1M5QR","../../utils/with-default-props":"ebN4M","../divider":"lKBbb","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8lvH4":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$ebbe = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -54701,7 +56390,7 @@ class AI {
         this.player = player;
         this.listener = (event)=>{
             if (event.name !== "set" || event.pathString !== "playerIndex") return;
-            if (!this.player.isCurrent(game)) return;
+            if (this.game.over || !this.player.isCurrent(game)) return;
             this.play();
         };
     }
@@ -54712,10 +56401,7 @@ class AI {
         this.game.$e.off(this.listener);
     }
     async play() {
-        if (!this.player.isCurrent(this.game)) {
-            console.log("Not AI's turn.");
-            return;
-        }
+        if (this.game.over || !this.player.isCurrent(this.game)) return;
         (0, _antdMobile.Toast).show({
             content: "AI is thinking..."
         });
