@@ -19,7 +19,7 @@ class AI {
       if (event.name !== 'set' || event.pathString !== 'playerIndex') {
         return;
       }
-      if (!this.player.isCurrent(game)) {
+      if (this.game.over || !this.player.isCurrent(game)) {
         return;
       }
       this.play();
@@ -35,8 +35,7 @@ class AI {
   }
 
   public async play() {
-    if (!this.player.isCurrent(this.game)) {
-      console.log("Not AI's turn.");
+    if (this.game.over || !this.player.isCurrent(this.game)) {
       return;
     }
     Toast.show({ content: 'AI is thinking...' });
