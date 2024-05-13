@@ -2,11 +2,11 @@ import { auto } from 'manate/react';
 import React from 'react';
 import type { ActionSheetProps } from 'antd-mobile';
 import { ActionSheet } from 'antd-mobile';
+import type { ActionSheetShowHandler } from 'antd-mobile/es/components/action-sheet';
 
 import type Card from '../models/card';
 import type Game from '../models/game';
 import type Player from '../models/player';
-import type { ActionSheetShowHandler } from 'antd-mobile/es/components/action-sheet';
 
 const CardComponent = (props: { game: Game; player: Player; card: Card }) => {
   const { game, player, card } = props;
