@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "tsc --noEmit --project tsconfig.json && eslint --fix '**/*.{ts,tsx,js,jsx}' && prettier --write . && sort-package-json",
     "release": "rm -rf .parcel-cache && parcel build src/index.html --dist-dir docs --public-url .",
-    "serve": "rm -rf .parcel-cache && parcel src/index.html --dist-dir docs"
+    "serve": "rm -rf .parcel-cache && parcel src/index.html --dist-dir temp"
   },
   "dependencies": {
     "hyperid": "^3.2.0",
@@ -15,28 +15,28 @@
   },
   "devDependencies": {
     "@parcel/resolver-glob": "^2.12.0",
-    "@types/lodash": "^4.17.1",
-    "@types/node": "^20.12.11",
+    "@types/lodash": "^4.17.7",
+    "@types/node": "^22.4.1",
     "@types/react-dom": "^18.3.0",
-    "@typescript-eslint/eslint-plugin": "^7.8.0",
-    "@typescript-eslint/parser": "^7.8.0",
-    "antd-mobile": "^5.36.0",
+    "@typescript-eslint/eslint-plugin": "^8.2.0",
+    "@typescript-eslint/parser": "^8.2.0",
+    "antd-mobile": "^5.37.1",
     "dotenv-override-true": "^6.2.2",
     "eslint": "^8.57.0",
     "eslint-config-alloy": "^5.1.2",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-prettier": "^5.1.3",
-    "manate": "^0.5.4",
+    "eslint-plugin-prettier": "^5.2.1",
+    "manate": "^0.6.5",
     "parcel": "^2.12.0",
-    "prettier": "^3.2.5",
+    "prettier": "^3.3.3",
     "process": "^0.11.10",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "sort-package-json": "^2.10.0",
-    "tsx": "^4.10.1",
-    "ttpt": "^0.8.9",
-    "typescript": "^5.4.5",
-    "yarn-upgrade-all": "^0.7.2"
+    "tsx": "^4.17.0",
+    "ttpt": "^0.11.1",
+    "typescript": "^5.5.4",
+    "yarn-upgrade-all": "^0.7.4"
   },
   "yarn-upgrade-all": {
     "ignore": [

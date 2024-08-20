@@ -14,7 +14,7 @@ const You = (props: { game: Game }) => {
       actions.push(<NoticeBar key="notice-game-over" content="Game Over!" color="info" />);
       if (game.winner === undefined) {
         actions.push(<Result key="result-tie" status="info" title="Tie!" />);
-      } else if (game.findPlayer('You').won) {
+      } else if (game.winner === youPlayer) {
         actions.push(<Result key="result-win" status="success" title="You Win!" />);
       } else {
         actions.push(<Result key="result-lose" status="error" title="You Lose!" />);

@@ -38982,7 +38982,7 @@ const You = (props)=>{
                 lineNumber: 16,
                 columnNumber: 22
             }, undefined));
-            else if (game.findPlayer("You").won) actions.push(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antdMobile.Result), {
+            else if (game.winner === youPlayer) actions.push(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _antdMobile.Result), {
                 status: "success",
                 title: "You Win!"
             }, "result-win", false, {
