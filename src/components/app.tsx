@@ -7,18 +7,15 @@ import You from './you';
 import Opponent from './opponent';
 import Desk from './desk';
 
-const App = (props: { game: Game }) => {
+const App = auto((props: { game: Game }) => {
   const { game } = props;
-  const render = () => {
-    return (
-      <Space direction="vertical" block>
-        <Opponent game={game} />
-        <Desk game={game} />
-        <You game={game} />
-      </Space>
-    );
-  };
-  return auto(render, props);
-};
+  return (
+    <Space direction="vertical" block>
+      <Opponent game={game} />
+      <Desk game={game} />
+      <You game={game} />
+    </Space>
+  );
+});
 
 export default App;
